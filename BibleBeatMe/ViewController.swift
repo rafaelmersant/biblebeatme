@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftIcons
 
 class ViewController: UIViewController {
 
@@ -19,9 +20,6 @@ class ViewController: UIViewController {
         specialButtons.forEach { (button) in
             button.layer.borderColor = UIColor.gray.cgColor
         }
-
-        
-        
 
     }
 

@@ -1,5 +1,6 @@
 Pods/
+Pods/*
 DerivedData/
-BibleBeatMe.xcworkspace
+BibleBeatMe.xcworkspace/
 Podfile.lock
 
