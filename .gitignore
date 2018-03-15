@@ -1,6 +1,10 @@
-Pods/
-Pods/*
-DerivedData/
+
+# Xcode
+xcuserdata/
 BibleBeatMe.xcworkspace/
+DerivedData/
+
+# Cocoapods
+Pods/
 Podfile.lock
 
