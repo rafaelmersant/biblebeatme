@@ -16,6 +16,12 @@
 		943EC0931FFB11C8009B3632 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943EC0911FFB11C8009B3632 /* LaunchScreen.storyboard */; };
 		943EC09E1FFB11C8009B3632 /* BibleTryToBeatMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC09D1FFB11C8009B3632 /* BibleTryToBeatMeTests.swift */; };
 		943EC0A91FFB11C8009B3632 /* BibleTryToBeatMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC0A81FFB11C8009B3632 /* BibleTryToBeatMeUITests.swift */; };
+		94D113D62059FF0B005E08A9 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D113D52059FF0B005E08A9 /* QuestionsViewController.swift */; };
+		94D113D72059FF0B005E08A9 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D113D52059FF0B005E08A9 /* QuestionsViewController.swift */; };
+		94D113D82059FF0B005E08A9 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D113D52059FF0B005E08A9 /* QuestionsViewController.swift */; };
+		94D113DA205DB169005E08A9 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D113D9205DB169005E08A9 /* Config.swift */; };
+		94D113DB205DB169005E08A9 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D113D9205DB169005E08A9 /* Config.swift */; };
+		94D113DC205DB16A005E08A9 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D113D9205DB169005E08A9 /* Config.swift */; };
 		FB0121F4A3BBB03D6CE8221C /* Pods_BibleBeatMeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70DFA9C1C90778E22AE99DCE /* Pods_BibleBeatMeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +63,8 @@
 		943EC0A41FFB11C8009B3632 /* BibleBeatMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BibleBeatMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		943EC0A81FFB11C8009B3632 /* BibleTryToBeatMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleTryToBeatMeUITests.swift; sourceTree = "<group>"; };
 		943EC0AA1FFB11C8009B3632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94D113D52059FF0B005E08A9 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		94D113D9205DB169005E08A9 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		E6CBD1387361208C4418D416 /* Pods-BibleBeatMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibleBeatMeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibleBeatMeTests/Pods-BibleBeatMeTests.release.xcconfig"; sourceTree = "<group>"; };
 		F02F29244F8FEF5AC94B54C2 /* Pods_BibleBeatMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BibleBeatMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -137,12 +145,14 @@
 		943EC0871FFB11C8009B3632 /* BibleBeatMe */ = {
 			isa = PBXGroup;
 			children = (
+				943EC0941FFB11C8009B3632 /* Info.plist */,
+				947A278D205DB740008D1EF9 /* Config */,
+				94D113DE205DB385005E08A9 /* Layouts */,
+				94D113DD205DB378005E08A9 /* Sources */,
+				94D113D9205DB169005E08A9 /* Config.swift */,
 				943EC0881FFB11C8009B3632 /* AppDelegate.swift */,
 				943EC08A1FFB11C8009B3632 /* ViewController.swift */,
-				943EC08C1FFB11C8009B3632 /* Main.storyboard */,
-				943EC08F1FFB11C8009B3632 /* Assets.xcassets */,
-				943EC0911FFB11C8009B3632 /* LaunchScreen.storyboard */,
-				943EC0941FFB11C8009B3632 /* Info.plist */,
+				94D113D52059FF0B005E08A9 /* QuestionsViewController.swift */,
 			);
 			path = BibleBeatMe;
 			sourceTree = "<group>";
@@ -163,6 +173,30 @@
 				943EC0AA1FFB11C8009B3632 /* Info.plist */,
 			);
 			path = BibleBeatMeUITests;
+			sourceTree = "<group>";
+		};
+		947A278D205DB740008D1EF9 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		94D113DD205DB378005E08A9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		94D113DE205DB385005E08A9 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				943EC0911FFB11C8009B3632 /* LaunchScreen.storyboard */,
+				943EC08C1FFB11C8009B3632 /* Main.storyboard */,
+				943EC08F1FFB11C8009B3632 /* Assets.xcassets */,
+			);
+			path = Layouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,6 +493,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				943EC08B1FFB11C8009B3632 /* ViewController.swift in Sources */,
+				94D113DA205DB169005E08A9 /* Config.swift in Sources */,
+				94D113D62059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
 				943EC0891FFB11C8009B3632 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +504,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				943EC09E1FFB11C8009B3632 /* BibleTryToBeatMeTests.swift in Sources */,
+				94D113D72059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
+				94D113DB205DB169005E08A9 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +514,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				943EC0A91FFB11C8009B3632 /* BibleTryToBeatMeUITests.swift in Sources */,
+				94D113D82059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
+				94D113DC205DB16A005E08A9 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
