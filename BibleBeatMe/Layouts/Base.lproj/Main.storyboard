@@ -48,9 +48,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kdW-cO-csH">
-                                <rect key="frame" x="16" y="554" width="343" height="49"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7o-un-21D">
                                 <rect key="frame" x="74.5" y="109" width="226" height="57"/>
                                 <constraints>
@@ -107,20 +104,23 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kdW-cO-csH">
+                                <rect key="frame" x="16" y="538" width="343" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="IXG-Dw-dEB"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FbB-ci-sIY" firstAttribute="top" secondItem="x7o-un-21D" secondAttribute="bottom" constant="50" id="0P1-D6-tbL"/>
-                            <constraint firstItem="D9h-tw-ume" firstAttribute="bottom" secondItem="kdW-cO-csH" secondAttribute="bottom" id="1sh-cJ-zxc"/>
-                            <constraint firstItem="kdW-cO-csH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5yB-ze-kPc"/>
+                            <constraint firstItem="kdW-cO-csH" firstAttribute="bottom" secondItem="D9h-tw-ume" secondAttribute="bottom" id="3hI-8V-3YB"/>
                             <constraint firstItem="FbB-ci-sIY" firstAttribute="centerX" secondItem="D9h-tw-ume" secondAttribute="centerX" id="6PI-gk-FNN"/>
                             <constraint firstItem="x7o-un-21D" firstAttribute="centerX" secondItem="D9h-tw-ume" secondAttribute="centerX" id="6VH-K7-4wS"/>
                             <constraint firstItem="x7o-un-21D" firstAttribute="top" secondItem="D9h-tw-ume" secondAttribute="top" constant="109" id="J1f-26-Upa"/>
                             <constraint firstItem="kzE-tw-X01" firstAttribute="centerX" secondItem="D9h-tw-ume" secondAttribute="centerX" id="U4e-mv-ORb"/>
                             <constraint firstItem="D9h-tw-ume" firstAttribute="trailing" secondItem="kdW-cO-csH" secondAttribute="trailing" constant="16" id="exu-PH-BZ5"/>
-                            <constraint firstItem="kdW-cO-csH" firstAttribute="top" secondItem="D9h-tw-ume" secondAttribute="top" constant="554" id="n7i-Gl-U1F"/>
                             <constraint firstItem="kzE-tw-X01" firstAttribute="top" secondItem="FbB-ci-sIY" secondAttribute="bottom" constant="48" id="tfE-aQ-tGe"/>
-                            <constraint firstItem="kdW-cO-csH" firstAttribute="leading" secondItem="D9h-tw-ume" secondAttribute="leading" constant="16" id="vfn-iZ-JHg"/>
                             <constraint firstItem="kdW-cO-csH" firstAttribute="centerX" secondItem="D9h-tw-ume" secondAttribute="centerX" id="wBZ-IG-YEd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D9h-tw-ume"/>
@@ -136,12 +136,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="111"/>
+            <point key="canvasLocation" x="113.04347826086958" y="110.86956521739131"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Practice Navigation-->
         <scene sceneID="VZC-3R-Gae">
             <objects>
-                <navigationController id="xBF-wU-VUo" sceneMemberID="viewController">
+                <navigationController title="Practice Navigation" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="xBF-wU-VUo" customClass="ModalNavigationController" customModule="BibleBeatMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="FKE-9G-Aqb">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -165,11 +167,12 @@
         <!--Practice-->
         <scene sceneID="RqV-uO-PfT">
             <objects>
-                <tableViewController id="pci-GO-xa7" customClass="QuestionsViewController" customModule="BibleBeatMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yMt-cm-mge">
+                <tableViewController title="Practice" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="pci-GO-xa7" customClass="QuestionsViewController" customModule="BibleBeatMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="yMt-cm-mge">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <edgeInsets key="layoutMargins" top="0.0" left="20" bottom="0.0" right="20"/>
                         <sections>
                             <tableViewSection id="9q3-Qr-0ns">
                                 <cells>
@@ -217,10 +220,6 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="cGs-TW-LgO">
-                                <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="awM-hV-GxE">
                                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -229,7 +228,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bible Beat Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1U4-qa-iTf">
-                                                    <rect key="frame" x="133.5" y="12.5" width="107.5" height="20"/>
+                                                    <rect key="frame" x="134" y="12.5" width="107" height="20"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -242,10 +241,6 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="pmK-Fu-IXL">
-                                <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="180" id="b3V-3G-Cad">
                                         <rect key="frame" x="0.0" y="88" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -264,10 +259,6 @@
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="nrB-Tn-U4C">
-                                <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="answersSection" rowHeight="255" id="61A-iq-gn6">
                                         <rect key="frame" x="0.0" y="268" width="375" height="255"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -277,10 +268,6 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="XXv-Si-6cs">
-                                <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="nhs-L1-vdX">
                                         <rect key="frame" x="0.0" y="523" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -289,28 +276,24 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:23 time elapsed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fL-BF-QFN">
-                                                    <rect key="frame" x="128" y="14" width="119.5" height="17.5"/>
+                                                    <rect key="frame" x="127.5" y="14" width="120" height="18"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="1fL-BF-QFN" firstAttribute="centerY" secondItem="SG4-0S-o3y" secondAttribute="centerY" id="Edv-xE-1cM"/>
+                                                <constraint firstItem="1fL-BF-QFN" firstAttribute="centerY" secondItem="SG4-0S-o3y" secondAttribute="centerY" constant="1" id="Edv-xE-1cM"/>
                                                 <constraint firstItem="1fL-BF-QFN" firstAttribute="centerX" secondItem="SG4-0S-o3y" secondAttribute="centerX" id="HKB-6j-zSn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="dTz-Mc-yec">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="167" id="EsR-97-tH6">
-                                        <rect key="frame" x="0.0" y="567" width="375" height="167"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="45" id="EsR-97-tH6">
+                                        <rect key="frame" x="0.0" y="567" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EsR-97-tH6" id="XgP-Pn-1a6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -323,15 +306,18 @@
                             <outlet property="delegate" destination="pci-GO-xa7" id="Cso-4Q-KOe"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Practice" id="BFi-4Q-qc0">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="wJi-Bb-Hxm"/>
                     </navigationItem>
+                    <value key="contentSizeForViewInPopover" type="size" width="375" height="603"/>
                     <connections>
                         <outlet property="answerSection" destination="61A-iq-gn6" id="2v4-D6-cls"/>
                         <outlet property="backButton" destination="wJi-Bb-Hxm" id="cVV-j2-QP9"/>
                         <outlet property="heart1" destination="EZi-AV-o0q" id="Ksa-u8-kXZ"/>
                         <outlet property="heart2" destination="fiG-R0-7F6" id="Z5k-gM-RRc"/>
                         <outlet property="heart3" destination="qsg-YQ-gvt" id="dpo-nN-WXw"/>
+                        <outlet property="tablaView" destination="yMt-cm-mge" id="HuJ-Im-5uh"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vh5-ir-zr7" userLabel="First Responder" sceneMemberID="firstResponder"/>

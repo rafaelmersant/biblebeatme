@@ -11,6 +11,8 @@ import UIKit
 class QuestionsViewController : UITableViewController {
 
    
+    @IBOutlet var tablaView: UITableView!
+    
     @IBOutlet weak var answerSection: UITableViewCell!
     @IBOutlet weak var backButton: UIBarButtonItem!
 
@@ -18,10 +20,13 @@ class QuestionsViewController : UITableViewController {
     @IBOutlet weak var heart1: UILabel!
     @IBOutlet weak var heart2: UILabel!
     @IBOutlet weak var heart3: UILabel!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
+       automaticallyAdjustsScrollViewInsets = false
+
 
         self.navigationController?.isNavigationBarHidden        = false
         self.navigationController?.navigationBar.barTintColor   = UIColor.black
