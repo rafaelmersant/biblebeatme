@@ -8,14 +8,11 @@
 
 import UIKit
 
-class QuestionsViewController : UITableViewController {
+class QuestionsViewController : UIViewController {
 
-   
-    @IBOutlet var tablaView: UITableView!
-    
-    @IBOutlet weak var answerSection: UITableViewCell!
     @IBOutlet weak var backButton: UIBarButtonItem!
-
+    @IBOutlet weak var answerSection: UIView!
+    
     //Hearts
     @IBOutlet weak var heart1: UILabel!
     @IBOutlet weak var heart2: UILabel!
@@ -24,15 +21,17 @@ class QuestionsViewController : UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
-       automaticallyAdjustsScrollViewInsets = false
-
-
         self.navigationController?.isNavigationBarHidden        = false
         self.navigationController?.navigationBar.barTintColor   = UIColor.black
         self.navigationController?.navigationBar.barStyle       = .black
 
-
+        heart1.setIcon(icon: .googleMaterialDesign(.favorite), iconSize: 30, color: UIColor.gray)
+        heart1.sizeToFit()
+        heart2.setIcon(icon: .googleMaterialDesign(.favorite), iconSize: 30, color: UIColor.red)
+        heart2.sizeToFit()
+        heart3.setIcon(icon: .googleMaterialDesign(.favorite), iconSize: 30, color: UIColor.red)
+        heart3.sizeToFit()
+        
         let option = UIButton(frame: CGRect(x: 10, y: 10, width: 226, height: 57))
         option.setTitle("Mateo 7:1", for: .normal)
         option.setTitleColor(mainColor, for: .normal)
@@ -88,15 +87,6 @@ class QuestionsViewController : UITableViewController {
         answerSection.addConstraint(widthConstraintOption)
 
 
-
-//        let option = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-//        option.titleLabel?.text = "Option 1"
-//
-//        let index = IndexPath(row: 0, section: 4)
-//        let cell = tableView.cellForRow(at: index)
-//        cell?.addSubview(option)
-
-
         // add right navigation bar button items.
         do {
 //            var barButtonItems = [UIBarButtonItem]()
@@ -120,15 +110,6 @@ class QuestionsViewController : UITableViewController {
             //self.navigationItem.rightBarButtonItems = barButtonItems
        // }
 
-
-        heart1.setIcon(icon: .googleMaterialDesign(.favorite), iconSize: 30, color: UIColor.red)
-        heart1.sizeToFit()
-        heart2.setIcon(icon: .googleMaterialDesign(.favorite), iconSize: 30, color: UIColor.red)
-        heart2.sizeToFit()
-        heart3.setIcon(icon: .googleMaterialDesign(.favorite), iconSize: 30, color: UIColor.red)
-        heart3.sizeToFit()
-
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -140,36 +121,4 @@ class QuestionsViewController : UITableViewController {
         super.viewWillAppear(animated)
 
     }
-    
 }
-//
-//extension QuestionsViewController {
-//
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//        var cell: UITableViewCell! = UITableViewCell()
-//
-//        print("INDEX: \(indexPath.row) SECTION: \(indexPath.section)")
-//
-//        if indexPath.section == 0 {
-//            if indexPath.row == 0 {
-//
-//                heart1.setIcon(icon: .googleMaterialDesign(.star), iconSize: 30, color: UIColor.red)
-//
-//                cell = tableView.cellForRow(at: indexPath)//tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
-////
-////                let option = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-////                option.titleLabel?.text = "Option 1"
-////
-////                cell?.addSubview(option)
-//
-//            }
-//        } else {
-//            cell = tableView.cellForRow(at: indexPath)
-//        }
-//
-//        return cell
-//    }
-//}
-//
-//
