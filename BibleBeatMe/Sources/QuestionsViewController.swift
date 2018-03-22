@@ -12,6 +12,7 @@ class QuestionsViewController : UIViewController {
 
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var answerSection: UIView!
+    @IBOutlet weak var questionSection: UIView!
     
     //Hearts
     @IBOutlet weak var heart1: UILabel!
@@ -42,7 +43,7 @@ class QuestionsViewController : UIViewController {
 
         answerSection.addSubview(option)
 
-        answerSection.backgroundColor = UIColor.gray
+//        answerSection.backgroundColor = UIColor.gray
 
         //NSLayoutConstraints
         let horizontalConstraintOption =
