@@ -259,7 +259,7 @@
                                         <rect key="frame" x="0.0" y="75" width="414" height="185"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="55q-rT-SW6">
-                                                <rect key="frame" x="8" y="0.0" width="398" height="185"/>
+                                                <rect key="frame" x="18" y="0.0" width="378" height="185"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <string key="text">Porque no tenemos lucha contra sangre y carne, sino contra principados, contra potestades, contra los gobernadores de las tinieblas de este siglo, contra huestes espirituales de maldad en las regiones celestes.</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -269,7 +269,7 @@
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <constraints>
-                                            <constraint firstItem="55q-rT-SW6" firstAttribute="leading" secondItem="WUw-VS-ae4" secondAttribute="leadingMargin" id="1wo-pd-kyr"/>
+                                            <constraint firstItem="55q-rT-SW6" firstAttribute="leading" secondItem="WUw-VS-ae4" secondAttribute="leadingMargin" constant="10" id="1wo-pd-kyr"/>
                                             <constraint firstItem="55q-rT-SW6" firstAttribute="centerX" secondItem="WUw-VS-ae4" secondAttribute="centerX" id="Fpm-0B-xBT"/>
                                             <constraint firstItem="55q-rT-SW6" firstAttribute="height" secondItem="WUw-VS-ae4" secondAttribute="height" id="Ndd-eR-wbc"/>
                                             <constraint firstItem="55q-rT-SW6" firstAttribute="centerY" secondItem="WUw-VS-ae4" secondAttribute="centerY" id="OQ3-i7-KXs"/>
@@ -283,7 +283,7 @@
                                                 <subviews>
                                                     <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zww-v7-tbN">
                                                         <rect key="frame" x="0.0" y="0.0" width="248.66666666666666" height="53.333333333333336"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <state key="normal" title="Lucas">
                                                             <color key="titleColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -299,7 +299,7 @@
                                                     </button>
                                                     <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16O-ee-Et2">
                                                         <rect key="frame" x="0.0" y="68.333333333333371" width="248.66666666666666" height="53.333333333333343"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <state key="normal" title="Juan">
                                                             <color key="titleColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -315,7 +315,7 @@
                                                     </button>
                                                     <button opaque="NO" tag="300" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z87-Bp-gu3">
                                                         <rect key="frame" x="0.0" y="136.66666666666669" width="248.66666666666666" height="53.333333333333343"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <state key="normal" title="Mateo">
                                                             <color key="titleColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -331,7 +331,7 @@
                                                     </button>
                                                     <button opaque="NO" tag="400" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSH-4B-gHk">
                                                         <rect key="frame" x="0.0" y="205.00000000000006" width="248.66666666666666" height="53.333333333333314"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <state key="normal" title="Hechos">
                                                             <color key="titleColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -408,6 +408,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="answerButtonsStackView" destination="Ixw-fD-e8X" id="Udr-uh-3Gl"/>
+                        <outlet property="answerButtonsStackViewHeight" destination="0Xk-Q6-s9v" id="95P-Y9-mLk"/>
                         <outlet property="answerSection" destination="0ql-RM-wlO" id="NP0-Xa-45Q"/>
                         <outlet property="backButton" destination="22F-KS-cYg" id="hAc-lN-UdM"/>
                         <outlet property="heart1" destination="c85-92-HGf" id="n06-iE-7wO"/>

@@ -17,6 +17,8 @@ class QuestionsViewController : UIViewController {
     @IBOutlet var answerButtons: [UIButton]!
 
     @IBOutlet weak var answerButtonsStackView: UIStackView!
+    @IBOutlet weak var answerButtonsStackViewHeight: NSLayoutConstraint!
+    
     //Hearts
     @IBOutlet weak var heart1: UILabel!
     @IBOutlet weak var heart2: UILabel!
@@ -41,9 +43,12 @@ class QuestionsViewController : UIViewController {
         answerButtons.forEach { (button) in
             button.layer.borderColor = UIColor.gray.cgColor
 
-//            if button.tag == 200  {
-//                button.isHidden = true
-//            }
+            if button.tag == 800 || button.tag == 700 {
+                button.isHidden = true
+
+                let multiplier = (answerButtonsStackViewHeight.multiplier - 0.24)
+                answerButtonsStackViewHeight = answerButtonsStackViewHeight.setMultiplier(multiplier: multiplier)
+            }
         }
         
 //        let option = UIButton(frame: CGRect(x: 10, y: 10, width: 226, height: 57))
