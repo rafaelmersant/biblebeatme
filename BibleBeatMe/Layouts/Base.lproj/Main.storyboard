@@ -89,7 +89,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7o-un-21D">
-                                                <rect key="frame" x="56.5" y="107" width="261" height="57"/>
+                                                <rect key="frame" x="74" y="107" width="226" height="57"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="226" id="VFi-oE-KF3"/>
                                                     <constraint firstAttribute="height" constant="57" id="ieb-sE-Z02"/>
@@ -115,7 +115,7 @@
                                             <constraint firstItem="FbB-ci-sIY" firstAttribute="top" secondItem="x7o-un-21D" secondAttribute="bottom" constant="69" id="FgE-hc-Uox"/>
                                             <constraint firstItem="kzE-tw-X01" firstAttribute="centerX" secondItem="6Jy-lY-7cU" secondAttribute="centerX" id="Hdb-Xc-XIL"/>
                                             <constraint firstItem="FbB-ci-sIY" firstAttribute="centerY" secondItem="6Jy-lY-7cU" secondAttribute="centerY" id="Kn3-dJ-Kb8"/>
-                                            <constraint firstItem="x7o-un-21D" firstAttribute="width" secondItem="6Jy-lY-7cU" secondAttribute="height" multiplier="0.5" id="NAu-UK-d44"/>
+                                            <constraint firstItem="x7o-un-21D" firstAttribute="width" secondItem="6Jy-lY-7cU" secondAttribute="height" multiplier="0.5" constant="-35" id="NAu-UK-d44"/>
                                             <constraint firstItem="FbB-ci-sIY" firstAttribute="centerX" secondItem="6Jy-lY-7cU" secondAttribute="centerX" id="XWR-Ze-mBT"/>
                                             <constraint firstItem="kzE-tw-X01" firstAttribute="top" secondItem="FbB-ci-sIY" secondAttribute="bottom" constant="69" id="bIT-am-qM9"/>
                                             <constraint firstItem="x7o-un-21D" firstAttribute="centerX" secondItem="6Jy-lY-7cU" secondAttribute="centerX" constant="-0.5" id="iOJ-7h-KEh"/>

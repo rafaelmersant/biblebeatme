@@ -33,59 +33,59 @@ class QuestionsViewController : UIViewController {
         heart3.setIcon(icon: .googleMaterialDesign(.favorite), iconSize: 30, color: UIColor.red)
         heart3.sizeToFit()
         
-        let option = UIButton(frame: CGRect(x: 10, y: 10, width: 226, height: 57))
-        option.setTitle("Mateo 7:1", for: .normal)
-        option.setTitleColor(mainColor, for: .normal)
-        option.backgroundColor = UIColor.black
-        option.layer.borderWidth = 1
-        option.layer.borderColor = UIColor.gray.cgColor
-        option.translatesAutoresizingMaskIntoConstraints = false
-
-        answerSection.addSubview(option)
+//        let option = UIButton(frame: CGRect(x: 10, y: 10, width: 226, height: 57))
+//        option.setTitle("Mateo 7:1", for: .normal)
+//        option.setTitleColor(mainColor, for: .normal)
+//        option.backgroundColor = UIColor.black
+//        option.layer.borderWidth = 1
+//        option.layer.borderColor = UIColor.gray.cgColor
+//        option.translatesAutoresizingMaskIntoConstraints = false
+//
+//        answerSection.addSubview(option)
 
 //        answerSection.backgroundColor = UIColor.gray
 
         //NSLayoutConstraints
-        let horizontalConstraintOption =
-            NSLayoutConstraint(item: option,
-                               attribute: .centerX,
-                               relatedBy: .equal,
-                               toItem: answerSection,
-                               attribute: .centerX,
-                               multiplier: 1,
-                               constant: 0)
-
-        let verticalConstraintOption =
-            NSLayoutConstraint(item: option,
-                               attribute: .top,
-                               relatedBy: .equal,
-                               toItem: answerSection,
-                               attribute: .top,
-                               multiplier: 1,
-                               constant: 0)
-
-        let heightConstraintOption =
-            NSLayoutConstraint(item: option,
-                               attribute: .height,
-                               relatedBy: .equal,
-                               toItem: nil,
-                               attribute: .height,
-                               multiplier: 1,
-                               constant: 40)
-
-        let widthConstraintOption =
-            NSLayoutConstraint(item: option,
-                               attribute: .width,
-                               relatedBy: .equal,
-                               toItem: nil,
-                               attribute: .width,
-                               multiplier: 1,
-                               constant: 150)
-
-        answerSection.addConstraint(horizontalConstraintOption)
-        answerSection.addConstraint(verticalConstraintOption)
-        answerSection.addConstraint(heightConstraintOption)
-        answerSection.addConstraint(widthConstraintOption)
+//        let horizontalConstraintOption =
+//            NSLayoutConstraint(item: option,
+//                               attribute: .centerX,
+//                               relatedBy: .equal,
+//                               toItem: answerSection,
+//                               attribute: .centerX,
+//                               multiplier: 1,
+//                               constant: 0)
+//
+//        let verticalConstraintOption =
+//            NSLayoutConstraint(item: option,
+//                               attribute: .top,
+//                               relatedBy: .equal,
+//                               toItem: answerSection,
+//                               attribute: .top,
+//                               multiplier: 1,
+//                               constant: 0)
+//
+//        let heightConstraintOption =
+//            NSLayoutConstraint(item: option,
+//                               attribute: .height,
+//                               relatedBy: .equal,
+//                               toItem: nil,
+//                               attribute: .height,
+//                               multiplier: 1,
+//                               constant: 40)
+//
+//        let widthConstraintOption =
+//            NSLayoutConstraint(item: option,
+//                               attribute: .width,
+//                               relatedBy: .equal,
+//                               toItem: nil,
+//                               attribute: .width,
+//                               multiplier: 1,
+//                               constant: 150)
+//
+//        answerSection.addConstraint(horizontalConstraintOption)
+//        answerSection.addConstraint(verticalConstraintOption)
+//        answerSection.addConstraint(heightConstraintOption)
+//        answerSection.addConstraint(widthConstraintOption)
 
 
         // add right navigation bar button items.
