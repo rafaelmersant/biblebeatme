@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -236,7 +237,7 @@
                                         <rect key="frame" x="0.0" y="35" width="414" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bible Beat Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8at-vw-I7G">
-                                                <rect key="frame" x="146.66666666666666" y="9.6666666666666696" width="119.66666666666666" height="22.333333333333329"/>
+                                                <rect key="frame" x="147.33333333333334" y="8.9999999999999982" width="119.66666666666666" height="22.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                                 <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -269,13 +270,85 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ql-RM-wlO">
                                         <rect key="frame" x="0.0" y="260" width="414" height="287"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zww-v7-tbN">
+                                                <rect key="frame" x="82.666666666666671" y="22.333333333333314" width="248.66666666666663" height="46"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                                <state key="normal" title="Lucas">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16O-ee-Et2">
+                                                <rect key="frame" x="82.666666666666671" y="102.66666666666669" width="248.66666666666663" height="46"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                                <state key="normal" title="Juan">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z87-Bp-gu3">
+                                                <rect key="frame" x="82.666666666666671" y="178.33333333333331" width="248.66666666666663" height="46"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                                <state key="normal" title="Mateo">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSH-4B-gHk">
+                                                <rect key="frame" x="82.666666666666671" y="230" width="248.66666666666663" height="46"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                                <state key="normal" title="Hechos">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="zww-v7-tbN" firstAttribute="width" secondItem="0ql-RM-wlO" secondAttribute="width" multiplier="0.6" id="38d-o4-IFY"/>
+                                            <constraint firstItem="zww-v7-tbN" firstAttribute="centerX" secondItem="0ql-RM-wlO" secondAttribute="centerX" id="3If-iV-P3e"/>
+                                            <constraint firstItem="KSH-4B-gHk" firstAttribute="centerX" secondItem="0ql-RM-wlO" secondAttribute="centerX" id="9KG-AI-4RV"/>
+                                            <constraint firstItem="Z87-Bp-gu3" firstAttribute="centerX" secondItem="0ql-RM-wlO" secondAttribute="centerX" id="ALQ-oM-csJ"/>
+                                            <constraint firstItem="Z87-Bp-gu3" firstAttribute="height" secondItem="0ql-RM-wlO" secondAttribute="height" multiplier="0.16" id="Elc-83-hDB"/>
+                                            <constraint firstItem="KSH-4B-gHk" firstAttribute="width" secondItem="0ql-RM-wlO" secondAttribute="width" multiplier="0.6" id="IWS-Yv-fWe"/>
+                                            <constraint firstItem="zww-v7-tbN" firstAttribute="top" secondItem="0ql-RM-wlO" secondAttribute="topMargin" multiplier="2.8" id="MH0-Qm-yCJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="KSH-4B-gHk" secondAttribute="bottom" multiplier="1.04" id="Nm9-nX-8xL"/>
+                                            <constraint firstItem="KSH-4B-gHk" firstAttribute="height" secondItem="0ql-RM-wlO" secondAttribute="height" multiplier="0.16" id="RSk-6n-K9z"/>
+                                            <constraint firstItem="Z87-Bp-gu3" firstAttribute="top" secondItem="16O-ee-Et2" secondAttribute="bottom" multiplier="1.2" id="fHe-0r-GmX"/>
+                                            <constraint firstItem="Z87-Bp-gu3" firstAttribute="width" secondItem="0ql-RM-wlO" secondAttribute="width" multiplier="0.6" id="mLa-J3-PRk"/>
+                                            <constraint firstItem="16O-ee-Et2" firstAttribute="height" secondItem="0ql-RM-wlO" secondAttribute="height" multiplier="0.16" id="nvJ-h5-RAl"/>
+                                            <constraint firstItem="zww-v7-tbN" firstAttribute="height" secondItem="0ql-RM-wlO" secondAttribute="height" multiplier="0.16" id="qCZ-Qe-zb4"/>
+                                            <constraint firstItem="16O-ee-Et2" firstAttribute="centerX" secondItem="0ql-RM-wlO" secondAttribute="centerX" id="ruo-Ia-hM4"/>
+                                            <constraint firstItem="16O-ee-Et2" firstAttribute="top" secondItem="zww-v7-tbN" secondAttribute="bottom" multiplier="1.5" id="vH2-nB-tZ2"/>
+                                            <constraint firstItem="16O-ee-Et2" firstAttribute="width" secondItem="0ql-RM-wlO" secondAttribute="width" multiplier="0.6" id="vOX-kj-Yrq"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWF-s8-nrV">
                                         <rect key="frame" x="0.0" y="547" width="414" height="55"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:23 time elapsed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88L-qC-fCq">
-                                                <rect key="frame" x="143.66666666666666" y="19" width="127.33333333333334" height="18"/>
+                                                <rect key="frame" x="144" y="19" width="127.33333333333331" height="18"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -328,11 +401,15 @@
                         <outlet property="heart2" destination="16d-P8-LaD" id="Xv5-Qm-BvC"/>
                         <outlet property="heart3" destination="dBJ-JM-jwl" id="cXa-Ou-Jkl"/>
                         <outlet property="questionSection" destination="WUw-VS-ae4" id="X75-Eg-TnS"/>
+                        <outletCollection property="answerButtons" destination="zww-v7-tbN" collectionClass="NSMutableArray" id="FEw-zh-ea4"/>
+                        <outletCollection property="answerButtons" destination="16O-ee-Et2" collectionClass="NSMutableArray" id="EWf-3o-hGv"/>
+                        <outletCollection property="answerButtons" destination="Z87-Bp-gu3" collectionClass="NSMutableArray" id="uJI-uc-9W4"/>
+                        <outletCollection property="answerButtons" destination="KSH-4B-gHk" collectionClass="NSMutableArray" id="ZsM-bh-3QD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bT5-JJ-rFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1992.8" y="-316.19190404797604"/>
+            <point key="canvasLocation" x="1992.753623188406" y="-316.304347826087"/>
         </scene>
     </scenes>
 </document>

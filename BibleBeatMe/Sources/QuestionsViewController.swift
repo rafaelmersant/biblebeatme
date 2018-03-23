@@ -13,7 +13,10 @@ class QuestionsViewController : UIViewController {
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var answerSection: UIView!
     @IBOutlet weak var questionSection: UIView!
-    
+
+    @IBOutlet var answerButtons: [UIButton]!
+
+
     //Hearts
     @IBOutlet weak var heart1: UILabel!
     @IBOutlet weak var heart2: UILabel!
