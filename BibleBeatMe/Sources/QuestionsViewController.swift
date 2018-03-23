@@ -16,7 +16,7 @@ class QuestionsViewController : UIViewController {
 
     @IBOutlet var answerButtons: [UIButton]!
 
-
+    @IBOutlet weak var answerButtonsStackView: UIStackView!
     //Hearts
     @IBOutlet weak var heart1: UILabel!
     @IBOutlet weak var heart2: UILabel!
@@ -29,12 +29,22 @@ class QuestionsViewController : UIViewController {
         self.navigationController?.navigationBar.barTintColor   = UIColor.black
         self.navigationController?.navigationBar.barStyle       = .black
 
+        //Hearts sets
         heart1.setIcon(icon: .googleMaterialDesign(.favorite), iconSize: 30, color: UIColor.gray)
         heart1.sizeToFit()
         heart2.setIcon(icon: .googleMaterialDesign(.favorite), iconSize: 30, color: UIColor.red)
         heart2.sizeToFit()
         heart3.setIcon(icon: .googleMaterialDesign(.favorite), iconSize: 30, color: UIColor.red)
         heart3.sizeToFit()
+
+        //Set border to buttons
+        answerButtons.forEach { (button) in
+            button.layer.borderColor = UIColor.gray.cgColor
+
+//            if button.tag == 200  {
+//                button.isHidden = true
+//            }
+        }
         
 //        let option = UIButton(frame: CGRect(x: 10, y: 10, width: 226, height: 57))
 //        option.setTitle("Mateo 7:1", for: .normal)
