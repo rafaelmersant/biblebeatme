@@ -10,10 +10,15 @@ import UIKit
 
 class ResultsViewController: UIViewController {
 
+    @IBOutlet var resultsButtons: [UIButton]!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //Set border to buttons
+        resultsButtons.forEach { (button) in
+            button.layer.borderColor = UIColor.gray.cgColor
+        }
     }
 
     override func didReceiveMemoryWarning() {

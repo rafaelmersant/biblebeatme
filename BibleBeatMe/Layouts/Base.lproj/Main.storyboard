@@ -477,9 +477,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4bG-kE-YIq">
                                 <rect key="frame" x="0.0" y="109" width="414" height="672"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aot-nG-ROs">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aot-nG-ROs">
                                         <rect key="frame" x="94" y="73" width="226" height="57"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="226" id="YbI-9M-bga"/>
                                             <constraint firstAttribute="height" constant="57" id="t5e-nl-yDA"/>
@@ -497,9 +497,9 @@
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
                                         </variation>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WK-Z6-b5d">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WK-Z6-b5d">
                                         <rect key="frame" x="94" y="195" width="226" height="57"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="1OM-N2-lNo"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="226" id="PfB-wb-Pdc"/>
@@ -517,15 +517,21 @@
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
                                         </variation>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congrats! You can do it, go for more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpz-4Y-5Gm">
-                                        <rect key="frame" x="61" y="338" width="293" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congrats! You can do it, go for more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpz-4Y-5Gm">
+                                        <rect key="frame" x="61" y="352.66666666666663" width="293" height="21"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="lpz-4Y-5Gm" firstAttribute="top" secondItem="9WK-Z6-b5d" secondAttribute="bottom" multiplier="1.4" id="8WE-iD-LgS"/>
+                                    <constraint firstItem="lpz-4Y-5Gm" firstAttribute="centerX" secondItem="4bG-kE-YIq" secondAttribute="centerX" id="Vqd-hC-Rhv"/>
+                                    <constraint firstItem="aot-nG-ROs" firstAttribute="centerX" secondItem="4bG-kE-YIq" secondAttribute="centerX" id="huy-m2-rcO"/>
+                                    <constraint firstItem="9WK-Z6-b5d" firstAttribute="centerX" secondItem="4bG-kE-YIq" secondAttribute="centerX" id="oOk-1P-QpX"/>
+                                    <constraint firstItem="9WK-Z6-b5d" firstAttribute="top" secondItem="aot-nG-ROs" secondAttribute="bottom" constant="65" id="weg-fR-c1e"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U1Z-kH-OYY">
                                 <rect key="frame" x="0.0" y="603" width="414" height="70"/>
@@ -548,6 +554,7 @@
                             <constraint firstItem="XG3-cY-XSq" firstAttribute="top" secondItem="o65-YU-LHQ" secondAttribute="bottom" id="iZ5-05-pgP"/>
                             <constraint firstItem="4bG-kE-YIq" firstAttribute="top" secondItem="o65-YU-LHQ" secondAttribute="bottom" constant="65" id="kdc-9O-UXM"/>
                             <constraint firstItem="4bG-kE-YIq" firstAttribute="width" secondItem="Wlb-Uo-RfQ" secondAttribute="width" id="lRB-B6-1Kb"/>
+                            <constraint firstItem="aot-nG-ROs" firstAttribute="top" secondItem="XG3-cY-XSq" secondAttribute="bottom" constant="71" id="mtA-Ok-6TZ"/>
                             <constraint firstItem="XG3-cY-XSq" firstAttribute="width" secondItem="Wlb-Uo-RfQ" secondAttribute="width" id="oEI-cx-cFk"/>
                             <constraint firstItem="o65-YU-LHQ" firstAttribute="centerX" secondItem="dAg-DV-8Hx" secondAttribute="centerX" id="sMx-1N-62c"/>
                             <constraint firstItem="U1Z-kH-OYY" firstAttribute="bottom" secondItem="Wlb-Uo-RfQ" secondAttribute="bottom" constant="1" id="zY4-4p-Z5s"/>
@@ -559,6 +566,10 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="T7s-gI-Czb"/>
                         <barButtonItem key="leftBarButtonItem" title="Home" id="Ipk-aS-DJB"/>
                     </navigationItem>
+                    <connections>
+                        <outletCollection property="resultsButtons" destination="aot-nG-ROs" collectionClass="NSMutableArray" id="qPc-Wu-gss"/>
+                        <outletCollection property="resultsButtons" destination="9WK-Z6-b5d" collectionClass="NSMutableArray" id="cRK-0T-fdO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fXs-NP-EXm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
