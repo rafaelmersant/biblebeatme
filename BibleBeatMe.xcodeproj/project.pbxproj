@@ -10,7 +10,7 @@
 		497218D1323AF30A174F3500 /* Pods_BibleBeatMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A9932CA9137E79FC33C869 /* Pods_BibleBeatMeTests.framework */; };
 		75A54C924A6197F0440B60CD /* Pods_BibleBeatMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F02F29244F8FEF5AC94B54C2 /* Pods_BibleBeatMe.framework */; };
 		943EC0891FFB11C8009B3632 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC0881FFB11C8009B3632 /* AppDelegate.swift */; };
-		943EC08B1FFB11C8009B3632 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC08A1FFB11C8009B3632 /* ViewController.swift */; };
+		943EC08B1FFB11C8009B3632 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC08A1FFB11C8009B3632 /* MainViewController.swift */; };
 		943EC08E1FFB11C8009B3632 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943EC08C1FFB11C8009B3632 /* Main.storyboard */; };
 		943EC0901FFB11C8009B3632 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 943EC08F1FFB11C8009B3632 /* Assets.xcassets */; };
 		943EC0931FFB11C8009B3632 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943EC0911FFB11C8009B3632 /* LaunchScreen.storyboard */; };
@@ -21,8 +21,8 @@
 		947A2791205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A278E205F5B23008D1EF9 /* ModalNavigationController.swift */; };
 		947A2792205F5BDF008D1EF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC0881FFB11C8009B3632 /* AppDelegate.swift */; };
 		947A2793205F5BDF008D1EF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC0881FFB11C8009B3632 /* AppDelegate.swift */; };
-		947A2794205F5BE2008D1EF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC08A1FFB11C8009B3632 /* ViewController.swift */; };
-		947A2795205F5BE2008D1EF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC08A1FFB11C8009B3632 /* ViewController.swift */; };
+		947A2794205F5BE2008D1EF9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC08A1FFB11C8009B3632 /* MainViewController.swift */; };
+		947A2795205F5BE2008D1EF9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC08A1FFB11C8009B3632 /* MainViewController.swift */; };
 		947A27972065EB66008D1EF9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A27962065EB66008D1EF9 /* ResultsViewController.swift */; };
 		947A27982065EB66008D1EF9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A27962065EB66008D1EF9 /* ResultsViewController.swift */; };
 		947A27992065EB66008D1EF9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A27962065EB66008D1EF9 /* ResultsViewController.swift */; };
@@ -62,7 +62,7 @@
 		8D28466271C7D6F31CD884D2 /* Pods-BibleBeatMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibleBeatMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibleBeatMe/Pods-BibleBeatMe.debug.xcconfig"; sourceTree = "<group>"; };
 		943EC0851FFB11C8009B3632 /* BibleBeatMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BibleBeatMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		943EC0881FFB11C8009B3632 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		943EC08A1FFB11C8009B3632 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		943EC08A1FFB11C8009B3632 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		943EC08D1FFB11C8009B3632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		943EC08F1FFB11C8009B3632 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		943EC0921FFB11C8009B3632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -196,7 +196,7 @@
 				947A278E205F5B23008D1EF9 /* ModalNavigationController.swift */,
 				94D113D9205DB169005E08A9 /* Config.swift */,
 				943EC0881FFB11C8009B3632 /* AppDelegate.swift */,
-				943EC08A1FFB11C8009B3632 /* ViewController.swift */,
+				943EC08A1FFB11C8009B3632 /* MainViewController.swift */,
 				94D113D52059FF0B005E08A9 /* QuestionsViewController.swift */,
 				947A27962065EB66008D1EF9 /* ResultsViewController.swift */,
 			);
@@ -506,7 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				943EC08B1FFB11C8009B3632 /* ViewController.swift in Sources */,
+				943EC08B1FFB11C8009B3632 /* MainViewController.swift in Sources */,
 				947A278F205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */,
 				94D113DA205DB169005E08A9 /* Config.swift in Sources */,
 				94D113D62059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
@@ -519,7 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				947A2795205F5BE2008D1EF9 /* ViewController.swift in Sources */,
+				947A2795205F5BE2008D1EF9 /* MainViewController.swift in Sources */,
 				943EC09E1FFB11C8009B3632 /* BibleTryToBeatMeTests.swift in Sources */,
 				94D113D72059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
 				947A27982065EB66008D1EF9 /* ResultsViewController.swift in Sources */,
@@ -533,7 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				947A2794205F5BE2008D1EF9 /* ViewController.swift in Sources */,
+				947A2794205F5BE2008D1EF9 /* MainViewController.swift in Sources */,
 				943EC0A91FFB11C8009B3632 /* BibleTryToBeatMeUITests.swift in Sources */,
 				94D113D82059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
 				947A27992065EB66008D1EF9 /* ResultsViewController.swift in Sources */,

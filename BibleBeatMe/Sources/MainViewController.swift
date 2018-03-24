@@ -9,7 +9,7 @@
 import UIKit
 import SwiftIcons
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     @IBOutlet var specialButtons: [UIButton]!
 
