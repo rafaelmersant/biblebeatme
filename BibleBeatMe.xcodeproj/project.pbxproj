@@ -23,6 +23,9 @@
 		947A2793205F5BDF008D1EF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC0881FFB11C8009B3632 /* AppDelegate.swift */; };
 		947A2794205F5BE2008D1EF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC08A1FFB11C8009B3632 /* ViewController.swift */; };
 		947A2795205F5BE2008D1EF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC08A1FFB11C8009B3632 /* ViewController.swift */; };
+		947A27972065EB66008D1EF9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A27962065EB66008D1EF9 /* ResultsViewController.swift */; };
+		947A27982065EB66008D1EF9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A27962065EB66008D1EF9 /* ResultsViewController.swift */; };
+		947A27992065EB66008D1EF9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A27962065EB66008D1EF9 /* ResultsViewController.swift */; };
 		94D113D62059FF0B005E08A9 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D113D52059FF0B005E08A9 /* QuestionsViewController.swift */; };
 		94D113D72059FF0B005E08A9 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D113D52059FF0B005E08A9 /* QuestionsViewController.swift */; };
 		94D113D82059FF0B005E08A9 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D113D52059FF0B005E08A9 /* QuestionsViewController.swift */; };
@@ -71,6 +74,7 @@
 		943EC0A81FFB11C8009B3632 /* BibleTryToBeatMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleTryToBeatMeUITests.swift; sourceTree = "<group>"; };
 		943EC0AA1FFB11C8009B3632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		947A278E205F5B23008D1EF9 /* ModalNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNavigationController.swift; sourceTree = "<group>"; };
+		947A27962065EB66008D1EF9 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		94D113D52059FF0B005E08A9 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		94D113D9205DB169005E08A9 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		E6CBD1387361208C4418D416 /* Pods-BibleBeatMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibleBeatMeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibleBeatMeTests/Pods-BibleBeatMeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 				943EC0881FFB11C8009B3632 /* AppDelegate.swift */,
 				943EC08A1FFB11C8009B3632 /* ViewController.swift */,
 				94D113D52059FF0B005E08A9 /* QuestionsViewController.swift */,
+				947A27962065EB66008D1EF9 /* ResultsViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -506,6 +511,7 @@
 				94D113DA205DB169005E08A9 /* Config.swift in Sources */,
 				94D113D62059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
 				943EC0891FFB11C8009B3632 /* AppDelegate.swift in Sources */,
+				947A27972065EB66008D1EF9 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +522,7 @@
 				947A2795205F5BE2008D1EF9 /* ViewController.swift in Sources */,
 				943EC09E1FFB11C8009B3632 /* BibleTryToBeatMeTests.swift in Sources */,
 				94D113D72059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
+				947A27982065EB66008D1EF9 /* ResultsViewController.swift in Sources */,
 				94D113DB205DB169005E08A9 /* Config.swift in Sources */,
 				947A2793205F5BDF008D1EF9 /* AppDelegate.swift in Sources */,
 				947A2790205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */,
@@ -529,6 +536,7 @@
 				947A2794205F5BE2008D1EF9 /* ViewController.swift in Sources */,
 				943EC0A91FFB11C8009B3632 /* BibleTryToBeatMeUITests.swift in Sources */,
 				94D113D82059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
+				947A27992065EB66008D1EF9 /* ResultsViewController.swift in Sources */,
 				94D113DC205DB16A005E08A9 /* Config.swift in Sources */,
 				947A2792205F5BDF008D1EF9 /* AppDelegate.swift in Sources */,
 				947A2791205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */,

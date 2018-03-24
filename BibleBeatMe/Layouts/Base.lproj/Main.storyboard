@@ -114,7 +114,7 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
                                                 </variation>
                                                 <connections>
-                                                    <segue destination="xBF-wU-VUo" kind="presentation" id="h9Y-sb-VG6"/>
+                                                    <segue destination="xBF-wU-VUo" kind="presentation" modalTransitionStyle="flipHorizontal" id="h9Y-sb-VG6"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -165,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112.8" y="110.19490254872565"/>
+            <point key="canvasLocation" x="29" y="124"/>
         </scene>
         <!--Practice Navigation-->
         <scene sceneID="VZC-3R-Gae">
@@ -191,7 +191,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycH-a9-gHz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1009" y="-316"/>
+            <point key="canvasLocation" x="780" y="-492"/>
         </scene>
         <!--Practice-->
         <scene sceneID="xg3-xr-j0O">
@@ -404,7 +404,16 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Practice" id="xr4-NY-MCb">
                         <barButtonItem key="backBarButtonItem" title="Back" id="ohp-16-fdx"/>
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="22F-KS-cYg"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="22F-KS-cYg">
+                            <connections>
+                                <action selector="backButton:" destination="16m-Ly-mPt" id="xiw-Ma-UnS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Test" id="E4v-sD-wdg">
+                            <connections>
+                                <segue destination="TkZ-IZ-R11" kind="presentation" id="Mkc-oK-aW3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="answerButtonsStackView" destination="Ixw-fD-e8X" id="Udr-uh-3Gl"/>
@@ -423,7 +432,165 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bT5-JJ-rFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1992.753623188406" y="-316.304347826087"/>
+            <point key="canvasLocation" x="1568" y="-492"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="e9p-Uk-dpS">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="qkM-Yd-9rc" customClass="ResultsViewController" customModule="BibleBeatMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wlb-Uo-RfQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o65-YU-LHQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bible Beat Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5em-nw-j9D">
+                                        <rect key="frame" x="147" y="11" width="120" height="22"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                        <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="5em-nw-j9D" firstAttribute="centerY" secondItem="o65-YU-LHQ" secondAttribute="centerYWithinMargins" multiplier="1.001" id="Wec-A9-VzB"/>
+                                    <constraint firstItem="5em-nw-j9D" firstAttribute="centerX" secondItem="o65-YU-LHQ" secondAttribute="centerX" id="q8y-9S-fPv"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XG3-cY-XSq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="67"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6o-Xi-1SI">
+                                        <rect key="frame" x="176" y="22" width="63" height="23"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="H6o-Xi-1SI" firstAttribute="centerY" secondItem="XG3-cY-XSq" secondAttribute="centerY" id="act-os-44N"/>
+                                    <constraint firstItem="H6o-Xi-1SI" firstAttribute="centerX" secondItem="XG3-cY-XSq" secondAttribute="centerX" id="ezG-bD-5NK"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4bG-kE-YIq">
+                                <rect key="frame" x="0.0" y="109" width="414" height="672"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aot-nG-ROs">
+                                        <rect key="frame" x="94" y="73" width="226" height="57"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="226" id="YbI-9M-bga"/>
+                                            <constraint firstAttribute="height" constant="57" id="t5e-nl-yDA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                        <state key="normal" title="Rights: 5">
+                                            <color key="titleColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WK-Z6-b5d">
+                                        <rect key="frame" x="94" y="195" width="226" height="57"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="57" id="1OM-N2-lNo"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="226" id="PfB-wb-Pdc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                        <state key="normal" title="Wrongs: 3">
+                                            <color key="titleColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                        </variation>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congrats! You can do it, go for more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpz-4Y-5Gm">
+                                        <rect key="frame" x="61" y="338" width="293" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U1Z-kH-OYY">
+                                <rect key="frame" x="0.0" y="603" width="414" height="70"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4bG-kE-YIq" firstAttribute="leading" secondItem="XG3-cY-XSq" secondAttribute="leading" id="1vs-yB-vCB"/>
+                            <constraint firstItem="U1Z-kH-OYY" firstAttribute="width" secondItem="Wlb-Uo-RfQ" secondAttribute="width" id="HoM-Io-PEe"/>
+                            <constraint firstItem="U1Z-kH-OYY" firstAttribute="centerX" secondItem="dAg-DV-8Hx" secondAttribute="centerX" id="Mpt-Dc-MoX"/>
+                            <constraint firstItem="XG3-cY-XSq" firstAttribute="centerX" secondItem="dAg-DV-8Hx" secondAttribute="centerX" id="O0Y-Zh-W3y"/>
+                            <constraint firstItem="o65-YU-LHQ" firstAttribute="top" secondItem="Wlb-Uo-RfQ" secondAttribute="top" id="RXH-Jp-CWl"/>
+                            <constraint firstItem="o65-YU-LHQ" firstAttribute="width" secondItem="Wlb-Uo-RfQ" secondAttribute="width" id="Rh8-NN-rJQ"/>
+                            <constraint firstItem="o65-YU-LHQ" firstAttribute="height" secondItem="Wlb-Uo-RfQ" secondAttribute="height" multiplier="0.065" id="WUK-CL-UFl"/>
+                            <constraint firstItem="4bG-kE-YIq" firstAttribute="height" secondItem="Wlb-Uo-RfQ" secondAttribute="height" id="bzd-rT-OaX"/>
+                            <constraint firstItem="U1Z-kH-OYY" firstAttribute="top" secondItem="Wlb-Uo-RfQ" secondAttribute="bottom" constant="-69" id="cxp-pL-Eyt"/>
+                            <constraint firstItem="XG3-cY-XSq" firstAttribute="height" secondItem="Wlb-Uo-RfQ" secondAttribute="height" multiplier="0.1" id="fGn-xy-ftr"/>
+                            <constraint firstItem="4bG-kE-YIq" firstAttribute="centerX" secondItem="dAg-DV-8Hx" secondAttribute="centerX" id="gfv-xd-tdy"/>
+                            <constraint firstItem="XG3-cY-XSq" firstAttribute="top" secondItem="o65-YU-LHQ" secondAttribute="bottom" id="iZ5-05-pgP"/>
+                            <constraint firstItem="4bG-kE-YIq" firstAttribute="top" secondItem="o65-YU-LHQ" secondAttribute="bottom" constant="65" id="kdc-9O-UXM"/>
+                            <constraint firstItem="4bG-kE-YIq" firstAttribute="width" secondItem="Wlb-Uo-RfQ" secondAttribute="width" id="lRB-B6-1Kb"/>
+                            <constraint firstItem="XG3-cY-XSq" firstAttribute="width" secondItem="Wlb-Uo-RfQ" secondAttribute="width" id="oEI-cx-cFk"/>
+                            <constraint firstItem="o65-YU-LHQ" firstAttribute="centerX" secondItem="dAg-DV-8Hx" secondAttribute="centerX" id="sMx-1N-62c"/>
+                            <constraint firstItem="U1Z-kH-OYY" firstAttribute="bottom" secondItem="Wlb-Uo-RfQ" secondAttribute="bottom" constant="1" id="zY4-4p-Z5s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dAg-DV-8Hx"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Results" id="2Mj-No-Q01">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="T7s-gI-Czb"/>
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="Ipk-aS-DJB"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fXs-NP-EXm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3000.0000000000005" y="-492.39130434782612"/>
+        </scene>
+        <!--Result Practice Navigation-->
+        <scene sceneID="RG4-PI-My9">
+            <objects>
+                <navigationController title="Result Practice Navigation" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="TkZ-IZ-R11" customClass="ModalNavigationController" customModule="BibleBeatMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Lxo-As-btp">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qkM-Yd-9rc" kind="relationship" relationship="rootViewController" id="mzs-52-Jcl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OUP-7A-lqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2294" y="-492"/>
         </scene>
     </scenes>
 </document>

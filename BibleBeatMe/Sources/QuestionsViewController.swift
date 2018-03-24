@@ -140,4 +140,10 @@ class QuestionsViewController : UIViewController {
         super.viewWillAppear(animated)
 
     }
+
+    //MARK: IBActions
+    @IBAction func backButton(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
 }
