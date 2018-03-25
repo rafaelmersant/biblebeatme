@@ -15,6 +15,7 @@
     <customFonts key="customFonts">
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Medium</string>
         </array>
     </customFonts>
     <scenes>
@@ -55,11 +56,27 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k60-Qh-jYA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="603"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hj1-YC-yLw">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="71.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bible Beat Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bP-1Y-fVh">
+                                                <rect key="frame" x="145.33333333333334" y="24.333333333333329" width="123.66666666666666" height="22.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
+                                                <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="2bP-1Y-fVh" firstAttribute="centerY" secondItem="Hj1-YC-yLw" secondAttribute="centerY" id="rIg-GQ-DkU"/>
+                                            <constraint firstItem="2bP-1Y-fVh" firstAttribute="centerX" secondItem="Hj1-YC-yLw" secondAttribute="centerX" id="we2-UB-9Yy"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Jy-lY-7cU">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="603"/>
+                                        <rect key="frame" x="0.0" y="81.333333333333314" width="414" height="521.66666666666674"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7o-un-21D">
-                                                <rect key="frame" x="67" y="115.66666666666666" width="281.33333333333331" height="57"/>
+                                                <rect key="frame" x="83" y="83" width="249" height="57"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="226" id="VFi-oE-KF3"/>
@@ -82,7 +99,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbB-ci-sIY">
-                                                <rect key="frame" x="66.333333333333343" y="212.66666666666669" width="281.33333333333326" height="57"/>
+                                                <rect key="frame" x="83" y="179.99999999999997" width="249" height="57"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="57" id="4di-t5-Sfq"/>
@@ -106,7 +123,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzE-tw-X01">
-                                                <rect key="frame" x="66.333333333333343" y="309.66666666666669" width="281.33333333333326" height="57"/>
+                                                <rect key="frame" x="83" y="277" width="249" height="57"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="226" id="ONJ-d6-Qin"/>
@@ -140,6 +157,12 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Hj1-YC-yLw" secondAttribute="trailing" id="2lR-n5-L1L"/>
+                                    <constraint firstItem="Hj1-YC-yLw" firstAttribute="top" secondItem="k60-Qh-jYA" secondAttribute="top" id="A3i-Kq-voA"/>
+                                    <constraint firstItem="Hj1-YC-yLw" firstAttribute="leading" secondItem="k60-Qh-jYA" secondAttribute="leading" id="BIU-RC-1gX"/>
+                                    <constraint firstItem="6Jy-lY-7cU" firstAttribute="top" secondItem="Hj1-YC-yLw" secondAttribute="bottom" constant="10" id="g8q-ww-qk0"/>
+                                </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGb-LJ-vTr">
                                 <rect key="frame" x="0.0" y="603" width="414" height="69"/>
@@ -173,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29" y="124"/>
+            <point key="canvasLocation" x="28.985507246376812" y="123.91304347826087"/>
         </scene>
         <!--Competition-->
         <scene sceneID="CeI-Ig-NVS">
@@ -272,7 +295,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="602"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cu1-9X-U4Q">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="34.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="34.333333333333336"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBJ-JM-jwl">
                                                 <rect key="frame" x="384" y="4" width="22" height="20"/>
@@ -307,11 +330,11 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCt-XD-Z4E">
-                                        <rect key="frame" x="0.0" y="34.666666666666671" width="414" height="40.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="34.333333333333329" width="414" height="40.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bible Beat Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8at-vw-I7G">
-                                                <rect key="frame" x="147.33333333333334" y="8.9999999999999982" width="119.66666666666666" height="22.333333333333329"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                                <rect key="frame" x="145.33333333333334" y="9.0000000000000018" width="123.66666666666666" height="22.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
                                                 <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -513,8 +536,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bible Beat Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5em-nw-j9D">
-                                        <rect key="frame" x="147" y="11" width="120" height="22"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                        <rect key="frame" x="145.33333333333334" y="11" width="123.66666666666666" height="22"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
                                         <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
