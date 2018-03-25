@@ -11,10 +11,18 @@ import UIKit
 class OpponentsViewController: UIViewController {
 
     @IBOutlet weak var backButton: UIBarButtonItem!
-    
+    @IBOutlet weak var searchOpponentTextField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        searchOpponentTextField.backgroundColor = UIColor.black
+        searchOpponentTextField.layer.cornerRadius = 8.0
+        searchOpponentTextField.layer.borderWidth = 1
+        searchOpponentTextField.layer.borderColor = UIColor.gray.cgColor
+
+        searchOpponentTextField.setLeftViewIcon(icon: .googleMaterialDesign(.search), leftViewMode: .always, textColor: .gray, backgroundColor: .black, size: CGSize(width: 30, height: 30) )
+        
         do {
             backButton.setIcon(icon: .ionicons(.iosArrowBack), iconSize: 30, color: mainColor)
         }
