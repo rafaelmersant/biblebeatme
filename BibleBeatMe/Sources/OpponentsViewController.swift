@@ -12,7 +12,8 @@ class OpponentsViewController: UIViewController {
 
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var searchOpponentTextField: UITextField!
-
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,5 +47,23 @@ class OpponentsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+}
+
+//MARK: Delegate and DataSource
+extension OpponentsViewController: UITableViewDelegate, UITableViewDataSource {
+
+    //DataSource
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "opponentCell", for: indexPath)
+
+        return cell
+        
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 15
+    }
 
 }
