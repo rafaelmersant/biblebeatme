@@ -13,10 +13,14 @@ class OpponentsViewController: UIViewController {
     let opponents = ["Pedro124", "Rafael443", "Jose884", "Rafaelmersant", "Juan654", "John233", "Guest432","Pedro124", "Rafael443", "Jose884", "Rafaelmersant", "Juan654", "John233", "Guest432"]
     let opponentsStatus = ["Active", "Inactive", "Active", "Active", "Active", "Active", "Inactive", "Active", "Inactive", "Active", "Active", "Active", "Active", "Inactive"]
 
+    public var opponentSelected: String?
+
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var searchOpponentTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
-    
+
+    fileprivate weak var controller: UIViewController?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,22 +45,33 @@ class OpponentsViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    //MARK: Override
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+
+        if segue.identifier == "showOpponent" {
+
+            if let navigationController = segue.destination as? UINavigationController {
+                self.controller = navigationController
+                if let destination = navigationController.viewControllers.first as? OpponentViewController {
+
+                    destination.opponent = self.opponentSelected!
+
+//                    destination.user                = self.user
+                }
+            }
+
+        }
     }
-    */
+
 
 }
 
 //MARK: Delegate and DataSource
 extension OpponentsViewController: UITableViewDelegate, UITableViewDataSource {
 
-    //DataSource
+    //MARK: DataSource Methods
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "opponentCell", for: indexPath) as? OpponentCell
@@ -67,15 +82,18 @@ extension OpponentsViewController: UITableViewDelegate, UITableViewDataSource {
         return cell!
     }
 
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return opponents.count
     }
 
-    //Delegate
+    //MARK: Delegate Methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected : \(indexPath.row)")
-    }
 
+        self.opponentSelected = opponents[indexPath.row]
+        self.performSegue(withIdentifier: "showOpponent", sender: self)
+
+    }
 }
 
 

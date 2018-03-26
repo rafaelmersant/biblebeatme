@@ -10,26 +10,34 @@ import UIKit
 
 class OpponentViewController: UIViewController {
 
+    var opponent: String?
+
+    //MARK: IBOutlets
+    @IBOutlet weak var opponentName: UILabel!
+    @IBOutlet weak var backButton: UIBarButtonItem!
+
+    //MARK: Overrides methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let opponent = opponent {
+            opponentName.text = opponent
+        }
+
+        do {
+            backButton.setIcon(icon: .ionicons(.iosArrowBack), iconSize: 30, color: mainColor)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK: IBActions methods
+    @IBAction func backToOpponents(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
     }
-    */
 
 }
