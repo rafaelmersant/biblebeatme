@@ -10,6 +10,9 @@ import UIKit
 
 class OpponentsViewController: UIViewController {
 
+    let opponents = ["Pedro124", "Rafael443", "Jose884", "Rafaelmersant", "Juan654", "John233", "Guest432","Pedro124", "Rafael443", "Jose884", "Rafaelmersant", "Juan654", "John233", "Guest432"]
+    let opponentsStatus = ["Active", "Inactive", "Active", "Active", "Active", "Active", "Inactive", "Active", "Inactive", "Active", "Active", "Active", "Active", "Inactive"]
+
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var searchOpponentTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
@@ -56,14 +59,44 @@ extension OpponentsViewController: UITableViewDelegate, UITableViewDataSource {
     //DataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "opponentCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "opponentCell", for: indexPath) as? OpponentCell
 
-        return cell
-        
+        cell?.opponentName.text = opponents[indexPath.row]
+        cell?.opponentStatus.text = opponentsStatus[indexPath.row]
+
+        return cell!
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return opponents.count
     }
 
+    //Delegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Selected : \(indexPath.row)")
+    }
+
+}
+
+
+//MARK: OpponentCell
+
+class OpponentCell: UITableViewCell {
+
+    @IBOutlet weak var opponentName: UILabel!
+    @IBOutlet weak var opponentStatus: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+    }
 }

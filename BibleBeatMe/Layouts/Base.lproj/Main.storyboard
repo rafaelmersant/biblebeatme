@@ -200,10 +200,10 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="123.91304347826087"/>
         </scene>
-        <!--Competition-->
+        <!--Opponents-->
         <scene sceneID="CeI-Ig-NVS">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="xoW-Rd-RY2" customClass="OpponentsViewController" customModule="BibleBeatMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Opponents" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="xoW-Rd-RY2" customClass="OpponentsViewController" customModule="BibleBeatMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TgS-wh-kid">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,7 +248,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="opponentCell" rowHeight="70" id="Bo9-Dv-cjr">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="opponentCell" rowHeight="70" id="Bo9-Dv-cjr" customClass="OpponentCell" customModule="BibleBeatMe" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bo9-Dv-cjr" id="nqM-kF-pcR">
@@ -283,6 +283,10 @@
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <connections>
+                                                    <outlet property="opponentName" destination="ZZD-PP-lg9" id="rgp-5L-faY"/>
+                                                    <outlet property="opponentStatus" destination="6fz-0n-8CT" id="mAX-sT-4Ec"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
@@ -332,6 +336,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6LW-xK-plT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1560.8" y="123.68815592203899"/>
+        </scene>
+        <!--Opponent-->
+        <scene sceneID="5pY-Ki-P0v">
+            <objects>
+                <viewController title="Opponent" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="j0p-aQ-kfc" customClass="OpponentViewController" customModule="BibleBeatMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wMv-I1-The">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eSK-dl-MP4"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Competition" id="hRO-On-41z">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="FN5-X6-mlN"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lX8-Bg-OsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3071" y="124"/>
         </scene>
         <!--Practice Navigation-->
         <scene sceneID="VZC-3R-Gae">
@@ -794,6 +817,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bIg-lM-1Os" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="787" y="124"/>
+        </scene>
+        <!--Modal Navigation Controller-->
+        <scene sceneID="xp2-iQ-yPK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OuT-sc-WyH" customClass="ModalNavigationController" customModule="BibleBeatMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="qOx-rl-XLB">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="j0p-aQ-kfc" kind="relationship" relationship="rootViewController" id="tMq-nh-XSS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k8n-I4-WV3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2306" y="124"/>
         </scene>
     </scenes>
 </document>
