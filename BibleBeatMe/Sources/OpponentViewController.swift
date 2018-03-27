@@ -15,7 +15,8 @@ class OpponentViewController: UIViewController {
     //MARK: IBOutlets
     @IBOutlet weak var opponentName: UILabel!
     @IBOutlet weak var backButton: UIBarButtonItem!
-
+    @IBOutlet weak var contentView: UIView!
+    
     //MARK: Overrides methods
     override func viewDidLoad() {
         super.viewDidLoad()

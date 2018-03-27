@@ -209,19 +209,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UYW-SZ-09u">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="533"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="534"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZgR-2S-urd">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="106.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select opponent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAy-Rs-gkm">
-                                                <rect key="frame" x="0.0" y="10" width="375" height="30.5"/>
+                                                <rect key="frame" x="0.0" y="10" width="375" height="31"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
                                                 <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qx9-GZ-Cab">
-                                                <rect key="frame" x="56.5" y="50.5" width="262.5" height="30"/>
+                                                <rect key="frame" x="56" y="51" width="263" height="30"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Rvl-fY-3DY"/>
@@ -243,12 +243,12 @@
                                             <constraint firstItem="bAy-Rs-gkm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZgR-2S-urd" secondAttribute="leading" id="xi1-as-tUs"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ro5-sk-NpZ">
-                                        <rect key="frame" x="0.0" y="106.5" width="375" height="426.5"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ro5-sk-NpZ">
+                                        <rect key="frame" x="0.0" y="107" width="375" height="427"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="opponentCell" rowHeight="70" id="Bo9-Dv-cjr" customClass="OpponentCell" customModule="BibleBeatMe" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="opponentCell" rowHeight="70" id="Bo9-Dv-cjr" customClass="OpponentCell" customModule="BibleBeatMe" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bo9-Dv-cjr" id="nqM-kF-pcR">
@@ -301,16 +301,18 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHA-KI-6g4">
-                                <rect key="frame" x="0.0" y="533" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="534" width="375" height="69"/>
                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="JRI-Xx-Nf0"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="i8y-9B-OTh" firstAttribute="bottom" secondItem="UYW-SZ-09u" secondAttribute="bottom" constant="70" id="2Lg-O8-1mK"/>
-                            <constraint firstItem="dHA-KI-6g4" firstAttribute="top" secondItem="Ro5-sk-NpZ" secondAttribute="bottom" id="DDc-GM-QmH"/>
-                            <constraint firstItem="dHA-KI-6g4" firstAttribute="bottom" secondItem="TgS-wh-kid" secondAttribute="bottom" id="E2s-Ms-MSF"/>
                             <constraint firstItem="UYW-SZ-09u" firstAttribute="leading" secondItem="TgS-wh-kid" secondAttribute="leading" id="XKM-d2-Y3h"/>
+                            <constraint firstItem="dHA-KI-6g4" firstAttribute="top" secondItem="UYW-SZ-09u" secondAttribute="bottom" id="ZfS-LE-RiQ"/>
+                            <constraint firstItem="dHA-KI-6g4" firstAttribute="bottom" secondItem="TgS-wh-kid" secondAttribute="bottom" id="chl-pc-J71"/>
                             <constraint firstItem="UYW-SZ-09u" firstAttribute="trailing" secondItem="TgS-wh-kid" secondAttribute="trailing" id="phh-az-Puv"/>
                             <constraint firstItem="UYW-SZ-09u" firstAttribute="top" secondItem="TgS-wh-kid" secondAttribute="top" id="qtQ-py-IHf"/>
                             <constraint firstItem="dHA-KI-6g4" firstAttribute="leading" secondItem="UYW-SZ-09u" secondAttribute="leading" id="t58-t0-wQy"/>
@@ -331,7 +333,7 @@
                         <outlet property="backButton" destination="O2N-g6-s8u" id="syA-Tb-NVr"/>
                         <outlet property="searchOpponentTextField" destination="qx9-GZ-Cab" id="IKB-8R-9cY"/>
                         <outlet property="tableView" destination="Ro5-sk-NpZ" id="FfA-sf-hEZ"/>
-                        <segue destination="OuT-sc-WyH" kind="modal" identifier="showOpponent" id="zwm-Av-pDo"/>
+                        <segue destination="OuT-sc-WyH" kind="modal" identifier="showOpponent" modalPresentationStyle="fullScreen" id="zwm-Av-pDo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6LW-xK-plT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -347,10 +349,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m71-iO-yKk">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OpponentName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glp-Vy-WWz">
-                                        <rect key="frame" x="117.5" y="15.5" width="139.5" height="23"/>
+                                        <rect key="frame" x="118" y="15" width="140" height="23"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
                                         <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -360,15 +362,31 @@
                                 <constraints>
                                     <constraint firstItem="glp-Vy-WWz" firstAttribute="centerY" secondItem="m71-iO-yKk" secondAttribute="centerY" id="CsX-BL-Krw"/>
                                     <constraint firstItem="glp-Vy-WWz" firstAttribute="centerX" secondItem="m71-iO-yKk" secondAttribute="centerX" id="fva-JF-l7D"/>
+                                    <constraint firstItem="glp-Vy-WWz" firstAttribute="top" secondItem="m71-iO-yKk" secondAttribute="top" constant="15" id="pRm-4H-4mA"/>
                                 </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXw-tI-nng">
+                                <rect key="frame" x="0.0" y="53" width="375" height="480"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIK-o6-uGg">
+                                <rect key="frame" x="0.0" y="533" width="375" height="70"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eSK-dl-MP4" firstAttribute="bottom" secondItem="m71-iO-yKk" secondAttribute="bottom" constant="549" id="KbR-jS-jnl"/>
+                            <constraint firstAttribute="bottom" secondItem="wXw-tI-nng" secondAttribute="bottom" constant="70" id="9vM-qa-4cZ"/>
+                            <constraint firstItem="m71-iO-yKk" firstAttribute="top" secondItem="wMv-I1-The" secondAttribute="top" id="B3C-7W-tyk"/>
+                            <constraint firstItem="jIK-o6-uGg" firstAttribute="top" secondItem="wXw-tI-nng" secondAttribute="bottom" id="E6G-i8-qwy"/>
+                            <constraint firstItem="wXw-tI-nng" firstAttribute="leading" secondItem="m71-iO-yKk" secondAttribute="leading" id="J6K-7X-YuX"/>
+                            <constraint firstItem="wXw-tI-nng" firstAttribute="top" secondItem="m71-iO-yKk" secondAttribute="bottom" id="KVk-td-EYu"/>
                             <constraint firstItem="eSK-dl-MP4" firstAttribute="trailing" secondItem="m71-iO-yKk" secondAttribute="trailing" id="OjB-34-MgM"/>
-                            <constraint firstItem="m71-iO-yKk" firstAttribute="top" secondItem="eSK-dl-MP4" secondAttribute="top" id="n68-Ec-xks"/>
+                            <constraint firstItem="wXw-tI-nng" firstAttribute="trailing" secondItem="jIK-o6-uGg" secondAttribute="trailing" id="Q9l-OA-nAw"/>
+                            <constraint firstItem="wXw-tI-nng" firstAttribute="width" secondItem="wMv-I1-The" secondAttribute="width" id="Wy9-5H-hnl"/>
+                            <constraint firstItem="jIK-o6-uGg" firstAttribute="bottom" secondItem="wMv-I1-The" secondAttribute="bottom" id="ZOb-Ow-E3e"/>
                             <constraint firstItem="m71-iO-yKk" firstAttribute="leading" secondItem="eSK-dl-MP4" secondAttribute="leading" id="qbr-ou-pDI"/>
+                            <constraint firstItem="wXw-tI-nng" firstAttribute="leading" secondItem="jIK-o6-uGg" secondAttribute="leading" id="zHu-ob-rzZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eSK-dl-MP4"/>
                     </view>
@@ -383,6 +401,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="jFh-9C-NU5" id="tC7-7Q-dMc"/>
+                        <outlet property="contentView" destination="wXw-tI-nng" id="I3a-Qp-pCU"/>
                         <outlet property="opponentName" destination="glp-Vy-WWz" id="uEk-qh-ewd"/>
                     </connections>
                 </viewController>

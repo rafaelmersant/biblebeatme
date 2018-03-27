@@ -90,6 +90,8 @@ extension OpponentsViewController: UITableViewDelegate, UITableViewDataSource {
     //MARK: Delegate Methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+        tableView.deselectRow(at: indexPath, animated: true)
+
         self.opponentSelected = opponents[indexPath.row]
         self.performSegue(withIdentifier: "showOpponent", sender: self)
 
