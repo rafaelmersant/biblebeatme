@@ -16,10 +16,18 @@ class OpponentViewController: UIViewController {
     @IBOutlet weak var opponentName: UILabel!
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var contentView: UIView!
-    
+    @IBOutlet weak var dareButton: UIButton!
+    @IBOutlet weak var infoButton: UILabel!
+
     //MARK: Overrides methods
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        //Dare Button formats
+        dareButton.layer.borderColor = UIColor.gray.cgColor
+
+        //InfoButton
+        infoButton.setIcon(icon: .googleMaterialDesign(.infoOutline), iconSize: 35.0, color: .blue)
 
         if let opponent = opponent {
             opponentName.text = opponent
