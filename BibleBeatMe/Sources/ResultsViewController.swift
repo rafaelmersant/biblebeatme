@@ -20,6 +20,10 @@ class ResultsViewController: UIViewController {
         resultsButtons.forEach { (button) in
             button.layer.borderColor = UIColor.gray.cgColor
         }
+
+        //Home button
+        homeButton.setIcon(icon: .googleMaterialDesign(.home), iconSize: 30.0, color: mainColor)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,10 +33,14 @@ class ResultsViewController: UIViewController {
     
 
     @IBAction func goToHome(_ sender: UIBarButtonItem) {
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let homeViewController = storyboard.instantiateViewController(withIdentifier: "homeStoryboard") as! MainViewController
-        self.present(homeViewController, animated: true, completion: nil)
+
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let homeViewController = storyboard.instantiateViewController(withIdentifier: "homeStoryboard") as! MainViewController
+//        self.present(homeViewController, animated: false, completion: nil)
+
+        //self.navigationController?.popToRootViewController(animated: false)
+
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
 

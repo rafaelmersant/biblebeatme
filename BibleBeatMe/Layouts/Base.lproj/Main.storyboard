@@ -99,7 +99,7 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
                                                 </variation>
                                                 <connections>
-                                                    <segue destination="xBF-wU-VUo" kind="presentation" modalTransitionStyle="flipHorizontal" id="h9Y-sb-VG6"/>
+                                                    <segue destination="xBF-wU-VUo" kind="presentation" id="h9Y-sb-VG6"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbB-ci-sIY">
@@ -333,7 +333,7 @@
                         <outlet property="backButton" destination="O2N-g6-s8u" id="syA-Tb-NVr"/>
                         <outlet property="searchOpponentTextField" destination="qx9-GZ-Cab" id="IKB-8R-9cY"/>
                         <outlet property="tableView" destination="Ro5-sk-NpZ" id="FfA-sf-hEZ"/>
-                        <segue destination="OuT-sc-WyH" kind="modal" identifier="showOpponent" modalPresentationStyle="fullScreen" id="zwm-Av-pDo"/>
+                        <segue destination="OuT-sc-WyH" kind="presentation" identifier="showOpponent" id="zwm-Av-pDo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6LW-xK-plT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -826,7 +826,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4bG-kE-YIq">
                                 <rect key="frame" x="0.0" y="89.5" width="375" height="603"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aot-nG-ROs">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aot-nG-ROs">
                                         <rect key="frame" x="74.5" y="81" width="226" height="57"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -846,7 +846,7 @@
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
                                         </variation>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WK-Z6-b5d">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WK-Z6-b5d">
                                         <rect key="frame" x="74.5" y="203" width="226" height="57"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>

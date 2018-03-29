@@ -57,8 +57,6 @@ class OpponentsViewController: UIViewController {
                 if let destination = navigationController.viewControllers.first as? OpponentViewController {
 
                     destination.opponent = self.opponentSelected!
-
-//                    destination.user                = self.user
                 }
             }
 
