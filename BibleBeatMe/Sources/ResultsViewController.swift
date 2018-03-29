@@ -11,6 +11,7 @@ import UIKit
 class ResultsViewController: UIViewController {
 
     @IBOutlet var resultsButtons: [UIButton]!
+    @IBOutlet weak var homeButton: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +28,12 @@ class ResultsViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func goToHome(_ sender: UIBarButtonItem) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let homeViewController = storyboard.instantiateViewController(withIdentifier: "homeStoryboard") as! MainViewController
+        self.present(homeViewController, animated: true, completion: nil)
     }
-    */
+    
 
 }

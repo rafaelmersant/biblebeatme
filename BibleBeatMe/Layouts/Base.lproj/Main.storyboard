@@ -52,7 +52,7 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="BYZ-38-t0r" customClass="MainViewController" customModule="BibleBeatMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeStoryboard" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="BYZ-38-t0r" customClass="MainViewController" customModule="BibleBeatMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -372,8 +372,8 @@
                                         <rect key="frame" x="20" y="45" width="335" height="48"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Won: 4" lineBreakMode="tailTruncation" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Esx-IL-Bv5">
-                                                <rect key="frame" x="8" y="12" width="64.5" height="24"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                                <rect key="frame" x="8" y="14" width="54.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -389,8 +389,8 @@
                                         <rect key="frame" x="20" y="113" width="335" height="48"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Losses: 3" lineBreakMode="tailTruncation" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="xU6-3K-w3Q">
-                                                <rect key="frame" x="8" y="12" width="88" height="24"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                                <rect key="frame" x="8" y="14" width="75" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -406,8 +406,8 @@
                                         <rect key="frame" x="20" y="181" width="335" height="48"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fought with you: 3 times and won: 2" lineBreakMode="tailTruncation" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="X54-jp-a8m">
-                                                <rect key="frame" x="8" y="14" width="300.5" height="21.5"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                <rect key="frame" x="8" y="14.5" width="284" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -440,13 +440,13 @@
                                         </variation>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting for response..." lineBreakMode="tailTruncation" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="IB4-aR-wWW">
-                                        <rect key="frame" x="84" y="398" width="207.5" height="24"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                        <rect key="frame" x="102.5" y="398" width="170.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2m-DH-ric">
-                                        <rect key="frame" x="166" y="451" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2m-DH-ric">
+                                        <rect key="frame" x="172.5" y="451" width="29" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -758,7 +758,7 @@
                                 <action selector="backButton:" destination="16m-Ly-mPt" id="xiw-Ma-UnS"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Test" id="E4v-sD-wdg">
+                        <barButtonItem key="rightBarButtonItem" title="Finish" id="E4v-sD-wdg">
                             <connections>
                                 <segue destination="TkZ-IZ-R11" kind="presentation" id="Mkc-oK-aW3"/>
                             </connections>
@@ -913,9 +913,14 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Results" id="2Mj-No-Q01">
                         <barButtonItem key="backBarButtonItem" title="Back" id="T7s-gI-Czb"/>
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="Ipk-aS-DJB"/>
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="Ipk-aS-DJB">
+                            <connections>
+                                <action selector="goToHome:" destination="qkM-Yd-9rc" id="pes-v0-ABF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="homeButton" destination="Ipk-aS-DJB" id="Zxz-Sa-H4A"/>
                         <outletCollection property="resultsButtons" destination="aot-nG-ROs" collectionClass="NSMutableArray" id="qPc-Wu-gss"/>
                         <outletCollection property="resultsButtons" destination="9WK-Z6-b5d" collectionClass="NSMutableArray" id="cRK-0T-fdO"/>
                     </connections>

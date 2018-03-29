@@ -27,7 +27,7 @@ class OpponentViewController: UIViewController {
         dareButton.layer.borderColor = UIColor.gray.cgColor
 
         //InfoButton
-        infoButton.setIcon(icon: .googleMaterialDesign(.infoOutline), iconSize: 35.0, color: .blue)
+        infoButton.setIcon(icon: .googleMaterialDesign(.infoOutline), iconSize: 30.0, color: .blue)
 
         if let opponent = opponent {
             opponentName.text = opponent
