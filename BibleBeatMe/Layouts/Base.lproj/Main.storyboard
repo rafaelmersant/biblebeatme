@@ -328,9 +328,11 @@
                                 <action selector="backToHome:" destination="xoW-Rd-RY2" id="cW6-pK-M4j"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Battles" id="AJG-XJ-aCU"/>
                     </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="O2N-g6-s8u" id="syA-Tb-NVr"/>
+                        <outlet property="battlesButton" destination="AJG-XJ-aCU" id="tS6-fO-PvB"/>
                         <outlet property="searchOpponentTextField" destination="qx9-GZ-Cab" id="IKB-8R-9cY"/>
                         <outlet property="tableView" destination="Ro5-sk-NpZ" id="FfA-sf-hEZ"/>
                         <segue destination="OuT-sc-WyH" kind="presentation" identifier="showOpponent" id="zwm-Av-pDo"/>
@@ -608,7 +610,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUw-VS-ae4">
                                         <rect key="frame" x="0.0" y="75" width="375" height="185"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="55q-rT-SW6">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="55q-rT-SW6">
                                                 <rect key="frame" x="18" y="0.0" width="339" height="185"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <string key="text">Porque no tenemos lucha contra sangre y carne, sino contra principados, contra potestades, contra los gobernadores de las tinieblas de este siglo, contra huestes espirituales de maldad en las regiones celestes.</string>
@@ -772,6 +774,7 @@
                         <outlet property="heart1" destination="c85-92-HGf" id="n06-iE-7wO"/>
                         <outlet property="heart2" destination="16d-P8-LaD" id="Xv5-Qm-BvC"/>
                         <outlet property="heart3" destination="dBJ-JM-jwl" id="cXa-Ou-Jkl"/>
+                        <outlet property="questionLabel" destination="55q-rT-SW6" id="StB-pO-Kz5"/>
                         <outlet property="questionSection" destination="WUw-VS-ae4" id="X75-Eg-TnS"/>
                         <outletCollection property="answerButtons" destination="zww-v7-tbN" collectionClass="NSMutableArray" id="FEw-zh-ea4"/>
                         <outletCollection property="answerButtons" destination="16O-ee-Et2" collectionClass="NSMutableArray" id="EWf-3o-hGv"/>
@@ -867,8 +870,8 @@
                                         </variation>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congrats! You can do it, go for more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpz-4Y-5Gm">
-                                        <rect key="frame" x="41.5" y="364.5" width="293" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <rect key="frame" x="50" y="364.5" width="276" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>

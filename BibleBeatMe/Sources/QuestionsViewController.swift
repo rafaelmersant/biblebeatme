@@ -14,6 +14,7 @@ class QuestionsViewController : UIViewController {
     @IBOutlet weak var answerSection: UIView!
     @IBOutlet weak var questionSection: UIView!
 
+    @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet var answerButtons: [UIButton]!
 
     @IBOutlet weak var answerButtonsStackView: UIStackView!
@@ -50,6 +51,8 @@ class QuestionsViewController : UIViewController {
                 answerButtonsStackViewHeight = answerButtonsStackViewHeight.setMultiplier(multiplier: multiplier)
             }
         }
+
+        print("Font Size Principal:::: \(questionLabel.font.pointSize)")
 
         // add right navigation bar button items.
         do {

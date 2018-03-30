@@ -16,6 +16,7 @@ class OpponentsViewController: UIViewController {
     public var opponentSelected: String?
 
     @IBOutlet weak var backButton: UIBarButtonItem!
+    @IBOutlet weak var battlesButton: UIBarButtonItem!
     @IBOutlet weak var searchOpponentTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
 
@@ -24,15 +25,24 @@ class OpponentsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Search Opponent TextField
         searchOpponentTextField.backgroundColor = UIColor.black
         searchOpponentTextField.layer.cornerRadius = 8.0
         searchOpponentTextField.layer.borderWidth = 1
         searchOpponentTextField.layer.borderColor = UIColor.gray.cgColor
 
-        searchOpponentTextField.setLeftViewIcon(icon: .googleMaterialDesign(.search), leftViewMode: .always, textColor: .gray, backgroundColor: .black, size: CGSize(width: 30, height: 30) )
+        searchOpponentTextField.setLeftViewIcon(
+            icon            : .googleMaterialDesign(.search),
+            leftViewMode    : .always,
+            textColor       : .gray,
+            backgroundColor : .black,
+            size            : CGSize(width: 30, height: 30)
+        )
         
         do {
-            backButton.setIcon(icon: .ionicons(.iosArrowBack), iconSize: 30, color: mainColor)
+            backButton.setIcon(icon: .ionicons(.iosArrowBack), iconSize: 30.0, color: mainColor)
+
+            battlesButton.setIcon(icon: .icofont(.infoCircle), iconSize: 30.0, color: mainColor)
         }
     }
 
@@ -59,10 +69,8 @@ class OpponentsViewController: UIViewController {
                     destination.opponent = self.opponentSelected!
                 }
             }
-
         }
     }
-
 
 }
 
