@@ -44,7 +44,7 @@ class QuestionsViewController : UIViewController {
         answerButtons.forEach { (button) in
             button.layer.borderColor = UIColor.gray.cgColor
 
-            if button.tag == 800 || button.tag == 700 {
+            if button.tag == 100 || button.tag == 700 {
                 button.isHidden = true
 
                 let multiplier = (answerButtonsStackViewHeight.multiplier - 0.24)
