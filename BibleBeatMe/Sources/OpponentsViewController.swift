@@ -78,6 +78,10 @@ class OpponentsViewController: UIViewController {
 extension OpponentsViewController: UITableViewDelegate, UITableViewDataSource {
 
     //MARK: DataSource Methods
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return tableView.dequeueReusableCell(withIdentifier: "headerOpponentCell")
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "opponentCell", for: indexPath) as? OpponentCell
