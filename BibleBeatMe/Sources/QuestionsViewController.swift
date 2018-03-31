@@ -12,7 +12,6 @@ class QuestionsViewController : UIViewController {
 
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var answerSection: UIView!
-    @IBOutlet weak var questionSection: UIView!
 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet var answerButtons: [UIButton]!
@@ -44,7 +43,7 @@ class QuestionsViewController : UIViewController {
         answerButtons.forEach { (button) in
             button.layer.borderColor = UIColor.gray.cgColor
 
-            if button.tag == 100 || button.tag == 700 {
+            if button.tag == 1100 || button.tag == 1200 {
                 button.isHidden = true
 
                 let multiplier = (answerButtonsStackViewHeight.multiplier - 0.24)
