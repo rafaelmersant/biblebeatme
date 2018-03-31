@@ -392,7 +392,7 @@
                                 <rect key="frame" x="0.0" y="53" width="414" height="549"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Heb-Wp-Pwy">
-                                        <rect key="frame" x="20" y="45" width="374" height="55"/>
+                                        <rect key="frame" x="20" y="40" width="374" height="55"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Won: 4" lineBreakMode="tailTruncation" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Esx-IL-Bv5">
                                                 <rect key="frame" x="7.9999999999999964" y="17.333333333333343" width="54.666666666666657" height="20.666666666666671"/>
@@ -409,7 +409,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ei3-xA-hSa">
-                                        <rect key="frame" x="20" y="120.00000000000001" width="374" height="54.666666666666671"/>
+                                        <rect key="frame" x="20" y="115.00000000000001" width="374" height="54.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Losses: 3" lineBreakMode="tailTruncation" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="xU6-3K-w3Q">
                                                 <rect key="frame" x="8" y="17.333333333333343" width="75" height="20.666666666666671"/>
@@ -426,10 +426,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igr-Od-Lgp">
-                                        <rect key="frame" x="20" y="194.66666666666669" width="374" height="55"/>
+                                        <rect key="frame" x="20" y="189.66666666666669" width="374" height="55"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fought with you: 3 times and won: 2" lineBreakMode="tailTruncation" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="X54-jp-a8m">
-                                                <rect key="frame" x="8" y="18" width="284" height="20.666666666666671"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fought with you: 3 times and won: 2" lineBreakMode="tailTruncation" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="X54-jp-a8m">
+                                                <rect key="frame" x="8" y="1" width="358" height="54"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -438,12 +438,13 @@
                                         <color key="backgroundColor" red="0.054805871210000003" green="0.054805871210000003" blue="0.054805871210000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="X54-jp-a8m" firstAttribute="centerY" secondItem="igr-Od-Lgp" secondAttribute="centerY" id="77W-oD-B99"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="X54-jp-a8m" secondAttribute="trailingMargin" id="A9k-EI-1Ek"/>
+                                            <constraint firstItem="X54-jp-a8m" firstAttribute="height" secondItem="igr-Od-Lgp" secondAttribute="height" constant="-1" id="8GC-ra-ukV"/>
+                                            <constraint firstAttribute="trailing" secondItem="X54-jp-a8m" secondAttribute="trailing" constant="8" id="Oqm-ZY-Ydc"/>
                                             <constraint firstItem="X54-jp-a8m" firstAttribute="leading" secondItem="igr-Od-Lgp" secondAttribute="leadingMargin" id="z5I-6q-ThO"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hw6-uP-FTF">
-                                        <rect key="frame" x="93.666666666666686" y="300" width="226" height="57"/>
+                                        <rect key="frame" x="93.666666666666686" y="294" width="226" height="57"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="PLc-Fp-C5R"/>
@@ -462,14 +463,14 @@
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
                                         </variation>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting for response..." lineBreakMode="tailTruncation" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="IB4-aR-wWW">
-                                        <rect key="frame" x="121.99999999999999" y="427.66666666666663" width="170.66666666666663" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Waiting for response..." lineBreakMode="tailTruncation" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="IB4-aR-wWW">
+                                        <rect key="frame" x="121.99999999999999" y="386" width="170.66666666666663" height="136.66666666666663"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2m-DH-ric">
-                                        <rect key="frame" x="192" y="520" width="29" height="21"/>
+                                        <rect key="frame" x="192" y="528" width="29" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -478,7 +479,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="e2m-DH-ric" firstAttribute="centerX" secondItem="wXw-tI-nng" secondAttribute="centerX" id="2ty-j1-dUy"/>
-                                    <constraint firstItem="Heb-Wp-Pwy" firstAttribute="top" secondItem="wXw-tI-nng" secondAttribute="top" constant="45" id="ADA-sm-gdn"/>
+                                    <constraint firstItem="Heb-Wp-Pwy" firstAttribute="top" secondItem="wXw-tI-nng" secondAttribute="top" constant="40" id="ADA-sm-gdn"/>
                                     <constraint firstItem="Ei3-xA-hSa" firstAttribute="height" secondItem="wXw-tI-nng" secondAttribute="height" multiplier="0.1" id="Cb7-1f-IRP"/>
                                     <constraint firstItem="IB4-aR-wWW" firstAttribute="centerX" secondItem="wXw-tI-nng" secondAttribute="centerX" id="EOa-Bc-ORL"/>
                                     <constraint firstItem="igr-Od-Lgp" firstAttribute="top" secondItem="Ei3-xA-hSa" secondAttribute="bottom" constant="20" id="Kzo-Mi-5L1"/>
@@ -487,9 +488,10 @@
                                     <constraint firstItem="Ei3-xA-hSa" firstAttribute="top" secondItem="Heb-Wp-Pwy" secondAttribute="bottom" constant="20" id="Tkg-aA-dHv"/>
                                     <constraint firstItem="igr-Od-Lgp" firstAttribute="height" secondItem="wXw-tI-nng" secondAttribute="height" multiplier="0.1" id="UMM-D7-xGd"/>
                                     <constraint firstItem="Hw6-uP-FTF" firstAttribute="centerX" secondItem="wXw-tI-nng" secondAttribute="centerX" id="Vqo-yo-di6"/>
-                                    <constraint firstItem="IB4-aR-wWW" firstAttribute="top" secondItem="Hw6-uP-FTF" secondAttribute="bottom" multiplier="1.2" id="Wdh-4L-aBd"/>
                                     <constraint firstAttribute="trailing" secondItem="igr-Od-Lgp" secondAttribute="trailing" constant="20" id="WfY-mC-pAJ"/>
+                                    <constraint firstItem="e2m-DH-ric" firstAttribute="top" secondItem="IB4-aR-wWW" secondAttribute="bottom" multiplier="1.01" id="fMC-qh-ddS"/>
                                     <constraint firstItem="Hw6-uP-FTF" firstAttribute="top" secondItem="igr-Od-Lgp" secondAttribute="bottom" multiplier="1.2" id="fxe-Qw-jKz"/>
+                                    <constraint firstItem="IB4-aR-wWW" firstAttribute="top" secondItem="Hw6-uP-FTF" secondAttribute="bottom" multiplier="1.1" id="iAg-Ya-Q4Z"/>
                                     <constraint firstAttribute="trailing" secondItem="Ei3-xA-hSa" secondAttribute="trailing" constant="20" id="iHo-ll-5lD"/>
                                     <constraint firstItem="igr-Od-Lgp" firstAttribute="leading" secondItem="wXw-tI-nng" secondAttribute="leading" constant="20" id="nVP-q4-msF"/>
                                     <constraint firstItem="Ei3-xA-hSa" firstAttribute="leading" secondItem="wXw-tI-nng" secondAttribute="leading" constant="20" id="rDC-Cc-Wzs"/>
@@ -513,7 +515,7 @@
                             <constraint firstItem="wXw-tI-nng" firstAttribute="width" secondItem="wMv-I1-The" secondAttribute="width" id="Wy9-5H-hnl"/>
                             <constraint firstItem="jIK-o6-uGg" firstAttribute="bottom" secondItem="wMv-I1-The" secondAttribute="bottom" id="ZOb-Ow-E3e"/>
                             <constraint firstItem="m71-iO-yKk" firstAttribute="leading" secondItem="eSK-dl-MP4" secondAttribute="leading" id="qbr-ou-pDI"/>
-                            <constraint firstItem="e2m-DH-ric" firstAttribute="bottom" secondItem="jIK-o6-uGg" secondAttribute="bottom" constant="-78" id="wgn-7t-OC0"/>
+                            <constraint firstItem="e2m-DH-ric" firstAttribute="bottom" secondItem="jIK-o6-uGg" secondAttribute="top" id="wgn-7t-OC0"/>
                             <constraint firstItem="wXw-tI-nng" firstAttribute="leading" secondItem="jIK-o6-uGg" secondAttribute="leading" id="zHu-ob-rzZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eSK-dl-MP4"/>
@@ -537,7 +539,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lX8-Bg-OsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3069.5999999999999" y="123.68815592203899"/>
+            <point key="canvasLocation" x="3069.5652173913045" y="123.09782608695653"/>
         </scene>
         <!--Practice Navigation-->
         <scene sceneID="VZC-3R-Gae">
