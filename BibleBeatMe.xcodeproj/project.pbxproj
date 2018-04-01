@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		497218D1323AF30A174F3500 /* Pods_BibleBeatMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A9932CA9137E79FC33C869 /* Pods_BibleBeatMeTests.framework */; };
 		75A54C924A6197F0440B60CD /* Pods_BibleBeatMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F02F29244F8FEF5AC94B54C2 /* Pods_BibleBeatMe.framework */; };
+		94238B2B20705BD0008CC289 /* DareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94238B2A20705BD0008CC289 /* DareViewController.swift */; };
+		94238B2C20705BD0008CC289 /* DareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94238B2A20705BD0008CC289 /* DareViewController.swift */; };
+		94238B2D20705BD0008CC289 /* DareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94238B2A20705BD0008CC289 /* DareViewController.swift */; };
 		943EC0891FFB11C8009B3632 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC0881FFB11C8009B3632 /* AppDelegate.swift */; };
 		943EC08B1FFB11C8009B3632 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC08A1FFB11C8009B3632 /* MainViewController.swift */; };
 		943EC08E1FFB11C8009B3632 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943EC08C1FFB11C8009B3632 /* Main.storyboard */; };
@@ -66,6 +69,7 @@
 		70DFA9C1C90778E22AE99DCE /* Pods_BibleBeatMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BibleBeatMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8547D5B95C74AAFBA4F9A22C /* Pods-BibleBeatMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibleBeatMeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibleBeatMeUITests/Pods-BibleBeatMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D28466271C7D6F31CD884D2 /* Pods-BibleBeatMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibleBeatMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibleBeatMe/Pods-BibleBeatMe.debug.xcconfig"; sourceTree = "<group>"; };
+		94238B2A20705BD0008CC289 /* DareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DareViewController.swift; sourceTree = "<group>"; };
 		943EC0851FFB11C8009B3632 /* BibleBeatMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BibleBeatMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		943EC0881FFB11C8009B3632 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		943EC08A1FFB11C8009B3632 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 				947A27962065EB66008D1EF9 /* ResultsViewController.swift */,
 				948A25922067F91100151D1B /* OpponentsViewController.swift */,
 				948A25962068A84000151D1B /* OpponentViewController.swift */,
+				94238B2A20705BD0008CC289 /* DareViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -522,6 +527,7 @@
 				947A278F205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */,
 				94D113DA205DB169005E08A9 /* Config.swift in Sources */,
 				94D113D62059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
+				94238B2B20705BD0008CC289 /* DareViewController.swift in Sources */,
 				943EC0891FFB11C8009B3632 /* AppDelegate.swift in Sources */,
 				947A27972065EB66008D1EF9 /* ResultsViewController.swift in Sources */,
 			);
@@ -537,6 +543,7 @@
 				94D113D72059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
 				947A27982065EB66008D1EF9 /* ResultsViewController.swift in Sources */,
 				94D113DB205DB169005E08A9 /* Config.swift in Sources */,
+				94238B2C20705BD0008CC289 /* DareViewController.swift in Sources */,
 				948A25942067F91100151D1B /* OpponentsViewController.swift in Sources */,
 				947A2793205F5BDF008D1EF9 /* AppDelegate.swift in Sources */,
 				947A2790205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */,
@@ -553,6 +560,7 @@
 				94D113D82059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
 				947A27992065EB66008D1EF9 /* ResultsViewController.swift in Sources */,
 				94D113DC205DB16A005E08A9 /* Config.swift in Sources */,
+				94238B2D20705BD0008CC289 /* DareViewController.swift in Sources */,
 				948A25952067F91100151D1B /* OpponentsViewController.swift in Sources */,
 				947A2792205F5BDF008D1EF9 /* AppDelegate.swift in Sources */,
 				947A2791205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */,

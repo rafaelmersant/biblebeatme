@@ -19,7 +19,9 @@ class OpponentsViewController: UIViewController {
     @IBOutlet weak var battlesButton: UIBarButtonItem!
     @IBOutlet weak var searchOpponentTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var tableHeaderView: UIView!
+    @IBOutlet weak var invitationView: UILabel!
+    
     fileprivate weak var controller: UIViewController?
 
     override func viewDidLoad() {
@@ -44,6 +46,8 @@ class OpponentsViewController: UIViewController {
 
             battlesButton.setIcon(icon: .icofont(.infoCircle), iconSize: 30.0, color: mainColor)
         }
+
+        self.tableView.tableHeaderView = self.tableHeaderView
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,10 +82,6 @@ class OpponentsViewController: UIViewController {
 extension OpponentsViewController: UITableViewDelegate, UITableViewDataSource {
 
     //MARK: DataSource Methods
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return tableView.dequeueReusableCell(withIdentifier: "headerOpponentCell")
-    }
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "opponentCell", for: indexPath) as? OpponentCell
