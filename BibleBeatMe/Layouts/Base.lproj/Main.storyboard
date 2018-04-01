@@ -145,6 +145,9 @@
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
                                                 </variation>
+                                                <connections>
+                                                    <segue destination="YqF-7u-i7S" kind="presentation" id="2rw-3h-lbq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -199,6 +202,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="123.91304347826087"/>
+        </scene>
+        <!--Scores View-->
+        <scene sceneID="h4s-4s-qQx">
+            <objects>
+                <viewController title="Scores View" automaticallyAdjustsScrollViewInsets="NO" id="rTN-E3-xvV" customClass="ScoresViewController" customModule="BibleBeatMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EjN-vY-7qF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2Ur-Ns-P0K">
+                                <rect key="frame" x="83.333333333333329" y="42" width="248.66666666666669" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Personal"/>
+                                    <segment title="World"/>
+                                </segments>
+                                <color key="tintColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Aoj-0L-wG2">
+                                <rect key="frame" x="0.0" y="150" width="414" height="453"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lSm-fK-CPw">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GHq-tM-ffX">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="egi-U2-2Jy">
+                                        <rect key="frame" x="60.666666666666664" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="92r-pZ-aWP">
+                                <rect key="frame" x="0.0" y="603" width="414" height="69"/>
+                                <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="WHZ-w2-Gcs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="92r-pZ-aWP" firstAttribute="leading" secondItem="db0-I7-vof" secondAttribute="leading" id="Aqg-EK-MHW"/>
+                            <constraint firstItem="2Ur-Ns-P0K" firstAttribute="centerX" secondItem="Aoj-0L-wG2" secondAttribute="centerX" id="O6f-b4-65I"/>
+                            <constraint firstAttribute="bottom" secondItem="92r-pZ-aWP" secondAttribute="bottom" id="Ylv-3I-6RZ"/>
+                            <constraint firstItem="db0-I7-vof" firstAttribute="trailing" secondItem="92r-pZ-aWP" secondAttribute="trailing" id="cMC-A7-89o"/>
+                            <constraint firstItem="92r-pZ-aWP" firstAttribute="top" secondItem="Aoj-0L-wG2" secondAttribute="bottom" id="dat-zU-VMZ"/>
+                            <constraint firstItem="2Ur-Ns-P0K" firstAttribute="width" secondItem="EjN-vY-7qF" secondAttribute="width" multiplier="0.6" id="lq4-Cm-Rzi"/>
+                            <constraint firstItem="Aoj-0L-wG2" firstAttribute="centerX" secondItem="db0-I7-vof" secondAttribute="centerX" id="nhe-6J-L8o"/>
+                            <constraint firstItem="Aoj-0L-wG2" firstAttribute="top" secondItem="2Ur-Ns-P0K" secondAttribute="bottom" constant="80" id="w8U-Cv-AdM"/>
+                            <constraint firstItem="2Ur-Ns-P0K" firstAttribute="top" secondItem="db0-I7-vof" secondAttribute="top" constant="42" id="x9Q-wX-tue"/>
+                            <constraint firstItem="Aoj-0L-wG2" firstAttribute="leading" secondItem="92r-pZ-aWP" secondAttribute="leading" id="yTF-Pk-0bV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="db0-I7-vof"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Scores" id="Hfm-Xu-yeh">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="mLQ-pE-S73"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="zrC-86-rwN">
+                            <connections>
+                                <action selector="backToHome:" destination="rTN-E3-xvV" id="UaA-GX-soq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backButton" destination="zrC-86-rwN" id="IyM-zm-139"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvI-HY-4kU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="1647.554347826087"/>
         </scene>
         <!--Opponents-->
         <scene sceneID="CeI-Ig-NVS">
@@ -955,10 +1043,10 @@
             </objects>
             <point key="canvasLocation" x="3072" y="-637"/>
         </scene>
-        <!--Competition-->
+        <!--Dare View-->
         <scene sceneID="xHS-Mx-M1j">
             <objects>
-                <viewController id="AJZ-ic-gcw" customClass="DareViewController" customModule="BibleBeatMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Dare View" id="AJZ-ic-gcw" customClass="DareViewController" customModule="BibleBeatMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c1M-CA-m6X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1015,15 +1103,25 @@
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
                                 </variation>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Upi-0Z-Og4">
+                                <rect key="frame" x="0.0" y="603" width="414" height="69"/>
+                                <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="Ogt-8G-49M"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Upi-0Z-Og4" firstAttribute="bottom" secondItem="c1M-CA-m6X" secondAttribute="bottom" id="2X7-Bn-D14"/>
                             <constraint firstItem="498-9x-bfI" firstAttribute="top" secondItem="9yW-dJ-TMj" secondAttribute="bottom" constant="49" id="2dv-iR-Lh7"/>
+                            <constraint firstItem="pz3-rU-tGf" firstAttribute="trailing" secondItem="Upi-0Z-Og4" secondAttribute="trailing" id="2if-gG-fQv"/>
                             <constraint firstItem="9yW-dJ-TMj" firstAttribute="centerX" secondItem="pz3-rU-tGf" secondAttribute="centerX" id="6fT-XK-Km3"/>
                             <constraint firstItem="498-9x-bfI" firstAttribute="centerX" secondItem="pz3-rU-tGf" secondAttribute="centerX" id="WIx-Xs-zQ2"/>
                             <constraint firstItem="9yW-dJ-TMj" firstAttribute="top" secondItem="qwX-Xg-dZh" secondAttribute="bottom" constant="77" id="ccw-rK-vqe"/>
                             <constraint firstItem="qwX-Xg-dZh" firstAttribute="top" secondItem="QR1-fL-Irv" secondAttribute="bottom" constant="5" id="dXb-u1-ftZ"/>
                             <constraint firstItem="QR1-fL-Irv" firstAttribute="top" secondItem="pz3-rU-tGf" secondAttribute="top" constant="40" id="dbZ-2R-lGA"/>
+                            <constraint firstItem="Upi-0Z-Og4" firstAttribute="leading" secondItem="pz3-rU-tGf" secondAttribute="leading" id="hwc-P0-7R1"/>
                             <constraint firstItem="QR1-fL-Irv" firstAttribute="centerX" secondItem="pz3-rU-tGf" secondAttribute="centerX" id="lqj-Ex-hxh"/>
                             <constraint firstItem="qwX-Xg-dZh" firstAttribute="centerX" secondItem="pz3-rU-tGf" secondAttribute="centerX" id="vsV-0D-QXb"/>
                         </constraints>
@@ -1045,7 +1143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCa-VF-bPS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2336" y="852"/>
+            <point key="canvasLocation" x="2306" y="880"/>
         </scene>
         <!--Result Practice Navigation-->
         <scene sceneID="RG4-PI-My9">
@@ -1128,7 +1226,7 @@
         <!--Modal Navigation Controller-->
         <scene sceneID="FPj-Ot-Thb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qRu-km-QIh" customClass="ModalNavigationController" customModule="BibleBeatMe" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="qRu-km-QIh" customClass="ModalNavigationController" customModule="BibleBeatMe" customModuleProvider="target" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Vbu-wP-3AX">
@@ -1150,7 +1248,34 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hgh-cU-Rtq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1559" y="852"/>
+            <point key="canvasLocation" x="1559" y="880"/>
+        </scene>
+        <!--Modal Navigation Controller-->
+        <scene sceneID="ylQ-ld-Egz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="YqF-7u-i7S" customClass="ModalNavigationController" customModule="BibleBeatMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Tjf-A7-2iG">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rTN-E3-xvV" kind="relationship" relationship="rootViewController" id="rtK-iU-Lzv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iqZ-iA-XVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29" y="880"/>
         </scene>
     </scenes>
 </document>

@@ -12,6 +12,9 @@
 		94238B2B20705BD0008CC289 /* DareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94238B2A20705BD0008CC289 /* DareViewController.swift */; };
 		94238B2C20705BD0008CC289 /* DareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94238B2A20705BD0008CC289 /* DareViewController.swift */; };
 		94238B2D20705BD0008CC289 /* DareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94238B2A20705BD0008CC289 /* DareViewController.swift */; };
+		94238B2F20706F19008CC289 /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94238B2E20706F19008CC289 /* ScoresViewController.swift */; };
+		94238B3020706F19008CC289 /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94238B2E20706F19008CC289 /* ScoresViewController.swift */; };
+		94238B3120706F19008CC289 /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94238B2E20706F19008CC289 /* ScoresViewController.swift */; };
 		943EC0891FFB11C8009B3632 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC0881FFB11C8009B3632 /* AppDelegate.swift */; };
 		943EC08B1FFB11C8009B3632 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC08A1FFB11C8009B3632 /* MainViewController.swift */; };
 		943EC08E1FFB11C8009B3632 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943EC08C1FFB11C8009B3632 /* Main.storyboard */; };
@@ -70,6 +73,7 @@
 		8547D5B95C74AAFBA4F9A22C /* Pods-BibleBeatMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibleBeatMeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibleBeatMeUITests/Pods-BibleBeatMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D28466271C7D6F31CD884D2 /* Pods-BibleBeatMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibleBeatMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibleBeatMe/Pods-BibleBeatMe.debug.xcconfig"; sourceTree = "<group>"; };
 		94238B2A20705BD0008CC289 /* DareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DareViewController.swift; sourceTree = "<group>"; };
+		94238B2E20706F19008CC289 /* ScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		943EC0851FFB11C8009B3632 /* BibleBeatMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BibleBeatMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		943EC0881FFB11C8009B3632 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		943EC08A1FFB11C8009B3632 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +218,7 @@
 				948A25922067F91100151D1B /* OpponentsViewController.swift */,
 				948A25962068A84000151D1B /* OpponentViewController.swift */,
 				94238B2A20705BD0008CC289 /* DareViewController.swift */,
+				94238B2E20706F19008CC289 /* ScoresViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -522,6 +527,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				948A25932067F91100151D1B /* OpponentsViewController.swift in Sources */,
+				94238B2F20706F19008CC289 /* ScoresViewController.swift in Sources */,
 				948A25972068A84000151D1B /* OpponentViewController.swift in Sources */,
 				943EC08B1FFB11C8009B3632 /* MainViewController.swift in Sources */,
 				947A278F205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */,
@@ -537,6 +543,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94238B3020706F19008CC289 /* ScoresViewController.swift in Sources */,
 				947A2795205F5BE2008D1EF9 /* MainViewController.swift in Sources */,
 				948A25982068A84000151D1B /* OpponentViewController.swift in Sources */,
 				943EC09E1FFB11C8009B3632 /* BibleTryToBeatMeTests.swift in Sources */,
@@ -554,6 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94238B3120706F19008CC289 /* ScoresViewController.swift in Sources */,
 				947A2794205F5BE2008D1EF9 /* MainViewController.swift in Sources */,
 				948A25992068A84000151D1B /* OpponentViewController.swift in Sources */,
 				943EC0A91FFB11C8009B3632 /* BibleTryToBeatMeUITests.swift in Sources */,
