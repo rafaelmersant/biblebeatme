@@ -23,8 +23,7 @@ class ResultsViewController: UIViewController {
         }
 
         //Home button
-        homeButton.setIcon(icon: .googleMaterialDesign(.home), iconSize: 30.0, color: mainColor)
-        
+        homeButton.setIcon(icon: .ionicons(.iosHome), iconSize: 30.0, color: mainColor)
     }
 
     override func didReceiveMemoryWarning() {

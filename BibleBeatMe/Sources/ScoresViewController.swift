@@ -17,7 +17,8 @@ class ScoresViewController: UIViewController {
     @IBOutlet weak var wrongsHeader: UILabel!
     @IBOutlet weak var whoHeader: UILabel!
     @IBOutlet weak var timeHeader: UILabel!
-
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,6 +44,38 @@ class ScoresViewController: UIViewController {
 
     }
 }
+
+//MARK: Delegate and DataSource
+extension ScoresViewController: UITableViewDelegate, UITableViewDataSource {
+
+    //MARK: DataSource Methods
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "scoreCell", for: indexPath) as? ScoreCell
+
+        cell?.dateInfo.text = "May 2, 2018"
+        cell?.rightsInfo.text = "9"
+        cell?.wrongsInfo.text = "3"
+        cell?.whoInfo.text = "Pedro432"
+        cell?.timeInfo.text = "1:15"
+
+        return cell!
+    }
+
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 15
+    }
+
+    //MARK: Delegate Methods
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        //self.opponentSelected = opponents[indexPath.row]
+        //self.performSegue(withIdentifier: "showOpponent", sender: self)
+
+    }
+}
+
 
 
 //MARK: ScoreCell

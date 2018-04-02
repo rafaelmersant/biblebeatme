@@ -6,6 +6,7 @@ target 'BibleBeatMe' do
   
   use_frameworks!
   pod 'SwiftIcons', '~> 2.0'
+  # pod 'FlagKit'
 
   # Pods for BibleBeatMe
 

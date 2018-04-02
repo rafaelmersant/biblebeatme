@@ -15,14 +15,13 @@ class OpponentsViewController: UIViewController {
 
     public var opponentSelected: String?
 
-    @IBOutlet weak var backButton: UIBarButtonItem!
-    @IBOutlet weak var battlesButton: UIBarButtonItem!
-    @IBOutlet weak var searchOpponentTextField: UITextField!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tableHeaderView: UIView!
-    @IBOutlet weak var titleOpponent: UILabel!
+    @IBOutlet weak var backButton               : UIBarButtonItem!
+    @IBOutlet weak var searchOpponentTextField  : UITextField!
+    @IBOutlet weak var tableView                : UITableView!
+    @IBOutlet weak var tableHeaderView          : UIView!
+    @IBOutlet weak var titleOpponent            : UILabel!
 
-    fileprivate weak var controller: UIViewController?
+    fileprivate weak var controller             : UIViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +45,6 @@ class OpponentsViewController: UIViewController {
         
         do {
             backButton.setIcon(icon: .ionicons(.iosArrowBack), iconSize: 30.0, color: mainColor)
-
-            battlesButton.setIcon(icon: .icofont(.infoCircle), iconSize: 30.0, color: mainColor)
         }
 
         self.tableView.tableHeaderView = self.tableHeaderView
