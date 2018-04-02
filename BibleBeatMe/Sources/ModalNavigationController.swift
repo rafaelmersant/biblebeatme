@@ -28,8 +28,10 @@ class ModalNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationController?.navigationBar.tintColor = mainColor
-
+        //Set color for title in navBar
+        let textAttributes = [NSAttributedStringKey.foregroundColor: mainColor]
+        UINavigationBar.appearance().titleTextAttributes = textAttributes
+        
         if let window = self.view.window {
             self.offset.x   = window.center.x - self.view.center.x
             self.offset.y   = window.center.y - self.view.center.y

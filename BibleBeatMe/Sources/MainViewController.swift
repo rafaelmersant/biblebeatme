@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
         //Set border to buttons
         specialButtons.forEach { (button) in
             button.layer.borderColor = UIColor.gray.cgColor
+            button.setTitleColor(mainColor, for: .normal)
         }
 
     }

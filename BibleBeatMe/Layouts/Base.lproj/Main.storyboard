@@ -69,7 +69,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bible Beat Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bP-1Y-fVh">
                                                         <rect key="frame" x="145.33333333333334" y="17.666666666666671" width="123.66666666666666" height="22.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
-                                                        <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -375,6 +375,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="zrC-86-rwN" id="IyM-zm-139"/>
+                        <outlet property="dateHeader" destination="htE-KN-MsF" id="vuv-HA-COW"/>
+                        <outlet property="rightsHeader" destination="0IL-jf-ohu" id="9Qf-BR-g82"/>
+                        <outlet property="timeHeader" destination="T7j-9F-wHj" id="XUf-hG-PTD"/>
+                        <outlet property="whoHeader" destination="eSr-3B-GPb" id="f8A-0w-8ko"/>
+                        <outlet property="wrongsHeader" destination="MRR-TO-kAq" id="4jE-64-Qh7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvI-HY-4kU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -540,6 +545,7 @@
                         <outlet property="searchOpponentTextField" destination="qx9-GZ-Cab" id="IKB-8R-9cY"/>
                         <outlet property="tableHeaderView" destination="17W-ch-gMI" id="poS-HQ-MwH"/>
                         <outlet property="tableView" destination="Ro5-sk-NpZ" id="FfA-sf-hEZ"/>
+                        <outlet property="titleOpponent" destination="bAy-Rs-gkm" id="O93-BK-zhd"/>
                         <segue destination="OuT-sc-WyH" kind="presentation" identifier="showOpponent" id="zwm-Av-pDo"/>
                     </connections>
                 </viewController>
@@ -576,7 +582,7 @@
                                 <rect key="frame" x="0.0" y="53" width="414" height="549"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Heb-Wp-Pwy">
-                                        <rect key="frame" x="20" y="40" width="374" height="55"/>
+                                        <rect key="frame" x="20" y="30" width="374" height="55"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Won: 4" lineBreakMode="tailTruncation" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Esx-IL-Bv5">
                                                 <rect key="frame" x="7.9999999999999964" y="17.333333333333343" width="54.666666666666657" height="20.666666666666671"/>
@@ -593,7 +599,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ei3-xA-hSa">
-                                        <rect key="frame" x="20" y="115.00000000000001" width="374" height="54.666666666666671"/>
+                                        <rect key="frame" x="20" y="105.00000000000001" width="374" height="54.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Losses: 3" lineBreakMode="tailTruncation" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="xU6-3K-w3Q">
                                                 <rect key="frame" x="8" y="17.333333333333343" width="75" height="20.666666666666671"/>
@@ -610,7 +616,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igr-Od-Lgp">
-                                        <rect key="frame" x="20" y="189.66666666666669" width="374" height="55"/>
+                                        <rect key="frame" x="20" y="179.66666666666669" width="374" height="55"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fought with you: 3 times and won: 2" lineBreakMode="tailTruncation" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="X54-jp-a8m">
                                                 <rect key="frame" x="8" y="1" width="358" height="54"/>
@@ -628,7 +634,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hw6-uP-FTF">
-                                        <rect key="frame" x="93.666666666666686" y="294" width="226" height="57"/>
+                                        <rect key="frame" x="93.666666666666686" y="282" width="226" height="57"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="PLc-Fp-C5R"/>
@@ -648,13 +654,13 @@
                                         </variation>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Waiting for response..." lineBreakMode="tailTruncation" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="IB4-aR-wWW">
-                                        <rect key="frame" x="121.99999999999999" y="386" width="170.66666666666663" height="136.66666666666663"/>
+                                        <rect key="frame" x="121.99999999999999" y="372.66666666666669" width="170.66666666666663" height="145.00000000000006"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2m-DH-ric">
-                                        <rect key="frame" x="192" y="528" width="29" height="21"/>
+                                        <rect key="frame" x="192" y="523" width="29" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -663,7 +669,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="e2m-DH-ric" firstAttribute="centerX" secondItem="wXw-tI-nng" secondAttribute="centerX" id="2ty-j1-dUy"/>
-                                    <constraint firstItem="Heb-Wp-Pwy" firstAttribute="top" secondItem="wXw-tI-nng" secondAttribute="top" constant="40" id="ADA-sm-gdn"/>
+                                    <constraint firstItem="Heb-Wp-Pwy" firstAttribute="top" secondItem="wXw-tI-nng" secondAttribute="top" constant="30" id="ADA-sm-gdn"/>
                                     <constraint firstItem="Ei3-xA-hSa" firstAttribute="height" secondItem="wXw-tI-nng" secondAttribute="height" multiplier="0.1" id="Cb7-1f-IRP"/>
                                     <constraint firstItem="IB4-aR-wWW" firstAttribute="centerX" secondItem="wXw-tI-nng" secondAttribute="centerX" id="EOa-Bc-ORL"/>
                                     <constraint firstItem="igr-Od-Lgp" firstAttribute="top" secondItem="Ei3-xA-hSa" secondAttribute="bottom" constant="20" id="Kzo-Mi-5L1"/>
@@ -699,7 +705,7 @@
                             <constraint firstItem="wXw-tI-nng" firstAttribute="width" secondItem="wMv-I1-The" secondAttribute="width" id="Wy9-5H-hnl"/>
                             <constraint firstItem="jIK-o6-uGg" firstAttribute="bottom" secondItem="wMv-I1-The" secondAttribute="bottom" id="ZOb-Ow-E3e"/>
                             <constraint firstItem="m71-iO-yKk" firstAttribute="leading" secondItem="eSK-dl-MP4" secondAttribute="leading" id="qbr-ou-pDI"/>
-                            <constraint firstItem="e2m-DH-ric" firstAttribute="bottom" secondItem="jIK-o6-uGg" secondAttribute="top" id="wgn-7t-OC0"/>
+                            <constraint firstItem="e2m-DH-ric" firstAttribute="bottom" secondItem="jIK-o6-uGg" secondAttribute="top" constant="-5" id="wgn-7t-OC0"/>
                             <constraint firstItem="wXw-tI-nng" firstAttribute="leading" secondItem="jIK-o6-uGg" secondAttribute="leading" id="zHu-ob-rzZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eSK-dl-MP4"/>
@@ -801,7 +807,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bible Beat Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8at-vw-I7G">
                                         <rect key="frame" x="145.33333333333334" y="6.3333333333333304" width="123.66666666666666" height="22.666666666666671"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
-                                        <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1004,7 +1010,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bible Beat Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5em-nw-j9D">
                                         <rect key="frame" x="145" y="10.333333333333329" width="124" height="23"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
-                                        <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1153,7 +1159,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wants a competition with you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="qwX-Xg-dZh">
                                 <rect key="frame" x="76" y="69" width="262" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yW-dJ-TMj">
@@ -1231,7 +1237,9 @@
                     <connections>
                         <outlet property="acceptButton" destination="9yW-dJ-TMj" id="c9z-VR-ICZ"/>
                         <outlet property="backButton" destination="mJF-U1-IEf" id="a9P-h1-b2w"/>
+                        <outlet property="opponentName" destination="QR1-fL-Irv" id="ISI-VX-Bf6"/>
                         <outlet property="rejectButton" destination="498-9x-bfI" id="Suq-Zb-Za2"/>
+                        <outlet property="textInvitation" destination="qwX-Xg-dZh" id="L9s-om-yyv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCa-VF-bPS" userLabel="First Responder" sceneMemberID="firstResponder"/>

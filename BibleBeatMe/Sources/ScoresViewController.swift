@@ -11,8 +11,22 @@ import UIKit
 class ScoresViewController: UIViewController {
 
     @IBOutlet weak var backButton: UIBarButtonItem!
+
+    @IBOutlet weak var dateHeader: UILabel!
+    @IBOutlet weak var rightsHeader: UILabel!
+    @IBOutlet weak var wrongsHeader: UILabel!
+    @IBOutlet weak var whoHeader: UILabel!
+    @IBOutlet weak var timeHeader: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        //title header formats
+        dateHeader.textColor    = mainColor
+        rightsHeader.textColor  = mainColor
+        wrongsHeader.textColor  = mainColor
+        whoHeader.textColor     = mainColor
+        timeHeader.textColor    = mainColor
 
         do {
             backButton.setIcon(icon: .ionicons(.iosArrowBack), iconSize: 30.0, color: mainColor)

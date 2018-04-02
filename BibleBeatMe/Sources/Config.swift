@@ -34,7 +34,7 @@ func hexToUIColor (hexString: String) -> UIColor {
 }
 
 //MARK: General properties / values
-let mainColor = UIColor(red: 0.80, green: 0.00, blue: 0.20, alpha: 1.0)
+let mainColor = hexToUIColor(hexString: "FF0033")
 
 
 //MARK: Modify Multiplier for NSLayoutConstraint

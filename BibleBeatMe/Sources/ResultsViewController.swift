@@ -19,6 +19,7 @@ class ResultsViewController: UIViewController {
         //Set border to buttons
         resultsButtons.forEach { (button) in
             button.layer.borderColor = UIColor.gray.cgColor
+            button.setTitleColor(mainColor, for: .normal)
         }
 
         //Home button

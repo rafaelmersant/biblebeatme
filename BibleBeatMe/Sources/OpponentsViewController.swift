@@ -20,12 +20,15 @@ class OpponentsViewController: UIViewController {
     @IBOutlet weak var searchOpponentTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableHeaderView: UIView!
-    @IBOutlet weak var invitationView: UILabel!
-    
+    @IBOutlet weak var titleOpponent: UILabel!
+
     fileprivate weak var controller: UIViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        //title opponent formats
+        titleOpponent.textColor = mainColor
 
         //Search Opponent TextField
         searchOpponentTextField.backgroundColor = UIColor.black

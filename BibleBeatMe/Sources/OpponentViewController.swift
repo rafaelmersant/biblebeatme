@@ -23,11 +23,15 @@ class OpponentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Opponent Name formats
+        opponentName.textColor = mainColor
+
         //Dare Button formats
         dareButton.layer.borderColor = UIColor.gray.cgColor
+        dareButton.setTitleColor(mainColor, for: .normal)
 
         //InfoButton
-        infoButton.setIcon(icon: .googleMaterialDesign(.infoOutline), iconSize: 30.0, color: .blue)
+        infoButton.setIcon(icon: .googleMaterialDesign(.infoOutline), iconSize: 30.0, color: mainColor)
 
         if let opponent = opponent {
             opponentName.text = opponent

@@ -42,6 +42,7 @@ class QuestionsViewController : UIViewController {
         //Set border to buttons
         answerButtons.forEach { (button) in
             button.layer.borderColor = UIColor.gray.cgColor
+            button.setTitleColor(mainColor, for: .normal)
 
             if button.tag == 1100 || button.tag == 1200 {
                 button.isHidden = true
