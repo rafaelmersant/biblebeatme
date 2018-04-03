@@ -73,7 +73,6 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="2bP-1Y-fVh" firstAttribute="centerY" secondItem="Hj1-YC-yLw" secondAttribute="centerY" multiplier="0.5" id="93z-hd-01m"/>
                                                     <constraint firstItem="2bP-1Y-fVh" firstAttribute="centerX" secondItem="Hj1-YC-yLw" secondAttribute="centerX" id="lIl-Dd-5Mt"/>
@@ -194,6 +193,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="Ee2-2Z-tIR"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="mainView" destination="6Jy-lY-7cU" id="Lzq-7g-Ypr"/>
                         <outletCollection property="specialButtons" destination="FbB-ci-sIY" collectionClass="NSMutableArray" id="T9Z-fW-qUU"/>
                         <outletCollection property="specialButtons" destination="x7o-un-21D" collectionClass="NSMutableArray" id="MU4-Pn-N2S"/>
                         <outletCollection property="specialButtons" destination="kzE-tw-X01" collectionClass="NSMutableArray" id="VtO-r5-pyZ"/>

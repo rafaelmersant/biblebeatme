@@ -12,14 +12,19 @@ import SwiftIcons
 class MainViewController: UIViewController {
 
     @IBOutlet var specialButtons: [UIButton]!
+    @IBOutlet weak var mainView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        //Set background Color
+        mainView.backgroundColor = backColor
 
         //Set border to buttons
         specialButtons.forEach { (button) in
             button.layer.borderColor = UIColor.gray.cgColor
             button.setTitleColor(mainColor, for: .normal)
+            button.backgroundColor = backColor
         }
 
     }
