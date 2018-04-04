@@ -863,7 +863,6 @@
                                                 <subviews>
                                                     <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zww-v7-tbN">
                                                         <rect key="frame" x="0.0" y="0.0" width="249" height="72.666666666666671"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <state key="normal" title="Lucas">
                                                             <color key="titleColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -879,7 +878,6 @@
                                                     </button>
                                                     <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16O-ee-Et2">
                                                         <rect key="frame" x="0.0" y="87.666666666666686" width="249" height="72.666666666666686"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <state key="normal" title="Juan">
                                                             <color key="titleColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -895,7 +893,6 @@
                                                     </button>
                                                     <button opaque="NO" tag="300" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z87-Bp-gu3">
                                                         <rect key="frame" x="0.0" y="175.33333333333331" width="249" height="72.333333333333314"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <state key="normal" title="Mateo">
                                                             <color key="titleColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -911,7 +908,6 @@
                                                     </button>
                                                     <button opaque="NO" tag="400" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSH-4B-gHk">
                                                         <rect key="frame" x="0.0" y="262.66666666666663" width="249" height="72.666666666666686"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <state key="normal" title="Hechos">
                                                             <color key="titleColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -928,7 +924,6 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Ixw-fD-e8X" firstAttribute="height" secondItem="0ql-RM-wlO" secondAttribute="height" id="JYF-mS-NDk"/>
                                             <constraint firstItem="Ixw-fD-e8X" firstAttribute="centerX" secondItem="0ql-RM-wlO" secondAttribute="centerXWithinMargins" id="KMP-4s-W4P"/>
@@ -946,7 +941,6 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <constraints>
                                             <constraint firstItem="88L-qC-fCq" firstAttribute="centerX" secondItem="eWF-s8-nrV" secondAttribute="centerXWithinMargins" id="4hv-Pa-2ex"/>
                                             <constraint firstItem="88L-qC-fCq" firstAttribute="centerY" secondItem="eWF-s8-nrV" secondAttribute="centerYWithinMargins" id="lIJ-Cu-oT9"/>
@@ -1002,11 +996,16 @@
                         <outlet property="answerButtonsStackView" destination="Ixw-fD-e8X" id="Udr-uh-3Gl"/>
                         <outlet property="answerButtonsStackViewHeight" destination="JYF-mS-NDk" id="bJx-UX-4h3"/>
                         <outlet property="answerSection" destination="0ql-RM-wlO" id="NP0-Xa-45Q"/>
+                        <outlet property="answerStackView" destination="J5I-ks-ZEY" id="n2e-2r-Iti"/>
                         <outlet property="backButton" destination="22F-KS-cYg" id="hAc-lN-UdM"/>
+                        <outlet property="headerView" destination="aCt-XD-Z4E" id="9Th-Q1-w6x"/>
                         <outlet property="heart1" destination="c85-92-HGf" id="n06-iE-7wO"/>
                         <outlet property="heart2" destination="16d-P8-LaD" id="Xv5-Qm-BvC"/>
                         <outlet property="heart3" destination="dBJ-JM-jwl" id="cXa-Ou-Jkl"/>
+                        <outlet property="heartsView" destination="Cu1-9X-U4Q" id="yfx-bj-u1U"/>
+                        <outlet property="mainView" destination="Y8O-5M-ber" id="Tta-ZL-RuA"/>
                         <outlet property="questionLabel" destination="55q-rT-SW6" id="StB-pO-Kz5"/>
+                        <outlet property="timeElapse" destination="88L-qC-fCq" id="jvF-9A-lXV"/>
                         <outletCollection property="answerButtons" destination="zww-v7-tbN" collectionClass="NSMutableArray" id="FEw-zh-ea4"/>
                         <outletCollection property="answerButtons" destination="KSH-4B-gHk" collectionClass="NSMutableArray" id="ZsM-bh-3QD"/>
                         <outletCollection property="answerButtons" destination="16O-ee-Et2" collectionClass="NSMutableArray" id="EWf-3o-hGv"/>

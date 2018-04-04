@@ -33,7 +33,7 @@ class ModalNavigationController: UINavigationController {
         UINavigationBar.appearance().titleTextAttributes = textAttributes
 
         //Set color for background in navBar
-        UINavigationBar.appearance().barTintColor = backColor
+        //UINavigationBar.appearance().barTintColor = backColor
         UINavigationBar.appearance().isTranslucent = false
         
         if let window = self.view.window {

@@ -10,6 +10,12 @@ import UIKit
 
 class QuestionsViewController : UIViewController {
 
+    @IBOutlet weak var heartsView: UIView!
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var answerStackView: UIStackView!
+    @IBOutlet var mainView: UIView!
+    @IBOutlet weak var timeElapse: UILabel!
+
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var answerSection: UIView!
 
@@ -30,6 +36,15 @@ class QuestionsViewController : UIViewController {
         self.navigationController?.isNavigationBarHidden        = false
         self.navigationController?.navigationBar.barTintColor   = UIColor.black
         self.navigationController?.navigationBar.barStyle       = .black
+
+        //Set backColor
+        heartsView.backgroundColor = backColor
+        headerView.backgroundColor = backColor
+        questionLabel.backgroundColor = backColor
+        questionLabel.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
+        timeElapse.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
+        answerStackView.backgroundColor = backColor
+        mainView.backgroundColor = backColor
 
         //Hearts sets
         heart1.setIcon(icon: .googleMaterialDesign(.favorite), iconSize: 30, color: UIColor.gray)
