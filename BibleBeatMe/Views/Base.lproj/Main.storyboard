@@ -559,6 +559,7 @@
                                 <action selector="backToHome:" destination="xoW-Rd-RY2" id="cW6-pK-M4j"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Battles" id="cGj-XT-68N"/>
                     </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="O2N-g6-s8u" id="syA-Tb-NVr"/>
@@ -1232,13 +1233,28 @@
                                     <constraint firstAttribute="height" constant="69" id="Ogt-8G-49M"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 minutes ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="WN6-6J-paj">
+                                <rect key="frame" x="156.66666666666666" y="101" width="101.66666666666666" height="18.666666666666671"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="he3-0l-UFc">
+                                <rect key="frame" x="173" y="366.33333333333331" width="69" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Upi-0Z-Og4" firstAttribute="bottom" secondItem="c1M-CA-m6X" secondAttribute="bottom" id="2X7-Bn-D14"/>
                             <constraint firstItem="498-9x-bfI" firstAttribute="top" secondItem="9yW-dJ-TMj" secondAttribute="bottom" constant="49" id="2dv-iR-Lh7"/>
                             <constraint firstItem="pz3-rU-tGf" firstAttribute="trailing" secondItem="Upi-0Z-Og4" secondAttribute="trailing" id="2if-gG-fQv"/>
+                            <constraint firstItem="WN6-6J-paj" firstAttribute="top" secondItem="qwX-Xg-dZh" secondAttribute="bottom" constant="8" id="4rG-UI-U0c"/>
                             <constraint firstItem="9yW-dJ-TMj" firstAttribute="centerX" secondItem="pz3-rU-tGf" secondAttribute="centerX" id="6fT-XK-Km3"/>
+                            <constraint firstItem="he3-0l-UFc" firstAttribute="top" secondItem="498-9x-bfI" secondAttribute="bottom" multiplier="1.1" id="8Gl-bQ-Yml"/>
+                            <constraint firstItem="he3-0l-UFc" firstAttribute="centerX" secondItem="pz3-rU-tGf" secondAttribute="centerX" id="AsQ-vs-6Qb"/>
                             <constraint firstItem="498-9x-bfI" firstAttribute="centerX" secondItem="pz3-rU-tGf" secondAttribute="centerX" id="WIx-Xs-zQ2"/>
                             <constraint firstItem="9yW-dJ-TMj" firstAttribute="top" secondItem="qwX-Xg-dZh" secondAttribute="bottom" constant="77" id="ccw-rK-vqe"/>
                             <constraint firstItem="qwX-Xg-dZh" firstAttribute="top" secondItem="QR1-fL-Irv" secondAttribute="bottom" constant="5" id="dXb-u1-ftZ"/>
@@ -1246,6 +1262,7 @@
                             <constraint firstItem="Upi-0Z-Og4" firstAttribute="leading" secondItem="pz3-rU-tGf" secondAttribute="leading" id="hwc-P0-7R1"/>
                             <constraint firstItem="QR1-fL-Irv" firstAttribute="centerX" secondItem="pz3-rU-tGf" secondAttribute="centerX" id="lqj-Ex-hxh"/>
                             <constraint firstItem="qwX-Xg-dZh" firstAttribute="centerX" secondItem="pz3-rU-tGf" secondAttribute="centerX" id="vsV-0D-QXb"/>
+                            <constraint firstItem="WN6-6J-paj" firstAttribute="centerX" secondItem="pz3-rU-tGf" secondAttribute="centerX" id="zxm-wP-aAA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pz3-rU-tGf"/>
                     </view>
