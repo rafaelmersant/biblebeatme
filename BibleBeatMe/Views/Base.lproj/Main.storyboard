@@ -1028,7 +1028,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bible Beat Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5em-nw-j9D">
-                                        <rect key="frame" x="145" y="10.333333333333329" width="124" height="23"/>
+                                        <rect key="frame" x="145" y="17.666666666666671" width="124" height="23"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
                                         <color key="textColor" red="1" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1036,7 +1036,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="5em-nw-j9D" firstAttribute="centerY" secondItem="o65-YU-LHQ" secondAttribute="centerYWithinMargins" multiplier="1.001" id="Wec-A9-VzB"/>
+                                    <constraint firstItem="5em-nw-j9D" firstAttribute="centerY" secondItem="o65-YU-LHQ" secondAttribute="centerYWithinMargins" multiplier="1.001" constant="7.3115000000000023" id="Wec-A9-VzB"/>
                                     <constraint firstItem="5em-nw-j9D" firstAttribute="centerX" secondItem="o65-YU-LHQ" secondAttribute="centerX" id="q8y-9S-fPv"/>
                                 </constraints>
                             </view>
@@ -1061,7 +1061,6 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aot-nG-ROs">
                                         <rect key="frame" x="94" y="81.666666666666657" width="226" height="57"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="226" id="YbI-9M-bga"/>
                                             <constraint firstAttribute="height" constant="57" id="t5e-nl-yDA"/>
@@ -1081,7 +1080,6 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WK-Z6-b5d">
                                         <rect key="frame" x="94" y="203.66666666666666" width="226" height="56.999999999999972"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="1OM-N2-lNo"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="226" id="PfB-wb-Pdc"/>
@@ -1153,7 +1151,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="contentView" destination="4bG-kE-YIq" id="hUa-d8-OTg"/>
                         <outlet property="homeButton" destination="Ipk-aS-DJB" id="Zxz-Sa-H4A"/>
+                        <outlet property="messageResult" destination="lpz-4Y-5Gm" id="D6a-d1-41I"/>
+                        <outlet property="resultsLabel" destination="H6o-Xi-1SI" id="LfZ-3G-UZG"/>
+                        <outlet property="titleResults" destination="XG3-cY-XSq" id="tiM-8I-qAr"/>
+                        <outlet property="titleView" destination="o65-YU-LHQ" id="P4k-yM-8OW"/>
                         <outletCollection property="resultsButtons" destination="aot-nG-ROs" collectionClass="NSMutableArray" id="qPc-Wu-gss"/>
                         <outletCollection property="resultsButtons" destination="9WK-Z6-b5d" collectionClass="NSMutableArray" id="cRK-0T-fdO"/>
                     </connections>

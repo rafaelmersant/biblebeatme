@@ -12,9 +12,21 @@ class ResultsViewController: UIViewController {
 
     @IBOutlet var resultsButtons: [UIButton]!
     @IBOutlet weak var homeButton: UIBarButtonItem!
+    @IBOutlet weak var titleView: UIView!
+    @IBOutlet weak var titleResults: UIView!
+    @IBOutlet weak var resultsLabel: UILabel!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var messageResult: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        //Set backColor
+        titleView.backgroundColor = backColor
+        titleResults.backgroundColor = backColor
+        resultsLabel.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
+        contentView.backgroundColor = backColor
+        messageResult.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
 
         //Set border to buttons
         resultsButtons.forEach { (button) in
