@@ -10,14 +10,23 @@ import UIKit
 
 class DareViewController: UIViewController {
 
-    @IBOutlet weak var backButton: UIBarButtonItem!
-    @IBOutlet weak var acceptButton: UIButton!
-    @IBOutlet weak var rejectButton: UIButton!
-    @IBOutlet weak var opponentName: UILabel!
-    @IBOutlet weak var textInvitation: UILabel!
+    @IBOutlet weak var backButton       : UIBarButtonItem!
+    @IBOutlet weak var acceptButton     : UIButton!
+    @IBOutlet weak var rejectButton     : UIButton!
+    @IBOutlet weak var opponentName     : UILabel!
+    @IBOutlet weak var textInvitation   : UILabel!
+    @IBOutlet weak var timeElapsed      : UILabel!
+    @IBOutlet weak var seeMoreLabel     : UILabel!
+    @IBOutlet var mainView              : UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        //Set backColor
+        mainView.backgroundColor = backColor
+        textInvitation.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
+        timeElapsed.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
+        seeMoreLabel.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
 
         //Buttons formats
         acceptButton.layer.borderColor = UIColor.gray.cgColor

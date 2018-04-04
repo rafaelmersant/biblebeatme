@@ -1161,7 +1161,6 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yW-dJ-TMj">
                                 <rect key="frame" x="94" y="170" width="226" height="57"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="226" id="QAp-zf-BLX"/>
                                     <constraint firstAttribute="height" constant="57" id="qyn-1U-NX8"/>
@@ -1181,7 +1180,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="498-9x-bfI">
                                 <rect key="frame" x="94" y="276" width="226" height="57"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="aEN-Ah-LS5"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="226" id="syq-u9-K7T"/>
@@ -1209,7 +1207,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 minutes ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="WN6-6J-paj">
                                 <rect key="frame" x="156.66666666666666" y="101" width="101.66666666666666" height="18.666666666666671"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="he3-0l-UFc">
@@ -1250,9 +1248,12 @@
                     <connections>
                         <outlet property="acceptButton" destination="9yW-dJ-TMj" id="c9z-VR-ICZ"/>
                         <outlet property="backButton" destination="mJF-U1-IEf" id="a9P-h1-b2w"/>
+                        <outlet property="mainView" destination="c1M-CA-m6X" id="cgM-m6-jof"/>
                         <outlet property="opponentName" destination="QR1-fL-Irv" id="ISI-VX-Bf6"/>
                         <outlet property="rejectButton" destination="498-9x-bfI" id="Suq-Zb-Za2"/>
+                        <outlet property="seeMoreLabel" destination="he3-0l-UFc" id="aAk-yG-aXr"/>
                         <outlet property="textInvitation" destination="qwX-Xg-dZh" id="L9s-om-yyv"/>
+                        <outlet property="timeElapsed" destination="WN6-6J-paj" id="rA7-pO-KfL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCa-VF-bPS" userLabel="First Responder" sceneMemberID="firstResponder"/>
