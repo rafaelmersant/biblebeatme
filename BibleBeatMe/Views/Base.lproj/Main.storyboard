@@ -417,7 +417,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="120.66666666666667"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select opponent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAy-Rs-gkm">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="65.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
                                                 <color key="textColor" red="0.80000000000000004" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -438,7 +438,7 @@
                                             <constraint firstAttribute="bottom" secondItem="qx9-GZ-Cab" secondAttribute="bottom" constant="15" id="A3d-pY-XmW"/>
                                             <constraint firstItem="bAy-Rs-gkm" firstAttribute="top" secondItem="ZgR-2S-urd" secondAttribute="top" id="AyH-IR-wh7"/>
                                             <constraint firstItem="qx9-GZ-Cab" firstAttribute="centerX" secondItem="ZgR-2S-urd" secondAttribute="centerX" id="GCF-5W-aOZ"/>
-                                            <constraint firstItem="qx9-GZ-Cab" firstAttribute="top" secondItem="bAy-Rs-gkm" secondAttribute="bottom" constant="20.666666666666657" id="KIG-kl-Qc2"/>
+                                            <constraint firstItem="qx9-GZ-Cab" firstAttribute="top" secondItem="bAy-Rs-gkm" secondAttribute="bottom" constant="10" id="KIG-kl-Qc2"/>
                                             <constraint firstItem="qx9-GZ-Cab" firstAttribute="width" secondItem="ZgR-2S-urd" secondAttribute="width" multiplier="0.7" id="UEC-2k-hvn"/>
                                             <constraint firstAttribute="trailing" secondItem="bAy-Rs-gkm" secondAttribute="trailing" id="ZOT-wA-LT1"/>
                                             <constraint firstItem="bAy-Rs-gkm" firstAttribute="width" secondItem="ZgR-2S-urd" secondAttribute="width" id="bKo-eo-I8J"/>
@@ -557,6 +557,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="O2N-g6-s8u" id="syA-Tb-NVr"/>
+                        <outlet property="headerView" destination="ZgR-2S-urd" id="RDY-ph-8IX"/>
                         <outlet property="searchOpponentTextField" destination="qx9-GZ-Cab" id="IKB-8R-9cY"/>
                         <outlet property="tableHeaderView" destination="17W-ch-gMI" id="poS-HQ-MwH"/>
                         <outlet property="tableView" destination="Ro5-sk-NpZ" id="FfA-sf-hEZ"/>

@@ -15,6 +15,7 @@ class OpponentsViewController: UIViewController {
 
     public var opponentSelected: String?
 
+    @IBOutlet weak var headerView               : UIView!
     @IBOutlet weak var backButton               : UIBarButtonItem!
     @IBOutlet weak var searchOpponentTextField  : UITextField!
     @IBOutlet weak var tableView                : UITableView!
@@ -26,11 +27,14 @@ class OpponentsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Set backColor
+        headerView.backgroundColor = backColor
+        
         //title opponent formats
         titleOpponent.textColor = mainColor
 
         //Search Opponent TextField
-        searchOpponentTextField.backgroundColor = UIColor.black
+        searchOpponentTextField.backgroundColor = backColor
         searchOpponentTextField.layer.cornerRadius = 8.0
         searchOpponentTextField.layer.borderWidth = 1
         searchOpponentTextField.layer.borderColor = UIColor.gray.cgColor
@@ -39,7 +43,7 @@ class OpponentsViewController: UIViewController {
             icon            : .googleMaterialDesign(.search),
             leftViewMode    : .always,
             textColor       : .gray,
-            backgroundColor : .black,
+            backgroundColor : backColor,
             size            : CGSize(width: 30, height: 30)
         )
         
@@ -85,6 +89,11 @@ extension OpponentsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "opponentCell", for: indexPath) as? OpponentCell
+
+        //Set backColor
+        cell?.opponentName.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
+        cell?.opponentStatus.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
+        cell?.backgroundColor = backColor
 
         cell?.opponentName.text = opponents[indexPath.row]
         cell?.opponentStatus.text = opponentsStatus[indexPath.row]
