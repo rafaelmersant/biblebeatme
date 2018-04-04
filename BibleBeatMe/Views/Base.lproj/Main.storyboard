@@ -651,7 +651,6 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hw6-uP-FTF">
                                         <rect key="frame" x="93.666666666666686" y="282" width="226" height="57"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="PLc-Fp-C5R"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="226" id="sgF-iX-qzo"/>
@@ -672,7 +671,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Waiting for response..." lineBreakMode="tailTruncation" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="IB4-aR-wWW">
                                         <rect key="frame" x="121.99999999999999" y="372.66666666666669" width="170.66666666666663" height="145.00000000000006"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <color key="textColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2m-DH-ric">
@@ -741,6 +740,8 @@
                         <outlet property="dareButton" destination="Hw6-uP-FTF" id="lca-gs-0tE"/>
                         <outlet property="infoButton" destination="e2m-DH-ric" id="TI9-rS-w6J"/>
                         <outlet property="opponentName" destination="glp-Vy-WWz" id="uEk-qh-ewd"/>
+                        <outlet property="opponentNameView" destination="m71-iO-yKk" id="mlG-kj-U0i"/>
+                        <outlet property="responseLabel" destination="IB4-aR-wWW" id="w4z-FG-FfV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lX8-Bg-OsF" userLabel="First Responder" sceneMemberID="firstResponder"/>

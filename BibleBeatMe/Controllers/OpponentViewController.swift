@@ -13,15 +13,22 @@ class OpponentViewController: UIViewController {
     var opponent: String?
 
     //MARK: IBOutlets
-    @IBOutlet weak var opponentName: UILabel!
-    @IBOutlet weak var backButton: UIBarButtonItem!
-    @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var dareButton: UIButton!
-    @IBOutlet weak var infoButton: UILabel!
+    @IBOutlet weak var opponentName     : UILabel!
+    @IBOutlet weak var backButton       : UIBarButtonItem!
+    @IBOutlet weak var contentView      : UIView!
+    @IBOutlet weak var dareButton       : UIButton!
+    @IBOutlet weak var infoButton       : UILabel!
+    @IBOutlet weak var responseLabel    : UILabel!
+    @IBOutlet weak var opponentNameView : UIView!
 
     //MARK: Overrides methods
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        //Set backColor
+        contentView.backgroundColor = backColor
+        opponentNameView.backgroundColor = backColor
+        responseLabel.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
 
         //Opponent Name formats
         opponentName.textColor = mainColor
