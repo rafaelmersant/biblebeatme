@@ -35,7 +35,7 @@ func hexToUIColor (hexString: String) -> UIColor {
 
 //MARK: General properties / values
 let mainColor = hexToUIColor(hexString: "FF0033")
-let backColor = UIColor.white
+let backColor = UIColor.black
 let foreColor = UIColor.black
 
 //MARK: Modify Multiplier for NSLayoutConstraint
