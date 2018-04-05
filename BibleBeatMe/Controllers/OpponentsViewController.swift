@@ -21,6 +21,7 @@ class OpponentsViewController: UIViewController {
     @IBOutlet weak var tableView                : UITableView!
     @IBOutlet weak var tableHeaderView          : UIView!
     @IBOutlet weak var titleOpponent            : UILabel!
+    @IBOutlet weak var battlesButton            : UIBarButtonItem!
 
     fileprivate weak var controller             : UIViewController?
 
@@ -49,6 +50,7 @@ class OpponentsViewController: UIViewController {
         
         do {
             backButton.setIcon(icon: .ionicons(.iosArrowBack), iconSize: 30.0, color: mainColor)
+            battlesButton.setIcon(icon: .icofont(.list), iconSize: 30.0, color: mainColor)
         }
 
         self.tableView.tableHeaderView = self.tableHeaderView

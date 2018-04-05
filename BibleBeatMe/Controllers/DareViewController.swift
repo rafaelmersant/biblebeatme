@@ -16,8 +16,8 @@ class DareViewController: UIViewController {
     @IBOutlet weak var opponentName     : UILabel!
     @IBOutlet weak var textInvitation   : UILabel!
     @IBOutlet weak var timeElapsed      : UILabel!
-    @IBOutlet weak var seeMoreLabel     : UILabel!
     @IBOutlet var mainView              : UIView!
+    @IBOutlet weak var seeMoreButton    : UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +25,7 @@ class DareViewController: UIViewController {
         //Set backColor
         mainView.backgroundColor = backColor
         textInvitation.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
-        timeElapsed.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
-        seeMoreLabel.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
+        timeElapsed.textColor = backColor == UIColor.white ? UIColor.black : hexToUIColor(hexString: "FF9900") //UIColor.white
 
         //Buttons formats
         acceptButton.layer.borderColor = UIColor.gray.cgColor
@@ -39,6 +38,7 @@ class DareViewController: UIViewController {
 
         do {
             backButton.setIcon(icon: .ionicons(.iosArrowBack), iconSize: 30.0, color: mainColor)
+            seeMoreButton.setIcon(icon: .googleMaterialDesign(.more), iconSize: 30.0, color: mainColor)
         }
 
     }
