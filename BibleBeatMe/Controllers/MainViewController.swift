@@ -13,12 +13,16 @@ class MainViewController: UIViewController {
 
     @IBOutlet var specialButtons: [UIButton]!
     @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var titleApp: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //Set background Color
         mainView.backgroundColor = backColor
+
+        //Set others formats
+        titleApp.textColor = mainColor
 
         //Set border to buttons
         specialButtons.forEach { (button) in

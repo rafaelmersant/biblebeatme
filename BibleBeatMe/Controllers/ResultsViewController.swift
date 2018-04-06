@@ -10,6 +10,7 @@ import UIKit
 
 class ResultsViewController: UIViewController {
 
+    @IBOutlet weak var titleApp: UILabel!
     @IBOutlet var resultsButtons        : [UIButton]!
     @IBOutlet weak var homeButton       : UIBarButtonItem!
     @IBOutlet weak var resultsLabel     : UILabel!
@@ -25,6 +26,7 @@ class ResultsViewController: UIViewController {
         resultsLabel.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
         contentView.backgroundColor = backColor
         messageResult.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
+        titleApp.textColor = mainColor
 
         //Set border to buttons
         resultsButtons.forEach { (button) in

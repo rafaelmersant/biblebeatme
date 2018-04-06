@@ -45,6 +45,7 @@ extension ChallengesViewController: UITableViewDelegate, UITableViewDataSource {
         //Set backColor
         cell?.statusDescrp.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
         cell?.backgroundColor = backColor
+        cell?.opponentName.textColor = mainColor
 
         cell?.opponentName.text = "Rafael996"
         cell?.timeElapsed.text = "15 minutes ago"

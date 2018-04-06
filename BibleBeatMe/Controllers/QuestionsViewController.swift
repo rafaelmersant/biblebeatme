@@ -10,6 +10,7 @@ import UIKit
 
 class QuestionsViewController : UIViewController {
 
+    @IBOutlet weak var titleApp: UILabel!
     @IBOutlet weak var heartsView: UIView!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var answerStackView: UIStackView!
@@ -45,6 +46,7 @@ class QuestionsViewController : UIViewController {
         timeElapse.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
         answerStackView.backgroundColor = backColor
         mainView.backgroundColor = backColor
+        titleApp.textColor = mainColor
 
         //Hearts sets
         heart1.setIcon(icon: .googleMaterialDesign(.favorite), iconSize: 30, color: UIColor.gray)

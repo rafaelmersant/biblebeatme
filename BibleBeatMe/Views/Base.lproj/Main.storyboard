@@ -188,6 +188,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mainView" destination="6Jy-lY-7cU" id="Lzq-7g-Ypr"/>
+                        <outlet property="titleApp" destination="2bP-1Y-fVh" id="W4w-rW-ud8"/>
                         <outletCollection property="specialButtons" destination="kzE-tw-X01" collectionClass="NSMutableArray" id="VtO-r5-pyZ"/>
                         <outletCollection property="specialButtons" destination="FbB-ci-sIY" collectionClass="NSMutableArray" id="T9Z-fW-qUU"/>
                         <outletCollection property="specialButtons" destination="x7o-un-21D" collectionClass="NSMutableArray" id="MU4-Pn-N2S"/>
@@ -997,6 +998,7 @@
                         <outlet property="mainView" destination="Y8O-5M-ber" id="Tta-ZL-RuA"/>
                         <outlet property="questionLabel" destination="55q-rT-SW6" id="StB-pO-Kz5"/>
                         <outlet property="timeElapse" destination="88L-qC-fCq" id="jvF-9A-lXV"/>
+                        <outlet property="titleApp" destination="8at-vw-I7G" id="aTl-wh-gf5"/>
                         <outletCollection property="answerButtons" destination="zww-v7-tbN" collectionClass="NSMutableArray" id="FEw-zh-ea4"/>
                         <outletCollection property="answerButtons" destination="KSH-4B-gHk" collectionClass="NSMutableArray" id="ZsM-bh-3QD"/>
                         <outletCollection property="answerButtons" destination="16O-ee-Et2" collectionClass="NSMutableArray" id="EWf-3o-hGv"/>
@@ -1119,6 +1121,7 @@
                         <outlet property="mainView" destination="Wlb-Uo-RfQ" id="oPa-Ah-NJ8"/>
                         <outlet property="messageResult" destination="lpz-4Y-5Gm" id="D6a-d1-41I"/>
                         <outlet property="resultsLabel" destination="H6o-Xi-1SI" id="LfZ-3G-UZG"/>
+                        <outlet property="titleApp" destination="5em-nw-j9D" id="IfY-Ub-G1y"/>
                         <outletCollection property="resultsButtons" destination="aot-nG-ROs" collectionClass="NSMutableArray" id="qPc-Wu-gss"/>
                         <outletCollection property="resultsButtons" destination="9WK-Z6-b5d" collectionClass="NSMutableArray" id="cRK-0T-fdO"/>
                     </connections>
