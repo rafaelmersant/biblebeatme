@@ -94,7 +94,7 @@ extension OpponentsViewController: UITableViewDelegate, UITableViewDataSource {
 
         //Set backColor
         cell?.opponentName.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
-        cell?.opponentStatus.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
+        cell?.opponentStatus.textColor = backColor == UIColor.white ? UIColor.black : UIColor.lightGray
         cell?.backgroundColor = backColor
 
         cell?.opponentName.text = opponents[indexPath.row]

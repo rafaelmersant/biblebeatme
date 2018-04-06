@@ -11,9 +11,10 @@ import SwiftIcons
 
 class MainViewController: UIViewController {
 
-    @IBOutlet var specialButtons: [UIButton]!
-    @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var titleApp: UILabel!
+    @IBOutlet var specialButtons            : [UIButton]!
+    @IBOutlet weak var mainView             : UIView!
+    @IBOutlet weak var titleApp             : UILabel!
+    @IBOutlet weak var opponentsInvitations : UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,11 @@ class MainViewController: UIViewController {
 
         //Set others formats
         titleApp.textColor = mainColor
+        opponentsInvitations.layer.cornerRadius = opponentsInvitations.frame.width / 2
+        opponentsInvitations.layer.borderWidth = 1
+        opponentsInvitations.layer.borderColor = mainColor.cgColor
+        opponentsInvitations.layer.masksToBounds = true
+        opponentsInvitations.clipsToBounds = true
 
         //Set border to buttons
         specialButtons.forEach { (button) in
