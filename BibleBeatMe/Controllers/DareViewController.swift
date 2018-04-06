@@ -25,7 +25,7 @@ class DareViewController: UIViewController {
         //Set backColor
         mainView.backgroundColor = backColor
         textInvitation.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
-        timeElapsed.textColor = backColor == UIColor.white ? UIColor.black : hexToUIColor(hexString: "FF9900") //UIColor.white
+        timeElapsed.textColor = backColor == UIColor.white ? UIColor.black : UIColor.lightGray
 
         //Buttons formats
         acceptButton.layer.borderColor = UIColor.gray.cgColor

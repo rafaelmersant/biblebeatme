@@ -10,12 +10,12 @@ import UIKit
 
 class ResultsViewController: UIViewController {
 
-    @IBOutlet var resultsButtons: [UIButton]!
-    @IBOutlet weak var homeButton: UIBarButtonItem!
-    @IBOutlet weak var resultsLabel: UILabel!
-    @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var messageResult: UILabel!
-    @IBOutlet var mainView: UIView!
+    @IBOutlet var resultsButtons        : [UIButton]!
+    @IBOutlet weak var homeButton       : UIBarButtonItem!
+    @IBOutlet weak var resultsLabel     : UILabel!
+    @IBOutlet weak var contentView      : UIView!
+    @IBOutlet weak var messageResult    : UILabel!
+    @IBOutlet var mainView              : UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,8 @@ class ResultsViewController: UIViewController {
     
 
     @IBAction func goToHome(_ sender: UIBarButtonItem) {
-        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+       // self.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
 
     }
     

@@ -1187,7 +1187,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 minutes ago" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="WN6-6J-paj">
                                 <rect key="frame" x="145" y="110" width="124" height="23"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1225,6 +1225,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="See more" id="Spc-r0-p3R">
                             <color key="tintColor" red="1" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="BYO-gn-vzS" kind="presentation" id="wJI-SK-vOl"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -1241,6 +1244,127 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCa-VF-bPS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2306" y="880"/>
+        </scene>
+        <!--Challenges-->
+        <scene sceneID="snK-Dp-vJ4">
+            <objects>
+                <viewController title="Challenges" id="B9w-Bm-ZnG" customClass="ChallengesViewController" customModule="BibleBeatMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="58a-tl-Der">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List of Callenges" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="M6f-6m-nCq">
+                                <rect key="frame" x="125" y="30" width="165" height="29"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hMx-qX-daa">
+                                <rect key="frame" x="0.0" y="119" width="414" height="553"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="challengeCell" rowHeight="60" id="hAg-6o-XJA" customClass="ChallengeCell" customModule="BibleBeatMe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hAg-6o-XJA" id="4jF-Qi-Mh3">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rafael4456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixp-RK-olk">
+                                                    <rect key="frame" x="15" y="10.000000000000002" width="80.666666666666671" height="18.666666666666671"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 minutes ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5Q-74-S4t">
+                                                    <rect key="frame" x="15" y="33.666666666666664" width="97" height="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1y-Om-5M0">
+                                                    <rect key="frame" x="343" y="19" width="56" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="R5Q-74-S4t" firstAttribute="top" secondItem="ixp-RK-olk" secondAttribute="bottom" constant="5" id="0sO-Id-5d5"/>
+                                                <constraint firstItem="ixp-RK-olk" firstAttribute="top" secondItem="4jF-Qi-Mh3" secondAttribute="top" constant="10" id="0tA-xa-BYV"/>
+                                                <constraint firstItem="ixp-RK-olk" firstAttribute="leading" secondItem="4jF-Qi-Mh3" secondAttribute="leading" constant="15" id="6PN-Kb-diK"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="R5Q-74-S4t" secondAttribute="trailing" constant="20" symbolic="YES" id="LKS-Ji-24W"/>
+                                                <constraint firstAttribute="trailing" secondItem="s1y-Om-5M0" secondAttribute="trailing" constant="15" id="LTf-ic-7XZ"/>
+                                                <constraint firstItem="R5Q-74-S4t" firstAttribute="leading" secondItem="4jF-Qi-Mh3" secondAttribute="leading" constant="15" id="MxA-xI-rGV"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ixp-RK-olk" secondAttribute="trailing" constant="20" symbolic="YES" id="UlG-hm-fRI"/>
+                                                <constraint firstItem="s1y-Om-5M0" firstAttribute="centerY" secondItem="4jF-Qi-Mh3" secondAttribute="centerY" id="bbo-S0-1B9"/>
+                                                <constraint firstItem="s1y-Om-5M0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4jF-Qi-Mh3" secondAttribute="leading" constant="20" symbolic="YES" id="vwp-jZ-m5s"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="opponentName" destination="ixp-RK-olk" id="E26-bH-wOE"/>
+                                            <outlet property="statusDescrp" destination="s1y-Om-5M0" id="S6d-fL-H1q"/>
+                                            <outlet property="timeElapsed" destination="R5Q-74-S4t" id="lIk-Gy-R7Z"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="B9w-Bm-ZnG" id="XIK-ue-Eur"/>
+                                    <outlet property="delegate" destination="B9w-Bm-ZnG" id="cbB-4M-iKm"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XnV-vp-ch5">
+                                <rect key="frame" x="0.0" y="603" width="414" height="69"/>
+                                <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="hXW-OH-HEB"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hpx-VO-Bto">
+                                <rect key="frame" x="104.33333333333331" y="78" width="207" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="Waiting"/>
+                                </segments>
+                                <color key="tintColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="M6f-6m-nCq" firstAttribute="centerX" secondItem="wKh-cf-nLn" secondAttribute="centerX" id="1rn-Ud-Raw"/>
+                            <constraint firstItem="Hpx-VO-Bto" firstAttribute="top" secondItem="M6f-6m-nCq" secondAttribute="bottom" constant="19" id="69E-2w-B21"/>
+                            <constraint firstItem="hMx-qX-daa" firstAttribute="leading" secondItem="wKh-cf-nLn" secondAttribute="leading" id="Ajt-N3-7FC"/>
+                            <constraint firstItem="Hpx-VO-Bto" firstAttribute="width" secondItem="58a-tl-Der" secondAttribute="width" multiplier="0.5" id="N9z-AB-Z4S"/>
+                            <constraint firstItem="hMx-qX-daa" firstAttribute="bottom" secondItem="XnV-vp-ch5" secondAttribute="bottom" id="NJ1-41-gxY"/>
+                            <constraint firstItem="Hpx-VO-Bto" firstAttribute="centerX" secondItem="wKh-cf-nLn" secondAttribute="centerX" id="SOV-8R-frZ"/>
+                            <constraint firstItem="XnV-vp-ch5" firstAttribute="trailing" secondItem="wKh-cf-nLn" secondAttribute="trailing" id="Z7g-T0-j5y"/>
+                            <constraint firstItem="M6f-6m-nCq" firstAttribute="top" secondItem="58a-tl-Der" secondAttribute="top" constant="30" id="gDB-XG-CZn"/>
+                            <constraint firstItem="XnV-vp-ch5" firstAttribute="bottom" secondItem="58a-tl-Der" secondAttribute="bottom" id="gf9-6k-4I4"/>
+                            <constraint firstItem="M6f-6m-nCq" firstAttribute="width" relation="lessThanOrEqual" secondItem="58a-tl-Der" secondAttribute="width" multiplier="0.4" id="ipg-fQ-cOo"/>
+                            <constraint firstItem="XnV-vp-ch5" firstAttribute="leading" secondItem="wKh-cf-nLn" secondAttribute="leading" id="mQy-oB-jSl"/>
+                            <constraint firstItem="hMx-qX-daa" firstAttribute="top" secondItem="Hpx-VO-Bto" secondAttribute="bottom" constant="13" id="mah-7K-dcT"/>
+                            <constraint firstItem="hMx-qX-daa" firstAttribute="trailing" secondItem="wKh-cf-nLn" secondAttribute="trailing" id="sB3-AD-2vM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wKh-cf-nLn"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Competition" id="USE-fn-6s2">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="YlW-hz-Rjc"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="6SW-bJ-PgZ">
+                            <connections>
+                                <action selector="backToOpponents:" destination="B9w-Bm-ZnG" id="eGD-8c-Ka7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backButton" destination="6SW-bJ-PgZ" id="cPB-CW-61k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bIC-5K-bMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2305.7971014492755" y="2401.630434782609"/>
         </scene>
         <!--Result Practice Navigation-->
         <scene sceneID="RG4-PI-My9">
@@ -1373,6 +1497,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iqZ-iA-XVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="29" y="880"/>
+        </scene>
+        <!--Challenges-->
+        <scene sceneID="HTt-7f-A2s">
+            <objects>
+                <navigationController title="Challenges" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="BYO-gn-vzS" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Utd-2Q-Kao">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="1" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B9w-Bm-ZnG" kind="relationship" relationship="rootViewController" id="BOA-T6-yTG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gzq-BB-lgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2306" y="1670"/>
         </scene>
     </scenes>
 </document>
