@@ -8,10 +8,9 @@
 
 import UIKit
 
-class ChallengesViewController: UIViewController {
+class ChallengesReceivedViewController: UIViewController {
 
     @IBOutlet weak var backButton: UIBarButtonItem!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +34,12 @@ class ChallengesViewController: UIViewController {
 
 
 //MARK: Delegate and DataSource
-extension ChallengesViewController: UITableViewDelegate, UITableViewDataSource {
+extension ChallengesReceivedViewController: UITableViewDelegate, UITableViewDataSource {
 
     //MARK: DataSource Methods
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "challengeCell", for: indexPath) as? ChallengeCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "challengeReceivedCell", for: indexPath) as? ChallengeReceivedCell
 
         //Set backColor
         cell?.statusDescrp.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
@@ -66,14 +65,14 @@ extension ChallengesViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 
-//MARK: ChallengeCell
+//MARK: ChallengeReceivedCell
 
-class ChallengeCell: UITableViewCell {
+class ChallengeReceivedCell: UITableViewCell {
 
     @IBOutlet weak var opponentName: UILabel!
     @IBOutlet weak var timeElapsed: UILabel!
     @IBOutlet weak var statusDescrp: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
 

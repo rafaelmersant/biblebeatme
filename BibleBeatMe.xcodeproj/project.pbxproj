@@ -15,9 +15,12 @@
 		94238B2F20706F19008CC289 /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94238B2E20706F19008CC289 /* ScoresViewController.swift */; };
 		94238B3020706F19008CC289 /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94238B2E20706F19008CC289 /* ScoresViewController.swift */; };
 		94238B3120706F19008CC289 /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94238B2E20706F19008CC289 /* ScoresViewController.swift */; };
-		9425CEE72075C70D00FD4ADD /* ChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9425CEE62075C70D00FD4ADD /* ChallengesViewController.swift */; };
-		9425CEE82075C70D00FD4ADD /* ChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9425CEE62075C70D00FD4ADD /* ChallengesViewController.swift */; };
-		9425CEE92075C70D00FD4ADD /* ChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9425CEE62075C70D00FD4ADD /* ChallengesViewController.swift */; };
+		9425CEE72075C70D00FD4ADD /* ChallengesReceivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9425CEE62075C70D00FD4ADD /* ChallengesReceivedViewController.swift */; };
+		9425CEE82075C70D00FD4ADD /* ChallengesReceivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9425CEE62075C70D00FD4ADD /* ChallengesReceivedViewController.swift */; };
+		9425CEE92075C70D00FD4ADD /* ChallengesReceivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9425CEE62075C70D00FD4ADD /* ChallengesReceivedViewController.swift */; };
+		9425CEEB2078364C00FD4ADD /* ChallengesSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9425CEEA2078364C00FD4ADD /* ChallengesSentViewController.swift */; };
+		9425CEEC2078364C00FD4ADD /* ChallengesSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9425CEEA2078364C00FD4ADD /* ChallengesSentViewController.swift */; };
+		9425CEED2078364C00FD4ADD /* ChallengesSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9425CEEA2078364C00FD4ADD /* ChallengesSentViewController.swift */; };
 		943EC0891FFB11C8009B3632 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC0881FFB11C8009B3632 /* AppDelegate.swift */; };
 		943EC08B1FFB11C8009B3632 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC08A1FFB11C8009B3632 /* MainViewController.swift */; };
 		943EC08E1FFB11C8009B3632 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943EC08C1FFB11C8009B3632 /* Main.storyboard */; };
@@ -77,7 +80,8 @@
 		8D28466271C7D6F31CD884D2 /* Pods-BibleBeatMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibleBeatMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibleBeatMe/Pods-BibleBeatMe.debug.xcconfig"; sourceTree = "<group>"; };
 		94238B2A20705BD0008CC289 /* DareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DareViewController.swift; sourceTree = "<group>"; };
 		94238B2E20706F19008CC289 /* ScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
-		9425CEE62075C70D00FD4ADD /* ChallengesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesViewController.swift; sourceTree = "<group>"; };
+		9425CEE62075C70D00FD4ADD /* ChallengesReceivedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesReceivedViewController.swift; sourceTree = "<group>"; };
+		9425CEEA2078364C00FD4ADD /* ChallengesSentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesSentViewController.swift; sourceTree = "<group>"; };
 		943EC0851FFB11C8009B3632 /* BibleBeatMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BibleBeatMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		943EC0881FFB11C8009B3632 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		943EC08A1FFB11C8009B3632 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -231,7 +235,8 @@
 				948A25962068A84000151D1B /* OpponentViewController.swift */,
 				94238B2A20705BD0008CC289 /* DareViewController.swift */,
 				94238B2E20706F19008CC289 /* ScoresViewController.swift */,
-				9425CEE62075C70D00FD4ADD /* ChallengesViewController.swift */,
+				9425CEE62075C70D00FD4ADD /* ChallengesReceivedViewController.swift */,
+				9425CEEA2078364C00FD4ADD /* ChallengesSentViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -539,7 +544,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9425CEE72075C70D00FD4ADD /* ChallengesViewController.swift in Sources */,
+				9425CEEB2078364C00FD4ADD /* ChallengesSentViewController.swift in Sources */,
+				9425CEE72075C70D00FD4ADD /* ChallengesReceivedViewController.swift in Sources */,
 				948A25932067F91100151D1B /* OpponentsViewController.swift in Sources */,
 				94238B2F20706F19008CC289 /* ScoresViewController.swift in Sources */,
 				948A25972068A84000151D1B /* OpponentViewController.swift in Sources */,
@@ -561,13 +567,14 @@
 				947A2795205F5BE2008D1EF9 /* MainViewController.swift in Sources */,
 				948A25982068A84000151D1B /* OpponentViewController.swift in Sources */,
 				943EC09E1FFB11C8009B3632 /* BibleTryToBeatMeTests.swift in Sources */,
+				9425CEEC2078364C00FD4ADD /* ChallengesSentViewController.swift in Sources */,
 				94D113D72059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
 				947A27982065EB66008D1EF9 /* ResultsViewController.swift in Sources */,
 				94D113DB205DB169005E08A9 /* Config.swift in Sources */,
 				94238B2C20705BD0008CC289 /* DareViewController.swift in Sources */,
 				948A25942067F91100151D1B /* OpponentsViewController.swift in Sources */,
 				947A2793205F5BDF008D1EF9 /* AppDelegate.swift in Sources */,
-				9425CEE82075C70D00FD4ADD /* ChallengesViewController.swift in Sources */,
+				9425CEE82075C70D00FD4ADD /* ChallengesReceivedViewController.swift in Sources */,
 				947A2790205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,13 +587,14 @@
 				947A2794205F5BE2008D1EF9 /* MainViewController.swift in Sources */,
 				948A25992068A84000151D1B /* OpponentViewController.swift in Sources */,
 				943EC0A91FFB11C8009B3632 /* BibleTryToBeatMeUITests.swift in Sources */,
+				9425CEED2078364C00FD4ADD /* ChallengesSentViewController.swift in Sources */,
 				94D113D82059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
 				947A27992065EB66008D1EF9 /* ResultsViewController.swift in Sources */,
 				94D113DC205DB16A005E08A9 /* Config.swift in Sources */,
 				94238B2D20705BD0008CC289 /* DareViewController.swift in Sources */,
 				948A25952067F91100151D1B /* OpponentsViewController.swift in Sources */,
 				947A2792205F5BDF008D1EF9 /* AppDelegate.swift in Sources */,
-				9425CEE92075C70D00FD4ADD /* ChallengesViewController.swift in Sources */,
+				9425CEE92075C70D00FD4ADD /* ChallengesReceivedViewController.swift in Sources */,
 				947A2791205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
