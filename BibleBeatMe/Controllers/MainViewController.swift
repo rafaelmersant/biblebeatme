@@ -37,6 +37,16 @@ class MainViewController: UIViewController {
             button.backgroundColor = backColor
         }
 
+        //Notification number (invitation --> Challenges Received)
+        let NotiChallengesGesture = UITapGestureRecognizer(target: self, action: #selector(MainViewController.recentsChallengesReceived))
+        NotiChallengesGesture.numberOfTapsRequired = 1
+        opponentsInvitations.isUserInteractionEnabled = true
+        opponentsInvitations.addGestureRecognizer(NotiChallengesGesture)
+
+    }
+
+    @objc func recentsChallengesReceived() {
+        print("Go to Challenges Received......")
     }
 
     override func didReceiveMemoryWarning() {
