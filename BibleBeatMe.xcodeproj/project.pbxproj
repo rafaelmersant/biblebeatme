@@ -21,6 +21,15 @@
 		9425CEEB2078364C00FD4ADD /* ChallengesSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9425CEEA2078364C00FD4ADD /* ChallengesSentViewController.swift */; };
 		9425CEEC2078364C00FD4ADD /* ChallengesSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9425CEEA2078364C00FD4ADD /* ChallengesSentViewController.swift */; };
 		9425CEED2078364C00FD4ADD /* ChallengesSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9425CEEA2078364C00FD4ADD /* ChallengesSentViewController.swift */; };
+		9425CEEF207C534B00FD4ADD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9425CEEE207C534B00FD4ADD /* Question.swift */; };
+		9425CEF0207C534B00FD4ADD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9425CEEE207C534B00FD4ADD /* Question.swift */; };
+		9425CEF1207C534B00FD4ADD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9425CEEE207C534B00FD4ADD /* Question.swift */; };
+		9425CEF3207C537A00FD4ADD /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9425CEF2207C537A00FD4ADD /* Challenge.swift */; };
+		9425CEF4207C537A00FD4ADD /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9425CEF2207C537A00FD4ADD /* Challenge.swift */; };
+		9425CEF5207C537A00FD4ADD /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9425CEF2207C537A00FD4ADD /* Challenge.swift */; };
+		9425CEF7207E482800FD4ADD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9425CEF6207E482700FD4ADD /* GoogleService-Info.plist */; };
+		9425CEF8207E482800FD4ADD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9425CEF6207E482700FD4ADD /* GoogleService-Info.plist */; };
+		9425CEF9207E482800FD4ADD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9425CEF6207E482700FD4ADD /* GoogleService-Info.plist */; };
 		943EC0891FFB11C8009B3632 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC0881FFB11C8009B3632 /* AppDelegate.swift */; };
 		943EC08B1FFB11C8009B3632 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943EC08A1FFB11C8009B3632 /* MainViewController.swift */; };
 		943EC08E1FFB11C8009B3632 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943EC08C1FFB11C8009B3632 /* Main.storyboard */; };
@@ -82,6 +91,9 @@
 		94238B2E20706F19008CC289 /* ScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		9425CEE62075C70D00FD4ADD /* ChallengesReceivedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesReceivedViewController.swift; sourceTree = "<group>"; };
 		9425CEEA2078364C00FD4ADD /* ChallengesSentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesSentViewController.swift; sourceTree = "<group>"; };
+		9425CEEE207C534B00FD4ADD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		9425CEF2207C537A00FD4ADD /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		9425CEF6207E482700FD4ADD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		943EC0851FFB11C8009B3632 /* BibleBeatMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BibleBeatMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		943EC0881FFB11C8009B3632 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		943EC08A1FFB11C8009B3632 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +171,8 @@
 		94238B32207402D5008CC289 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9425CEEE207C534B00FD4ADD /* Question.swift */,
+				9425CEF2207C537A00FD4ADD /* Challenge.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				943EC0941FFB11C8009B3632 /* Info.plist */,
+				9425CEF6207E482700FD4ADD /* GoogleService-Info.plist */,
 				947A278D205DB740008D1EF9 /* Config */,
 				94D113DE205DB385005E08A9 /* Views */,
 				94D113DD205DB378005E08A9 /* Controllers */,
@@ -368,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				943EC0931FFB11C8009B3632 /* LaunchScreen.storyboard in Resources */,
+				9425CEF7207E482800FD4ADD /* GoogleService-Info.plist in Resources */,
 				943EC0901FFB11C8009B3632 /* Assets.xcassets in Resources */,
 				943EC08E1FFB11C8009B3632 /* Main.storyboard in Resources */,
 			);
@@ -377,6 +393,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9425CEF8207E482800FD4ADD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +401,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9425CEF9207E482800FD4ADD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,7 +569,9 @@
 				948A25972068A84000151D1B /* OpponentViewController.swift in Sources */,
 				943EC08B1FFB11C8009B3632 /* MainViewController.swift in Sources */,
 				947A278F205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */,
+				9425CEF3207C537A00FD4ADD /* Challenge.swift in Sources */,
 				94D113DA205DB169005E08A9 /* Config.swift in Sources */,
+				9425CEEF207C534B00FD4ADD /* Question.swift in Sources */,
 				94D113D62059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
 				94238B2B20705BD0008CC289 /* DareViewController.swift in Sources */,
 				943EC0891FFB11C8009B3632 /* AppDelegate.swift in Sources */,
@@ -567,7 +587,9 @@
 				947A2795205F5BE2008D1EF9 /* MainViewController.swift in Sources */,
 				948A25982068A84000151D1B /* OpponentViewController.swift in Sources */,
 				943EC09E1FFB11C8009B3632 /* BibleTryToBeatMeTests.swift in Sources */,
+				9425CEF4207C537A00FD4ADD /* Challenge.swift in Sources */,
 				9425CEEC2078364C00FD4ADD /* ChallengesSentViewController.swift in Sources */,
+				9425CEF0207C534B00FD4ADD /* Question.swift in Sources */,
 				94D113D72059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
 				947A27982065EB66008D1EF9 /* ResultsViewController.swift in Sources */,
 				94D113DB205DB169005E08A9 /* Config.swift in Sources */,
@@ -587,7 +609,9 @@
 				947A2794205F5BE2008D1EF9 /* MainViewController.swift in Sources */,
 				948A25992068A84000151D1B /* OpponentViewController.swift in Sources */,
 				943EC0A91FFB11C8009B3632 /* BibleTryToBeatMeUITests.swift in Sources */,
+				9425CEF5207C537A00FD4ADD /* Challenge.swift in Sources */,
 				9425CEED2078364C00FD4ADD /* ChallengesSentViewController.swift in Sources */,
+				9425CEF1207C534B00FD4ADD /* Question.swift in Sources */,
 				94D113D82059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
 				947A27992065EB66008D1EF9 /* ResultsViewController.swift in Sources */,
 				94D113DC205DB16A005E08A9 /* Config.swift in Sources */,
