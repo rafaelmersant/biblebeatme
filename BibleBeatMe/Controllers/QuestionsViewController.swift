@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import CodableFirebase
 
 class QuestionsViewController : UIViewController {
 
@@ -31,8 +33,33 @@ class QuestionsViewController : UIViewController {
     @IBOutlet weak var heart2: UILabel!
     @IBOutlet weak var heart3: UILabel!
 
+    //Variables
+    fileprivate var questionsSelected: [Question]?
+
+    //get questions from DB
+    func questions() {
+
+        Database.database().reference().child("Questions").observeSingleEvent(of: .value, with: { (snapshot) in
+
+            guard let value = snapshot.value else { return }
+
+            do {
+                let questions = try FirebaseDecoder().decode([Question].self, from: value)
+
+                self.questionsSelected = questions.filter({ (Q) -> Bool in
+                    return Q.isActive == true
+                })
+
+            } catch let error {
+                print(error)
+            }
+        })
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        questions()
 
         self.navigationController?.isNavigationBarHidden        = false
         self.navigationController?.navigationBar.barTintColor   = UIColor.black
@@ -69,31 +96,12 @@ class QuestionsViewController : UIViewController {
             }
         }
 
-        print("Font Size Principal:::: \(questionLabel.font.pointSize)")
-
         // add right navigation bar button items.
         do {
-//            var barButtonItems = [UIBarButtonItem]()
-//            if let button = Bundle.main.loadNibNamed("NavigationBarButton", owner: nil, options: nil)?.first as? UIButton {
-//                button.titleLabel?.text = ""
-//                button.setIcon(prefixText: "", icon: .googleMaterialDesign(.arrowBack), postfixText: "", forState: .normal)
 
-//                button.addTarget(self, action: #selector(SearchViewController.logout(_:)), for: .touchUpInside)
+            backButton.setIcon(icon: .ionicons(.iosArrowBack), iconSize: 30, color: mainColor)
 
-                backButton.setIcon(icon: .ionicons(.iosArrowBack), iconSize: 30, color: mainColor)
-
-//                barButtonItems.append(UIBarButtonItem(customView: backButton))
-            }
-//
-//            if let button = Bundle.main.loadNibNamed("NavigationBarButton", owner: nil, options: nil)?.first as? PCButton {
-//                button.type = PCButton.NavigationBarItemSetting
-//                button.addTarget(self, action: #selector(SearchViewController.tappedSetting(_:)), for: .touchUpInside)
-//                barButtonItems.append(UIBarButtonItem(customView: button))
-//            }
-
-            //self.navigationItem.rightBarButtonItems = barButtonItems
-       // }
-
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -109,6 +117,11 @@ class QuestionsViewController : UIViewController {
     //MARK: IBActions
     @IBAction func backButton(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
+    }
+
+    //MARK: Functions
+    func questionsFromDatabase() {
+        
     }
 
 }

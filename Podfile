@@ -6,7 +6,12 @@ target 'BibleBeatMe' do
   
   use_frameworks!
   pod 'SwiftIcons', '~> 2.0'
+  pod 'Firebase'
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'SVProgressHUD'
+  pod 'CodableFirebase'
   # pod 'FlagKit'
 
   # Pods for BibleBeatMe

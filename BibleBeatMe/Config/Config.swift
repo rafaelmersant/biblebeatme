@@ -8,6 +8,9 @@
 
 import UIKit
 
+//Database models Strings
+let questionsModel = "Questions"
+let usersModel = "Users"
 
 //MARK: Convert hex color to UIColor
 

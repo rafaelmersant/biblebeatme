@@ -7,30 +7,23 @@
 //
 
 import UIKit
+import Firebase
 
-class Question {
+struct Question: Decodable {
 
-    //Properties
-    var questionId      : Int?
-    var questionText    : String?
-    var isActive        : Bool?
-    var lastUsed        : Date?
-    var languaje        : String?
-    var answers         : [Answer]?
-
-    //default constructor
-    init() {}
-
-    convenience init(questionText: String) {
-        self.init()
-
-        self.questionText = questionText
-    }
-
-    struct Answer {
+    //Answers struct
+    struct Answer: Decodable {
         let id          : Int
         let text        : String
-        let isTheRight  : Bool
+        let isRight     : Bool
     }
 
+    //Properties
+    let questionId      : Int?
+    let questionText    : String?
+    let isActive        : Bool?
+    let lastUsed        : Date?
+    let languaje        : String?
+    let level           : String
+    let answers         : [Answer]?
 }

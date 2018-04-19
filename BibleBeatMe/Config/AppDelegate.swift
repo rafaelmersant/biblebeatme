@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         //Firebase configure
         FirebaseApp.configure()
-
+        
         return true
     }
 
