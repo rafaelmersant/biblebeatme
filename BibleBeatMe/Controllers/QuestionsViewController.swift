@@ -34,32 +34,16 @@ class QuestionsViewController : UIViewController {
     @IBOutlet weak var heart3: UILabel!
 
     //Variables
+    fileprivate var answerButtonsStackViewHeightFixed: CGFloat = 0
     fileprivate var questionsSelected: [Question]?
-
-    //get questions from DB
-    func questions() {
-
-        Database.database().reference().child("Questions").observeSingleEvent(of: .value, with: { (snapshot) in
-
-            guard let value = snapshot.value else { return }
-
-            do {
-                let questions = try FirebaseDecoder().decode([Question].self, from: value)
-
-                self.questionsSelected = questions.filter({ (Q) -> Bool in
-                    return Q.isActive == true
-                })
-
-            } catch let error {
-                print(error)
-            }
-        })
-    }
+    fileprivate var questionNumber: Int = -1
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         questions()
+
+        self.answerButtonsStackViewHeightFixed = answerButtonsStackViewHeight.multiplier
 
         self.navigationController?.isNavigationBarHidden        = false
         self.navigationController?.navigationBar.barTintColor   = UIColor.black
@@ -76,25 +60,12 @@ class QuestionsViewController : UIViewController {
         titleApp.textColor = mainColor
 
         //Hearts sets
-        heart1.setIcon(icon: .googleMaterialDesign(.favorite), iconSize: 30, color: UIColor.gray)
+        heart1.setIcon(icon: .googleMaterialDesign(.favorite), iconSize: 30, color: UIColor.red)
         heart1.sizeToFit()
         heart2.setIcon(icon: .googleMaterialDesign(.favorite), iconSize: 30, color: UIColor.red)
         heart2.sizeToFit()
         heart3.setIcon(icon: .googleMaterialDesign(.favorite), iconSize: 30, color: UIColor.red)
         heart3.sizeToFit()
-
-        //Set border to buttons
-        answerButtons.forEach { (button) in
-            button.layer.borderColor = UIColor.gray.cgColor
-            button.setTitleColor(mainColor, for: .normal)
-
-            if button.tag == 1100 || button.tag == 1200 {
-                button.isHidden = true
-
-                let multiplier = (answerButtonsStackViewHeight.multiplier - 0.24)
-                answerButtonsStackViewHeight = answerButtonsStackViewHeight.setMultiplier(multiplier: multiplier)
-            }
-        }
 
         // add right navigation bar button items.
         do {
@@ -119,9 +90,80 @@ class QuestionsViewController : UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func selectAnswer(_ sender: UIButton) {
+
+        if let answerSelected = questionsSelected?[questionNumber].answers?[sender.tag].isRight {
+
+            print("Answer Selected : \(answerSelected)")
+            showQuestionOnScreen()
+        }
+    }
+
+
     //MARK: Functions
-    func questionsFromDatabase() {
-        
+
+    //Resize buttons - refresh on UI
+    func refreshAnswerButtons() {
+
+        answerButtonsStackViewHeight = answerButtonsStackViewHeight.setMultiplier(multiplier: answerButtonsStackViewHeightFixed)
+
+        //Set border to buttons
+        answerButtons.forEach { (button) in
+            button.layer.borderColor = UIColor.gray.cgColor
+            button.setTitleColor(mainColor, for: .normal)
+
+            if button.isHidden == true {
+
+                let multiplier = (answerButtonsStackViewHeight.multiplier - 0.24)
+                answerButtonsStackViewHeight = answerButtonsStackViewHeight.setMultiplier(multiplier: multiplier)
+
+            }
+        }
+    }
+
+    //Show each question in front
+    func showQuestionOnScreen() {
+
+        questionNumber += 1
+
+        if let questionsSelected = questionsSelected, questionNumber < questionsSelected.count {
+
+            self.questionLabel.text = questionsSelected[questionNumber].questionText
+
+            self.answerButtons.forEach({ (button) in
+                button.isHidden = true
+            })
+
+            questionsSelected[questionNumber].answers?.forEach({ (A) in
+                self.answerButtons[A.id].setTitle(A.text, for: .normal)
+                self.answerButtons[A.id].tag = A.id
+                self.answerButtons[A.id].isHidden = false
+            })
+        }
+
+        refreshAnswerButtons()
+    }
+
+    //get questions from DB
+    func questions() {
+
+        Database.database().reference().child(questionsModel).observeSingleEvent(of: .value, with: { (snapshot) in
+
+            guard let value = snapshot.value else { return }
+
+            do {
+                let questions = try FirebaseDecoder().decode([Question].self, from: value)
+
+                self.questionsSelected = questions.filter({ (Q) -> Bool in
+                    return Q.isActive == true
+                })
+
+                self.showQuestionOnScreen()
+
+            } catch let error {
+                print(error)
+            }
+        })
     }
 
 }
