@@ -115,8 +115,25 @@ class QuestionsViewController : UIViewController {
 
             if let answerSelected = questionsSelected?[questionNumber].answers?[sender.tag] {
 
+                UIView.animate(withDuration: 0.5, animations: {
+
+                    if answerSelected.isRight == false {
+
+                        sender.backgroundColor = UIColor.red
+                        sender.setTitleColor(UIColor.black, for: .normal)
+
+                    } else {
+
+                        sender.backgroundColor = UIColor.green
+                        sender.setTitleColor(UIColor.black, for: .normal)
+                    }
+
+                }) { (finished) in
+
+                    self.showQuestionOnScreen()
+                }
+
                 print("Answer Selected : \(answerSelected)")
-                showQuestionOnScreen()
             }
         }
 
@@ -137,6 +154,7 @@ class QuestionsViewController : UIViewController {
 
         //Set border to buttons
         answerButtons.forEach { (button) in
+            button.backgroundColor = UIColor(white: 0, alpha: 0.5)
             button.layer.borderColor = UIColor.gray.cgColor
             button.setTitleColor(mainColor, for: .normal)
 
@@ -144,7 +162,6 @@ class QuestionsViewController : UIViewController {
 
                 let multiplier = (answerButtonsStackViewHeight.multiplier - 0.24)
                 answerButtonsStackViewHeight = answerButtonsStackViewHeight.setMultiplier(multiplier: multiplier)
-
             }
         }
     }
@@ -164,22 +181,22 @@ class QuestionsViewController : UIViewController {
                 return
             }
 
-            var orderAnswers = [Int]()
+            var orderAnswersRandom = [Int]()
 
-            while(orderAnswers.count < answersCount) {
+            while(orderAnswersRandom.count < answersCount) {
 
                 let index = randomNumber(min: 0, max: answersCount)
 
-                if !orderAnswers.contains( Int(index) ) {
-                    orderAnswers.append( Int(index) )
+                if !orderAnswersRandom.contains( Int(index) ) {
+                    orderAnswersRandom.append( Int(index) )
                 }
             }
 
-            questionsSelected[questionNumber].answers?.forEach({ (A) in
+            questionsSelected[questionNumber].answers?.forEach({ (answer) in
 
-                self.answerButtons[orderAnswers[A.id]].setTitle(A.text, for: .normal)
-                self.answerButtons[orderAnswers[A.id]].tag = A.id
-                self.answerButtons[orderAnswers[A.id]].isHidden = false
+                self.answerButtons[orderAnswersRandom[answer.id]].setTitle(answer.text, for: .normal)
+                self.answerButtons[orderAnswersRandom[answer.id]].tag = answer.id
+                self.answerButtons[orderAnswersRandom[answer.id]].isHidden = false
             })
         }
 
