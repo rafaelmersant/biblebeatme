@@ -66,7 +66,7 @@ class OpponentsViewController: UIViewController {
     }
 
 
-    //MARK: Override
+    //MARK: Override methods
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 

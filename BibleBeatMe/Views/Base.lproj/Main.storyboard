@@ -996,9 +996,6 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="2 of 10" id="E4v-sD-wdg">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="TkZ-IZ-R11" kind="presentation" id="Mkc-oK-aW3"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -1020,6 +1017,7 @@
                         <outletCollection property="answerButtons" destination="KSH-4B-gHk" collectionClass="NSMutableArray" id="ZsM-bh-3QD"/>
                         <outletCollection property="answerButtons" destination="16O-ee-Et2" collectionClass="NSMutableArray" id="EWf-3o-hGv"/>
                         <outletCollection property="answerButtons" destination="Z87-Bp-gu3" collectionClass="NSMutableArray" id="uJI-uc-9W4"/>
+                        <segue destination="TkZ-IZ-R11" kind="presentation" identifier="showResultsSegue" id="Fl3-FE-J3X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bT5-JJ-rFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

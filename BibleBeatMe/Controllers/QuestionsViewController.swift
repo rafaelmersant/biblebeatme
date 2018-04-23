@@ -27,6 +27,8 @@ class QuestionsViewController : UIViewController {
 
     @IBOutlet weak var answerButtonsStackView: UIStackView!
     @IBOutlet weak var answerButtonsStackViewHeight: NSLayoutConstraint!
+
+    fileprivate weak var controller: UIViewController?
     
     //Hearts
     @IBOutlet weak var heart1: UILabel!
@@ -37,6 +39,9 @@ class QuestionsViewController : UIViewController {
     fileprivate var answerButtonsStackViewHeightFixed: CGFloat = 0
     fileprivate var questionsSelected: [Question]?
     fileprivate var questionNumber: Int = -1
+
+
+    //MARK: Override methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +90,20 @@ class QuestionsViewController : UIViewController {
 
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "showResultsSegue" {
+
+            if let navigationController = segue.destination as? UINavigationController {
+                self.controller = navigationController
+                if let destination = navigationController.viewControllers.first as? ResultsViewController {
+
+                    //destination.opponent = self.opponentSelected!
+                }
+            }
+        }
+    }
+
     //MARK: IBActions
     @IBAction func backButton(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
@@ -92,10 +111,19 @@ class QuestionsViewController : UIViewController {
 
     @IBAction func selectAnswer(_ sender: UIButton) {
 
-        if let answerSelected = questionsSelected?[questionNumber].answers?[sender.tag].isRight {
+        if let questionsAll = questionsSelected?.count, questionNumber < questionsAll  {
 
-            print("Answer Selected : \(answerSelected)")
-            showQuestionOnScreen()
+            if let answerSelected = questionsSelected?[questionNumber].answers?[sender.tag] {
+
+                print("Answer Selected : \(answerSelected)")
+                showQuestionOnScreen()
+            }
+        }
+
+        //The last question answered
+        if questionNumber == questionsSelected?.count {
+
+            self.performSegue(withIdentifier: "showResultsSegue", sender: self)
         }
     }
 
@@ -130,14 +158,28 @@ class QuestionsViewController : UIViewController {
 
             self.questionLabel.text = questionsSelected[questionNumber].questionText
 
-            self.answerButtons.forEach({ (button) in
-                button.isHidden = true
-            })
+            self.answerButtons.forEach{$0.isHidden = true}
+
+            guard let answersCount = questionsSelected[questionNumber].answers?.count else {
+                return
+            }
+
+            var orderAnswers = [Int]()
+
+            while(orderAnswers.count < answersCount) {
+
+                let index = randomNumber(min: 0, max: answersCount)
+
+                if !orderAnswers.contains( Int(index) ) {
+                    orderAnswers.append( Int(index) )
+                }
+            }
 
             questionsSelected[questionNumber].answers?.forEach({ (A) in
-                self.answerButtons[A.id].setTitle(A.text, for: .normal)
-                self.answerButtons[A.id].tag = A.id
-                self.answerButtons[A.id].isHidden = false
+
+                self.answerButtons[orderAnswers[A.id]].setTitle(A.text, for: .normal)
+                self.answerButtons[orderAnswers[A.id]].tag = A.id
+                self.answerButtons[orderAnswers[A.id]].isHidden = false
             })
         }
 

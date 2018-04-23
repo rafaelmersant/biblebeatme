@@ -41,6 +41,11 @@ let mainColor = hexToUIColor(hexString: "FF0033")
 let backColor = UIColor.black
 let foreColor = UIColor.black
 
+//MARK: random
+func randomNumber(min: Int, max: Int)-> Int {
+    return Int(arc4random_uniform(UInt32(max - min)) + UInt32(min));
+}
+
 //MARK: Modify Multiplier for NSLayoutConstraint
 extension NSLayoutConstraint {
     /**
