@@ -76,7 +76,6 @@ class QuestionsViewController : UIViewController {
         do {
 
             backButton.setIcon(icon: .ionicons(.iosArrowBack), iconSize: 30, color: mainColor)
-
         }
     }
 
@@ -109,38 +108,40 @@ class QuestionsViewController : UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+    //When user responses a question
     @IBAction func selectAnswer(_ sender: UIButton) {
 
         if let questionsAll = questionsSelected?.count, questionNumber < questionsAll  {
 
             if let answerSelected = questionsSelected?[questionNumber].answers?[sender.tag] {
 
-                UIView.animate(withDuration: 0.5, animations: {
+                UIView.animate(withDuration: 0.7, animations: {
 
                     if answerSelected.isRight == false {
-
                         sender.backgroundColor = UIColor.red
-                        sender.setTitleColor(UIColor.black, for: .normal)
-
                     } else {
-
                         sender.backgroundColor = UIColor.green
-                        sender.setTitleColor(UIColor.black, for: .normal)
                     }
+
+                    sender.setTitleColor(UIColor.black, for: .normal)
 
                 }) { (finished) in
 
-                    self.showQuestionOnScreen()
+                    UIView.animate(withDuration: 0.3, animations: {
+
+                        self.questionLabel.layer.opacity = 0
+                        self.answerButtons.forEach{$0.layer.opacity = 0}
+
+                        self.view.layoutIfNeeded()
+
+                    }, completion: { (finished) in
+                        self.refreshAnswerButtons()
+                        self.showQuestionOnScreen()
+                    })
                 }
 
                 print("Answer Selected : \(answerSelected)")
             }
-        }
-
-        //The last question answered
-        if questionNumber == questionsSelected?.count {
-
-            self.performSegue(withIdentifier: "showResultsSegue", sender: self)
         }
     }
 
@@ -171,9 +172,12 @@ class QuestionsViewController : UIViewController {
 
         questionNumber += 1
 
-        if let questionsSelected = questionsSelected, questionNumber < questionsSelected.count {
+        //The last question answered
+        if questionNumber == questionsSelected?.count {
+            self.performSegue(withIdentifier: "showResultsSegue", sender: self)
+        }
 
-            self.questionLabel.text = questionsSelected[questionNumber].questionText
+        if let questionsSelected = questionsSelected, questionNumber < questionsSelected.count {
 
             self.answerButtons.forEach{$0.isHidden = true}
 
@@ -192,15 +196,27 @@ class QuestionsViewController : UIViewController {
                 }
             }
 
-            questionsSelected[questionNumber].answers?.forEach({ (answer) in
+            //Show question text and answers
+            self.questionLabel.text = questionsSelected[self.questionNumber].questionText
+
+            questionsSelected[self.questionNumber].answers?.forEach({ (answer) in
 
                 self.answerButtons[orderAnswersRandom[answer.id]].setTitle(answer.text, for: .normal)
                 self.answerButtons[orderAnswersRandom[answer.id]].tag = answer.id
                 self.answerButtons[orderAnswersRandom[answer.id]].isHidden = false
+
+                self.answerButtons[orderAnswersRandom[answer.id]].frame.origin.x = 0
+            })
+
+            self.refreshAnswerButtons()
+
+            UIView.animate(withDuration: 0.4, animations: {
+
+                self.questionLabel.layer.opacity = 1
+                self.answerButtons.forEach{$0.layer.opacity = 1}
+
             })
         }
-
-        refreshAnswerButtons()
     }
 
     //get questions from DB
