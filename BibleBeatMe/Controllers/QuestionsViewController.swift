@@ -37,8 +37,9 @@ class QuestionsViewController : UIViewController {
 
     //Variables
     fileprivate var answerButtonsStackViewHeightFixed: CGFloat = 0
-    fileprivate var questionsSelected: [Question]?
+    fileprivate var questionsSelected = [Question]()
     fileprivate var questionNumber: Int = -1
+    fileprivate var practiceCompetition: PracticeCompetition?
 
 
     //MARK: Override methods
@@ -74,7 +75,6 @@ class QuestionsViewController : UIViewController {
 
         // add right navigation bar button items.
         do {
-
             backButton.setIcon(icon: .ionicons(.iosArrowBack), iconSize: 30, color: mainColor)
         }
     }
@@ -111,11 +111,11 @@ class QuestionsViewController : UIViewController {
     //When user responses a question
     @IBAction func selectAnswer(_ sender: UIButton) {
 
-        if let questionsAll = questionsSelected?.count, questionNumber < questionsAll  {
+        if questionNumber < questionsSelected.count {
 
-            if let answerSelected = questionsSelected?[questionNumber].answers?[sender.tag] {
+            if let answerSelected = questionsSelected[questionNumber].answers?[sender.tag] {
 
-                UIView.animate(withDuration: 0.7, animations: {
+                UIView.animate(withDuration: 0.4, animations: {
 
                     if answerSelected.isRight == false {
                         sender.backgroundColor = UIColor.red
@@ -173,11 +173,11 @@ class QuestionsViewController : UIViewController {
         questionNumber += 1
 
         //The last question answered
-        if questionNumber == questionsSelected?.count {
+        if questionNumber == questionsSelected.count {
             self.performSegue(withIdentifier: "showResultsSegue", sender: self)
         }
 
-        if let questionsSelected = questionsSelected, questionNumber < questionsSelected.count {
+        if questionNumber < questionsSelected.count {
 
             self.answerButtons.forEach{$0.isHidden = true}
 
@@ -185,16 +185,7 @@ class QuestionsViewController : UIViewController {
                 return
             }
 
-            var orderAnswersRandom = [Int]()
-
-            while(orderAnswersRandom.count < answersCount) {
-
-                let index = randomNumber(min: 0, max: answersCount)
-
-                if !orderAnswersRandom.contains( Int(index) ) {
-                    orderAnswersRandom.append( Int(index) )
-                }
-            }
+            let orderAnswersRandom = randomArrayOrder(min: 0, max: answersCount)
 
             //Show question text and answers
             self.questionLabel.text = questionsSelected[self.questionNumber].questionText
@@ -204,8 +195,6 @@ class QuestionsViewController : UIViewController {
                 self.answerButtons[orderAnswersRandom[answer.id]].setTitle(answer.text, for: .normal)
                 self.answerButtons[orderAnswersRandom[answer.id]].tag = answer.id
                 self.answerButtons[orderAnswersRandom[answer.id]].isHidden = false
-
-                self.answerButtons[orderAnswersRandom[answer.id]].frame.origin.x = 0
             })
 
             self.refreshAnswerButtons()
@@ -229,8 +218,12 @@ class QuestionsViewController : UIViewController {
             do {
                 let questions = try FirebaseDecoder().decode([Question].self, from: value)
 
-                self.questionsSelected = questions.filter({ (Q) -> Bool in
-                    return Q.isActive == true
+                let reOrderQuestions = randomArrayOrder(min: 0, max: questions.count)
+
+                reOrderQuestions.forEach({ (newIndex) in
+                    if questions[newIndex].isActive == true {
+                        self.questionsSelected.append(questions[newIndex])
+                    }
                 })
 
                 self.showQuestionOnScreen()

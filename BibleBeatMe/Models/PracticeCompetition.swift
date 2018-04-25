@@ -8,22 +8,24 @@
 
 import UIKit
 
-class PracticeCompetition {
+struct Status {
+    static let inProgress   = "In progress"
+    static let canceled     = "Canceled"
+    static let completed    = "Completed"
+}
+
+struct PracticeCompetition: Decodable {
 
     //Properties
-    var id              : Int?
-    var competitionId   : Int?
-    var started         : Date?
-    var ended           : Date?
-    var status          : String?
-    var questions       : [[String: Int]]?
-    var answeredRights  : [Int]?
-    var answeredWrongs  : [Int]?
-    var questionsAnswered: [Int]?
-    var userWhoComplete : User?
-
-    //default constructor
-    init() {}
-
+    let id                  : Int?
+    let competitionId       : Int?
+    let started             = Date().timeIntervalSince1970
+    let ended               : Date?
+    let status              = Status.inProgress //In progress, Canceled, Completed
+    let questions           : [[String: Int]]? //
+    let answeredRights      : [Int]?
+    let answeredWrongs      : [Int]?
+    let questionsAnswered   : [Int]?
+    let userWhoComplete     : User?
 }
 

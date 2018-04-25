@@ -8,7 +8,7 @@
 
 import UIKit
 
-class User {
+struct User: Decodable {
 
     let userId: Int
     var isGuest: Int?

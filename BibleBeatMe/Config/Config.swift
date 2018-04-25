@@ -46,6 +46,21 @@ func randomNumber(min: Int, max: Int)-> Int {
     return Int(arc4random_uniform(UInt32(max - min)) + UInt32(min));
 }
 
+func randomArrayOrder(min: Int, max: Int) -> [Int] {
+    var reOrderRandom = [Int]()
+
+    while(reOrderRandom.count < max) {
+
+        let index = randomNumber(min: min, max: max)
+
+        if !reOrderRandom.contains( Int(index) ) {
+            reOrderRandom.append( Int(index) )
+        }
+    }
+
+    return reOrderRandom
+}
+
 //MARK: Modify Multiplier for NSLayoutConstraint
 extension NSLayoutConstraint {
     /**

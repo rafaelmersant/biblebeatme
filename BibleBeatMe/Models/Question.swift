@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 struct Question: Decodable {
 
