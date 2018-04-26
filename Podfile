@@ -10,7 +10,7 @@ target 'BibleBeatMe' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
-  pod 'SVProgressHUD'
+  pod 'MBProgressHUD', '~> 1.1.0'
   pod 'CodableFirebase'
   # pod 'FlagKit'
 

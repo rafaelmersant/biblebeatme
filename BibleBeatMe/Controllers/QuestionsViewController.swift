@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import CodableFirebase
+import MBProgressHUD
 
 class QuestionsViewController : UIViewController {
 
@@ -61,8 +62,6 @@ class QuestionsViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        questions()
-
         self.answerButtonsStackViewHeightFixed = answerButtonsStackViewHeight.multiplier
 
         self.navigationController?.isNavigationBarHidden        = false
@@ -91,6 +90,12 @@ class QuestionsViewController : UIViewController {
         do {
             backButton.setIcon(icon: .ionicons(.iosArrowBack), iconSize: 30, color: mainColor)
         }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        questions()
     }
 
     override func didReceiveMemoryWarning() {
@@ -229,7 +234,22 @@ class QuestionsViewController : UIViewController {
     //get questions from DB
     func questions() {
 
+        guard let window = self.view.window else {
+            print("the view already detached from view hierarchy.")
+            return
+        }
+
+        let hud = MBProgressHUD.showAdded(to: window, animated: true)
+        hud.animationType = .zoomOut
+        hud.contentColor = backColor
+        hud.label.text = "Waiting"
+        hud.detailsLabel.text = "Loading your game..."
+
         Database.database().reference().child(questionsModel).observeSingleEvent(of: .value, with: { (snapshot) in
+
+            defer {
+                hud.hide(animated: true)
+            }
 
             guard let value = snapshot.value else { return }
 
