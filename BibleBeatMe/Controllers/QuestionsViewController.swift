@@ -26,6 +26,7 @@ class QuestionsViewController : UIViewController {
     @IBOutlet weak var questionLabel    : UILabel!
     @IBOutlet var answerButtons         : [UIButton]!
 
+    @IBOutlet weak var questionsInfoCount: UIBarButtonItem!
     @IBOutlet weak var answerButtonsStackView: UIStackView!
     @IBOutlet weak var answerButtonsStackViewHeight: NSLayoutConstraint!
 
@@ -191,6 +192,9 @@ class QuestionsViewController : UIViewController {
         if questionNumber == questionsSelected.count {
             self.performSegue(withIdentifier: "showResultsSegue", sender: self)
         }
+
+        //refresh current question number and how many are left.
+        questionsInfoCount.title = "\(questionNumber + 1) of \(questionsSelected.count)"
 
         if questionNumber < questionsSelected.count {
 

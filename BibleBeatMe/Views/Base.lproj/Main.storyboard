@@ -994,7 +994,7 @@
                                 <action selector="backButton:" destination="16m-Ly-mPt" id="xiw-Ma-UnS"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="2 of 10" id="E4v-sD-wdg">
+                        <barButtonItem key="rightBarButtonItem" id="E4v-sD-wdg">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
@@ -1011,6 +1011,7 @@
                         <outlet property="heartsView" destination="Cu1-9X-U4Q" id="yfx-bj-u1U"/>
                         <outlet property="mainView" destination="Y8O-5M-ber" id="Tta-ZL-RuA"/>
                         <outlet property="questionLabel" destination="55q-rT-SW6" id="StB-pO-Kz5"/>
+                        <outlet property="questionsInfoCount" destination="E4v-sD-wdg" id="uXg-LU-7E3"/>
                         <outlet property="timeElapse" destination="88L-qC-fCq" id="jvF-9A-lXV"/>
                         <outlet property="titleApp" destination="8at-vw-I7G" id="aTl-wh-gf5"/>
                         <outletCollection property="answerButtons" destination="zww-v7-tbN" collectionClass="NSMutableArray" id="FEw-zh-ea4"/>
