@@ -12,23 +12,24 @@ import CodableFirebase
 
 class QuestionsViewController : UIViewController {
 
-    @IBOutlet weak var titleApp: UILabel!
-    @IBOutlet weak var heartsView: UIView!
-    @IBOutlet weak var headerView: UIView!
-    @IBOutlet weak var answerStackView: UIStackView!
-    @IBOutlet var mainView: UIView!
-    @IBOutlet weak var timeElapse: UILabel!
+    //MARK: IBOutlets
+    @IBOutlet weak var titleApp         : UILabel!
+    @IBOutlet weak var heartsView       : UIView!
+    @IBOutlet weak var headerView       : UIView!
+    @IBOutlet weak var answerStackView  : UIStackView!
+    @IBOutlet var mainView              : UIView!
+    @IBOutlet weak var timeElapse       : UILabel!
 
-    @IBOutlet weak var backButton: UIBarButtonItem!
-    @IBOutlet weak var answerSection: UIView!
+    @IBOutlet weak var backButton       : UIBarButtonItem!
+    @IBOutlet weak var answerSection    : UIView!
 
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet var answerButtons: [UIButton]!
+    @IBOutlet weak var questionLabel    : UILabel!
+    @IBOutlet var answerButtons         : [UIButton]!
 
     @IBOutlet weak var answerButtonsStackView: UIStackView!
     @IBOutlet weak var answerButtonsStackViewHeight: NSLayoutConstraint!
 
-    fileprivate weak var controller: UIViewController?
+    fileprivate weak var controller     : UIViewController?
     
     //Hearts
     @IBOutlet weak var heart1: UILabel!
@@ -40,7 +41,19 @@ class QuestionsViewController : UIViewController {
     fileprivate var questionsSelected = [Question]()
     fileprivate var questionNumber: Int = -1
     fileprivate var practiceCompetition: PracticeCompetition?
+    fileprivate var hearts: Int = 3 {
+        didSet {
+            if oldValue > hearts {
+                if let heart = self.view.viewWithTag(1000 * oldValue) as? UILabel {
+                    heart.textColor = UIColor.gray
+                }
+            }
 
+            if hearts == 0 {
+                self.performSegue(withIdentifier: "showResultsSegue", sender: self)
+            }
+        }
+    }
 
     //MARK: Override methods
 
@@ -119,6 +132,8 @@ class QuestionsViewController : UIViewController {
 
                     if answerSelected.isRight == false {
                         sender.backgroundColor = UIColor.red
+                        self.hearts -= 1
+
                     } else {
                         sender.backgroundColor = UIColor.green
                     }
@@ -203,7 +218,6 @@ class QuestionsViewController : UIViewController {
 
                 self.questionLabel.layer.opacity = 1
                 self.answerButtons.forEach{$0.layer.opacity = 1}
-
             })
         }
     }
