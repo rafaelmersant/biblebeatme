@@ -51,6 +51,9 @@
 		9453FE4A2082EC5400910FFB /* PracticeCompetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453FE492082EC5400910FFB /* PracticeCompetition.swift */; };
 		9453FE4B2082EC5400910FFB /* PracticeCompetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453FE492082EC5400910FFB /* PracticeCompetition.swift */; };
 		9453FE4C2082EC5400910FFB /* PracticeCompetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453FE492082EC5400910FFB /* PracticeCompetition.swift */; };
+		946176FE209294A600DFC672 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946176FD209294A600DFC672 /* Reachability.swift */; };
+		946176FF209294A600DFC672 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946176FD209294A600DFC672 /* Reachability.swift */; };
+		94617700209294A600DFC672 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946176FD209294A600DFC672 /* Reachability.swift */; };
 		947A278F205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A278E205F5B23008D1EF9 /* ModalNavigationController.swift */; };
 		947A2790205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A278E205F5B23008D1EF9 /* ModalNavigationController.swift */; };
 		947A2791205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A278E205F5B23008D1EF9 /* ModalNavigationController.swift */; };
@@ -125,6 +128,7 @@
 		9453FE412082EA3800910FFB /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		9453FE452082EA5500910FFB /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		9453FE492082EC5400910FFB /* PracticeCompetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeCompetition.swift; sourceTree = "<group>"; };
+		946176FD209294A600DFC672 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		947A278E205F5B23008D1EF9 /* ModalNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNavigationController.swift; sourceTree = "<group>"; };
 		947A27962065EB66008D1EF9 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		948A25922067F91100151D1B /* OpponentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpponentsViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 			children = (
 				94D113D9205DB169005E08A9 /* Config.swift */,
 				943EC0881FFB11C8009B3632 /* AppDelegate.swift */,
+				946176FD209294A600DFC672 /* Reachability.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -600,6 +605,7 @@
 			files = (
 				9453FE462082EA5500910FFB /* Score.swift in Sources */,
 				9425CEEB2078364C00FD4ADD /* ChallengesSentViewController.swift in Sources */,
+				946176FE209294A600DFC672 /* Reachability.swift in Sources */,
 				9425CEE72075C70D00FD4ADD /* ChallengesReceivedViewController.swift in Sources */,
 				948A25932067F91100151D1B /* OpponentsViewController.swift in Sources */,
 				94238B2F20706F19008CC289 /* ScoresViewController.swift in Sources */,
@@ -641,6 +647,7 @@
 				9453FE432082EA3800910FFB /* Friend.swift in Sources */,
 				9425CEE82075C70D00FD4ADD /* ChallengesReceivedViewController.swift in Sources */,
 				9453FE472082EA5500910FFB /* Score.swift in Sources */,
+				946176FF209294A600DFC672 /* Reachability.swift in Sources */,
 				947A2790205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,6 +674,7 @@
 				9453FE442082EA3800910FFB /* Friend.swift in Sources */,
 				9425CEE92075C70D00FD4ADD /* ChallengesReceivedViewController.swift in Sources */,
 				9453FE482082EA5500910FFB /* Score.swift in Sources */,
+				94617700209294A600DFC672 /* Reachability.swift in Sources */,
 				947A2791205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

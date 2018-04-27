@@ -130,6 +130,8 @@ class QuestionsViewController : UIViewController {
     //When user responses a question
     @IBAction func selectAnswer(_ sender: UIButton) {
 
+        self.lock()
+
         if questionNumber < questionsSelected.count {
 
             if let answerSelected = questionsSelected[questionNumber].answers?[sender.tag] {
@@ -169,6 +171,16 @@ class QuestionsViewController : UIViewController {
 
     //MARK: Functions
 
+    //Lock screen
+    func lock() {
+        self.view.isUserInteractionEnabled = false
+    }
+
+    //Unlock screen
+    func unlock() {
+        self.view.isUserInteractionEnabled = true
+    }
+
     //Resize buttons - refresh on UI
     func refreshAnswerButtons() {
 
@@ -191,6 +203,8 @@ class QuestionsViewController : UIViewController {
     //Show each question in front
     func showQuestionOnScreen() {
 
+        self.unlock()
+        
         questionNumber += 1
 
         //The last question answered
@@ -242,8 +256,15 @@ class QuestionsViewController : UIViewController {
         let hud = MBProgressHUD.showAdded(to: window, animated: true)
         hud.animationType = .zoomOut
         hud.contentColor = backColor
-        hud.label.text = "Waiting"
+        hud.label.text = "Wait"
         hud.detailsLabel.text = "Loading your game..."
+
+        if Reachability.isConnectedToNetwork() == true {
+            print("Internet connection true...")
+        } else {
+            print("Internet connection false...")
+            return
+        }
 
         Database.database().reference().child(questionsModel).observeSingleEvent(of: .value, with: { (snapshot) in
 
