@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import CodableFirebase
 import MBProgressHUD
+import SCLAlertView
 
 class QuestionsViewController : UIViewController {
 
@@ -123,7 +124,7 @@ class QuestionsViewController : UIViewController {
     }
 
     //MARK: IBActions
-    @IBAction func backButton(_ sender: UIBarButtonItem) {
+    @IBAction func backToHome(_ sender: UIBarButtonItem?) {
         self.dismiss(animated: true, completion: nil)
     }
 
@@ -204,7 +205,7 @@ class QuestionsViewController : UIViewController {
     func showQuestionOnScreen() {
 
         self.unlock()
-        
+
         questionNumber += 1
 
         //The last question answered
@@ -248,22 +249,25 @@ class QuestionsViewController : UIViewController {
     //get questions from DB
     func questions() {
 
-        guard let window = self.view.window else {
-            print("the view already detached from view hierarchy.")
-            return
-        }
+        var hud: MBProgressHUD!
 
-        let hud = MBProgressHUD.showAdded(to: window, animated: true)
-        hud.animationType = .zoomOut
-        hud.contentColor = backColor
-        hud.label.text = "Wait"
-        hud.detailsLabel.text = "Loading your game..."
+        if Reachability.isConnectedToNetwork() != true {
 
-        if Reachability.isConnectedToNetwork() == true {
-            print("Internet connection true...")
+            SCLAlertView().showInfo("There's no internet conection", subTitle: "please check out and try again.")
+            backToHome(nil)
+
         } else {
-            print("Internet connection false...")
-            return
+
+            guard let window = self.view.window else {
+                print("the view already detached from view hierarchy.")
+                return
+            }
+
+            hud = MBProgressHUD.showAdded(to: window, animated: true)
+            hud.animationType = .zoomOut
+            hud.contentColor = backColor
+            hud.label.text = "Wait"
+            hud.detailsLabel.text = "Loading your game..."
         }
 
         Database.database().reference().child(questionsModel).observeSingleEvent(of: .value, with: { (snapshot) in

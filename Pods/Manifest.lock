@@ -46,6 +46,7 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - SCLAlertView (0.8)
   - SwiftIcons (2.0.1)
 
 DEPENDENCIES:
@@ -55,6 +56,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - MBProgressHUD (~> 1.1.0)
+  - SCLAlertView
   - SwiftIcons (~> 2.0)
 
 SPEC CHECKSUMS:
@@ -70,8 +72,9 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SwiftIcons: e475a56ae2c2da40672dbf16061ca5dd5cee7dbb
 
-PODFILE CHECKSUM: cf11832ac2eb4cef41ddec0d4b9fed4d60deebff
+PODFILE CHECKSUM: 136943a5507914238f5b37058e460ec00e1e807d
 
 COCOAPODS: 1.4.0

@@ -991,7 +991,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="ohp-16-fdx"/>
                         <barButtonItem key="leftBarButtonItem" title="Back" id="22F-KS-cYg">
                             <connections>
-                                <action selector="backButton:" destination="16m-Ly-mPt" id="xiw-Ma-UnS"/>
+                                <action selector="backToHome:" destination="16m-Ly-mPt" id="jgO-21-aH5"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" id="E4v-sD-wdg">
