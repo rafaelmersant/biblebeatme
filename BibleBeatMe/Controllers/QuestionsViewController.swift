@@ -35,15 +35,16 @@ class QuestionsViewController : UIViewController {
     fileprivate weak var controller     : UIViewController?
     
     //Hearts
-    @IBOutlet weak var heart1: UILabel!
-    @IBOutlet weak var heart2: UILabel!
-    @IBOutlet weak var heart3: UILabel!
+    @IBOutlet weak var heart1           : UILabel!
+    @IBOutlet weak var heart2           : UILabel!
+    @IBOutlet weak var heart3           : UILabel!
 
     //Variables
     fileprivate var answerButtonsStackViewHeightFixed: CGFloat = 0
     fileprivate var questionsSelected = [Question]()
     fileprivate var questionNumber: Int = -1
     fileprivate var practiceCompetition: PracticeCompetition?
+
     fileprivate var hearts: Int = 3 {
         didSet {
             if oldValue > hearts {
@@ -266,6 +267,8 @@ class QuestionsViewController : UIViewController {
             hud = MBProgressHUD.showAdded(to: window, animated: true)
             hud.animationType = .zoomOut
             hud.contentColor = backColor
+            hud.bezelView.color = mainColor
+            hud.bezelView.style = .solidColor
             hud.label.text = "Wait"
             hud.detailsLabel.text = "Loading your game..."
         }

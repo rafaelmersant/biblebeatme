@@ -61,6 +61,16 @@ func randomArrayOrder(min: Int, max: Int) -> [Int] {
     return reOrderRandom
 }
 
+func countDown(from: Int) {
+    var timer   = Timer()
+    var seconds = from
+
+    func clock() {
+        seconds = seconds - 1
+
+    }
+}
+
 //MARK: Modify Multiplier for NSLayoutConstraint
 extension NSLayoutConstraint {
     /**
