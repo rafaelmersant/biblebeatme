@@ -13,6 +13,7 @@ target 'BibleBeatMe' do
   pod 'MBProgressHUD', '~> 1.1.0'
   pod 'CodableFirebase'
   pod 'SCLAlertView'
+  pod 'SwiftDate'
   # pod 'FlagKit'
 
   # Pods for BibleBeatMe

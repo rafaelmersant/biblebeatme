@@ -11,6 +11,7 @@ import Firebase
 import CodableFirebase
 import MBProgressHUD
 import SCLAlertView
+import SwiftDate
 
 class QuestionsViewController : UIViewController {
 
@@ -44,6 +45,11 @@ class QuestionsViewController : UIViewController {
     fileprivate var questionsSelected = [Question]()
     fileprivate var questionNumber: Int = -1
     fileprivate var practiceCompetition: PracticeCompetition?
+    fileprivate let maxQuestions: Int = 10
+
+    //Timer
+    var timer = Timer()
+    var seconds = 0
 
     fileprivate var hearts: Int = 3 {
         didSet {
@@ -63,6 +69,11 @@ class QuestionsViewController : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let start = Date()
+        print("Elapsed time: \(start.timeIntervalSinceNow) seconds")
+
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(QuestionsViewController.clock), userInfo: nil, repeats: true)
 
         self.answerButtonsStackViewHeightFixed = answerButtonsStackViewHeight.multiplier
 
@@ -172,6 +183,11 @@ class QuestionsViewController : UIViewController {
 
 
     //MARK: Functions
+    @objc func clock() {
+        //seconds = seconds + 1
+
+        timeElapse.text = "\( (1.second + 2.second).fromNow()! ) time elapsed"
+    }
 
     //Lock screen
     func lock() {
@@ -205,17 +221,18 @@ class QuestionsViewController : UIViewController {
     //Show each question in front
     func showQuestionOnScreen() {
 
-        self.unlock()
-
         questionNumber += 1
+
+        self.unlock()
 
         //The last question answered
         if questionNumber == questionsSelected.count {
             self.performSegue(withIdentifier: "showResultsSegue", sender: self)
-        }
 
-        //refresh current question number and how many are left.
-        questionsInfoCount.title = "\(questionNumber + 1) of \(questionsSelected.count)"
+        } else {
+            //refresh current question number and how many are left.
+            questionsInfoCount.title = "\(questionNumber + 1) of \(questionsSelected.count)"
+        }
 
         if questionNumber < questionsSelected.count {
 
@@ -225,7 +242,7 @@ class QuestionsViewController : UIViewController {
                 return
             }
 
-            let orderAnswersRandom = randomArrayOrder(min: 0, max: answersCount)
+            let orderAnswersRandom = randomArrayOrder(min: 0, max: answersCount, limit: answersCount)
 
             //Show question text and answers
             self.questionLabel.text = questionsSelected[self.questionNumber].questionText
@@ -282,14 +299,12 @@ class QuestionsViewController : UIViewController {
             guard let value = snapshot.value else { return }
 
             do {
-                let questions = try FirebaseDecoder().decode([Question].self, from: value)
+                let questions = try FirebaseDecoder().decode([Question].self, from: value).filter {$0.isActive == true}
 
-                let reOrderQuestions = randomArrayOrder(min: 0, max: questions.count)
+                let reOrderQuestions = randomArrayOrder(min: 0, max: questions.count, limit: self.maxQuestions)
 
                 reOrderQuestions.forEach({ (newIndex) in
-                    if questions[newIndex].isActive == true {
-                        self.questionsSelected.append(questions[newIndex])
-                    }
+                    self.questionsSelected.append(questions[newIndex])
                 })
 
                 self.showQuestionOnScreen()
