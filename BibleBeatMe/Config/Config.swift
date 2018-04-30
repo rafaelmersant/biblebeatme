@@ -61,6 +61,11 @@ func randomArrayOrder(min: Int, max: Int, limit: Int) -> [Int] {
     return reOrderRandom
 }
 
+//Convert
+func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
+    return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+}
+
 //MARK: Modify Multiplier for NSLayoutConstraint
 extension NSLayoutConstraint {
     /**

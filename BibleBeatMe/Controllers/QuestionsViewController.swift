@@ -46,6 +46,7 @@ class QuestionsViewController : UIViewController {
     fileprivate var questionNumber: Int = -1
     fileprivate var practiceCompetition: PracticeCompetition?
     fileprivate let maxQuestions: Int = 10
+    fileprivate var startGame = Date()
 
     //Timer
     var timer = Timer()
@@ -70,10 +71,7 @@ class QuestionsViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let start = Date()
-        print("Elapsed time: \(start.timeIntervalSinceNow) seconds")
-
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(QuestionsViewController.clock), userInfo: nil, repeats: true)
+        print("Elapsed time: \(startGame.timeIntervalSinceNow) seconds")
 
         self.answerButtonsStackViewHeightFixed = answerButtonsStackViewHeight.multiplier
 
@@ -184,9 +182,10 @@ class QuestionsViewController : UIViewController {
 
     //MARK: Functions
     @objc func clock() {
-        //seconds = seconds + 1
+        let elapsed = (Date() - startGame)
+        let (_, minutes, seconds) = secondsToHoursMinutesSeconds(seconds: Int(elapsed))
 
-        timeElapse.text = "\( (1.second + 2.second).fromNow()! ) time elapsed"
+        timeElapse.text = "\(minutes):\(seconds) time elapsed"
     }
 
     //Lock screen
@@ -308,6 +307,8 @@ class QuestionsViewController : UIViewController {
                 })
 
                 self.showQuestionOnScreen()
+
+                self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(QuestionsViewController.clock), userInfo: nil, repeats: true)
 
             } catch let error {
                 print(error)
