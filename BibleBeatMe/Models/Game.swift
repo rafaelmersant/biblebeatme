@@ -14,10 +14,10 @@ struct Status {
     static let completed    = "Completed"
 }
 
-struct PracticeCompetition: Decodable {
+struct Game: Decodable {
 
     //Properties
-    let id                  : Int?
+    //let id                  : Int?
     let competitionId       : Int?
     let started             = Date().timeIntervalSince1970
     let ended               : Date?

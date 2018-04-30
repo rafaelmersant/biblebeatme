@@ -48,9 +48,9 @@
 		9453FE462082EA5500910FFB /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453FE452082EA5500910FFB /* Score.swift */; };
 		9453FE472082EA5500910FFB /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453FE452082EA5500910FFB /* Score.swift */; };
 		9453FE482082EA5500910FFB /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453FE452082EA5500910FFB /* Score.swift */; };
-		9453FE4A2082EC5400910FFB /* PracticeCompetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453FE492082EC5400910FFB /* PracticeCompetition.swift */; };
-		9453FE4B2082EC5400910FFB /* PracticeCompetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453FE492082EC5400910FFB /* PracticeCompetition.swift */; };
-		9453FE4C2082EC5400910FFB /* PracticeCompetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453FE492082EC5400910FFB /* PracticeCompetition.swift */; };
+		9453FE4A2082EC5400910FFB /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453FE492082EC5400910FFB /* Game.swift */; };
+		9453FE4B2082EC5400910FFB /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453FE492082EC5400910FFB /* Game.swift */; };
+		9453FE4C2082EC5400910FFB /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453FE492082EC5400910FFB /* Game.swift */; };
 		946176FE209294A600DFC672 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946176FD209294A600DFC672 /* Reachability.swift */; };
 		946176FF209294A600DFC672 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946176FD209294A600DFC672 /* Reachability.swift */; };
 		94617700209294A600DFC672 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946176FD209294A600DFC672 /* Reachability.swift */; };
@@ -127,7 +127,7 @@
 		9453FE3D2082E9FE00910FFB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9453FE412082EA3800910FFB /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		9453FE452082EA5500910FFB /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
-		9453FE492082EC5400910FFB /* PracticeCompetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeCompetition.swift; sourceTree = "<group>"; };
+		9453FE492082EC5400910FFB /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		946176FD209294A600DFC672 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		947A278E205F5B23008D1EF9 /* ModalNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNavigationController.swift; sourceTree = "<group>"; };
 		947A27962065EB66008D1EF9 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 				9453FE3D2082E9FE00910FFB /* User.swift */,
 				9453FE412082EA3800910FFB /* Friend.swift */,
 				9453FE452082EA5500910FFB /* Score.swift */,
-				9453FE492082EC5400910FFB /* PracticeCompetition.swift */,
+				9453FE492082EC5400910FFB /* Game.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -624,7 +624,7 @@
 				94238B2B20705BD0008CC289 /* DareViewController.swift in Sources */,
 				943EC0891FFB11C8009B3632 /* AppDelegate.swift in Sources */,
 				947A27972065EB66008D1EF9 /* ResultsViewController.swift in Sources */,
-				9453FE4A2082EC5400910FFB /* PracticeCompetition.swift in Sources */,
+				9453FE4A2082EC5400910FFB /* Game.swift in Sources */,
 				9453FE422082EA3800910FFB /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -635,7 +635,7 @@
 			files = (
 				94238B3020706F19008CC289 /* ScoresViewController.swift in Sources */,
 				947A2795205F5BE2008D1EF9 /* MainViewController.swift in Sources */,
-				9453FE4B2082EC5400910FFB /* PracticeCompetition.swift in Sources */,
+				9453FE4B2082EC5400910FFB /* Game.swift in Sources */,
 				948A25982068A84000151D1B /* OpponentViewController.swift in Sources */,
 				943EC09E1FFB11C8009B3632 /* BibleTryToBeatMeTests.swift in Sources */,
 				9453FE3F2082E9FE00910FFB /* User.swift in Sources */,
@@ -662,7 +662,7 @@
 			files = (
 				94238B3120706F19008CC289 /* ScoresViewController.swift in Sources */,
 				947A2794205F5BE2008D1EF9 /* MainViewController.swift in Sources */,
-				9453FE4C2082EC5400910FFB /* PracticeCompetition.swift in Sources */,
+				9453FE4C2082EC5400910FFB /* Game.swift in Sources */,
 				948A25992068A84000151D1B /* OpponentViewController.swift in Sources */,
 				943EC0A91FFB11C8009B3632 /* BibleTryToBeatMeUITests.swift in Sources */,
 				9453FE402082E9FE00910FFB /* User.swift in Sources */,

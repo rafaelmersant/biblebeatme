@@ -44,7 +44,7 @@ class QuestionsViewController : UIViewController {
     fileprivate var answerButtonsStackViewHeightFixed: CGFloat = 0
     fileprivate var questionsSelected = [Question]()
     fileprivate var questionNumber: Int = -1
-    fileprivate var practiceCompetition: PracticeCompetition?
+    fileprivate var Game: Game?
     fileprivate let maxQuestions: Int = 10
     fileprivate var startGame = Date()
 
@@ -61,7 +61,7 @@ class QuestionsViewController : UIViewController {
             }
 
             if hearts == 0 {
-                self.performSegue(withIdentifier: "showResultsSegue", sender: self)
+                self.terminateGame()
             }
         }
     }
@@ -198,6 +198,11 @@ class QuestionsViewController : UIViewController {
         self.view.isUserInteractionEnabled = true
     }
 
+    //Terminate game
+    func terminateGame() {
+        self.performSegue(withIdentifier: "showResultsSegue", sender: self)
+    }
+
     //Resize buttons - refresh on UI
     func refreshAnswerButtons() {
 
@@ -226,7 +231,7 @@ class QuestionsViewController : UIViewController {
 
         //The last question answered
         if questionNumber == questionsSelected.count {
-            self.performSegue(withIdentifier: "showResultsSegue", sender: self)
+            terminateGame()
 
         } else {
             //refresh current question number and how many are left.
