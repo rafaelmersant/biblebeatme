@@ -8,20 +8,21 @@
 
 import UIKit
 
-struct Status {
+struct StatusGame {
     static let inProgress   = "In progress"
     static let canceled     = "Canceled"
     static let completed    = "Completed"
+    static let aborted      = "Aborted"
 }
 
 struct Game: Decodable {
 
     //Properties
     //let id                  : Int?
+    private let started     = Date().timeIntervalSince1970
     let competitionId       : Int?
-    let started             = Date().timeIntervalSince1970
     let ended               : Date?
-    let status              = Status.inProgress //In progress, Canceled, Completed
+    let status              = StatusGame.inProgress //In progress, Canceled, Completed
     let questions           : [[String: Int]]? //
     let answeredRights      : [Int]?
     let answeredWrongs      : [Int]?

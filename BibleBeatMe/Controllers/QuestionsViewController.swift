@@ -44,7 +44,7 @@ class QuestionsViewController : UIViewController {
     fileprivate var answerButtonsStackViewHeightFixed: CGFloat = 0
     fileprivate var questionsSelected = [Question]()
     fileprivate var questionNumber: Int = -1
-    fileprivate var Game: Game?
+    fileprivate var game: Game!
     fileprivate let maxQuestions: Int = 10
     fileprivate var startGame = Date()
 
@@ -70,6 +70,12 @@ class QuestionsViewController : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let db = Database.database().reference().child("Games/Competition/0/name")
+        db.setValue("Test")
+
+        let db2 = Database.database().reference().child("Games/Competition/1/name")
+        db2.setValue("Test2")
 
         print("Elapsed time: \(startGame.timeIntervalSinceNow) seconds")
 
@@ -99,7 +105,10 @@ class QuestionsViewController : UIViewController {
 
         // add right navigation bar button items.
         do {
-            backButton.setIcon(icon: .ionicons(.iosArrowBack), iconSize: 30, color: mainColor)
+            backButton.title = "Cancel"
+            backButton.setTitleTextAttributes([
+                NSAttributedStringKey.font: UIFont(name: "HelveticaNeue", size: 17.0)!,
+                NSAttributedStringKey.foregroundColor: mainColor], for: .normal)
         }
     }
 
@@ -174,7 +183,8 @@ class QuestionsViewController : UIViewController {
                     })
                 }
 
-                print("Answer Selected : \(answerSelected)")
+                answeredSelected(question: questionsSelected[questionNumber], answer: answerSelected)
+
             }
         }
     }
@@ -313,12 +323,32 @@ class QuestionsViewController : UIViewController {
 
                 self.showQuestionOnScreen()
 
-                self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(QuestionsViewController.clock), userInfo: nil, repeats: true)
+                self.prepareGame()
 
             } catch let error {
                 print(error)
             }
         })
+    }
+
+    //Success getting questions started
+    func prepareGame() {
+
+        //Start time
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(QuestionsViewController.clock), userInfo: nil, repeats: true)
+
+        //Initialize game
+        //game.status = StatusGame.canceled
+    }
+
+    func answeredSelected(question: Question, answer: Question.Answer) {
+
+        print("question : \(question)")
+        print("answer : \(answer)")
+    }
+
+    func gameStatusChange(status: String) {
+
     }
 
 }
