@@ -67,13 +67,13 @@ func prepareUserAutoLogin(completion: @escaping (UserBB) -> Void) {
                     print("Users : \(userToSave)")
                 }
 
-                completion(user)
-
             } catch let error {
                 print(error)
             }
         })
     }
+
+    completion(user)
 }
 
 //MARK: Convert hex color to UIColor
