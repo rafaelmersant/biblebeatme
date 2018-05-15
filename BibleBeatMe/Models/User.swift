@@ -7,19 +7,31 @@
 //
 
 import UIKit
+import Firebase
 
-struct User: Decodable {
+struct UserBB: Decodable, Encodable {
 
-    let userId: Int
-    var isGuest: Int?
-    var isActive: Int?
-    var lastSeen: Date?
-    var isOnline: Bool?
-    var userName: String?
-    var email: String?
-    var userCountry: String?
+    var userGuestId : Int = 0
+    var isActive    : Int
+    var isOnline    : Bool = true
+    var userName    = ""
+    var email       = ""
+    var userCountry = ""
+    var lastSeen    = Date().timeIntervalSince1970
 
-    init(id: Int) {
-        self.userId = id
+    init() {
+        self.isActive = 1
     }
 }
+
+//class User: NSObject {
+//
+//    func lastUserFromDB() {
+//
+//        Database.database().reference().child("Users").observeSingleEvent(of: .value) { (snapshot) in
+//
+//            guard let users = snapshot.value else { return }
+//
+//        }
+//    }
+//}

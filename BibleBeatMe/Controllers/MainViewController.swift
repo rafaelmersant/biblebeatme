@@ -15,9 +15,15 @@ class MainViewController: UIViewController {
     @IBOutlet weak var mainView             : UIView!
     @IBOutlet weak var titleApp             : UILabel!
     @IBOutlet weak var opponentsInvitations : UILabel!
+    @IBOutlet weak var userLogged           : UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        //saveDataUserInfo(info: "", key: UserInfo.BBUserGuestId)
+        prepareUserAutoLogin { (user) in
+            self.userLogged.title = "Guest\(user.userGuestId)"
+        }
 
         //Set background Color
         mainView.backgroundColor = backColor
@@ -29,6 +35,8 @@ class MainViewController: UIViewController {
         opponentsInvitations.layer.borderColor = mainColor.cgColor
         opponentsInvitations.layer.masksToBounds = true
         opponentsInvitations.clipsToBounds = true
+
+        userLogged.tintColor = UIColor.lightGray
 
         //Set border to buttons
         specialButtons.forEach { (button) in
@@ -42,9 +50,9 @@ class MainViewController: UIViewController {
         NotiChallengesGesture.numberOfTapsRequired = 1
         opponentsInvitations.isUserInteractionEnabled = true
         opponentsInvitations.addGestureRecognizer(NotiChallengesGesture)
-
     }
 
+    //Action for notification about challenges received
     @objc func recentsChallengesReceived() {
         print("Go to Challenges Received......")
     }

@@ -185,11 +185,13 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Home" id="AoX-iY-1Cu">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Ee2-2Z-tIR"/>
+                        <barButtonItem key="leftBarButtonItem" title="user" id="0GG-DI-wpQ"/>
                     </navigationItem>
                     <connections>
                         <outlet property="mainView" destination="6Jy-lY-7cU" id="Lzq-7g-Ypr"/>
                         <outlet property="opponentsInvitations" destination="njE-Cy-GjM" id="Opi-3F-9PJ"/>
                         <outlet property="titleApp" destination="2bP-1Y-fVh" id="W4w-rW-ud8"/>
+                        <outlet property="userLogged" destination="0GG-DI-wpQ" id="byH-Af-a8e"/>
                         <outletCollection property="specialButtons" destination="kzE-tw-X01" collectionClass="NSMutableArray" id="VtO-r5-pyZ"/>
                         <outletCollection property="specialButtons" destination="FbB-ci-sIY" collectionClass="NSMutableArray" id="T9Z-fW-qUU"/>
                         <outletCollection property="specialButtons" destination="x7o-un-21D" collectionClass="NSMutableArray" id="MU4-Pn-N2S"/>

@@ -20,13 +20,13 @@ struct Game: Decodable {
     //Properties
     //let id                  : Int?
     private let started     = Date().timeIntervalSince1970
-    let competitionId       : Int?
-    let ended               : Date?
-    let status              = StatusGame.inProgress //In progress, Canceled, Completed
-    let questions           : [[String: Int]]? //
-    let answeredRights      : [Int]?
-    let answeredWrongs      : [Int]?
-    let questionsAnswered   : [Int]?
-    let userWhoComplete     : User?
+    var competitionId       : Int?
+    var ended               : Date?
+    var status              = StatusGame.inProgress //In progress, Canceled, Completed
+    var questions           : [[String: Int]]? //
+    var answeredRights      : [Int]?
+    var answeredWrongs      : [Int]?
+    var questionsAnswered   : [Int]?
+    var userWhoComplete     : UserBB?
 }
 

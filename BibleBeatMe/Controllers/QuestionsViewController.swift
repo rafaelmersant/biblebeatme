@@ -16,37 +16,39 @@ import SwiftDate
 class QuestionsViewController : UIViewController {
 
     //MARK: IBOutlets
-    @IBOutlet weak var titleApp         : UILabel!
-    @IBOutlet weak var heartsView       : UIView!
-    @IBOutlet weak var headerView       : UIView!
-    @IBOutlet weak var answerStackView  : UIStackView!
-    @IBOutlet var mainView              : UIView!
-    @IBOutlet weak var timeElapse       : UILabel!
+    @IBOutlet weak var titleApp                     : UILabel!
+    @IBOutlet weak var heartsView                   : UIView!
+    @IBOutlet weak var headerView                   : UIView!
+    @IBOutlet weak var answerStackView              : UIStackView!
+    @IBOutlet var mainView                          : UIView!
+    @IBOutlet weak var timeElapse                   : UILabel!
 
-    @IBOutlet weak var backButton       : UIBarButtonItem!
-    @IBOutlet weak var answerSection    : UIView!
+    @IBOutlet weak var backButton                   : UIBarButtonItem!
+    @IBOutlet weak var answerSection                : UIView!
 
-    @IBOutlet weak var questionLabel    : UILabel!
-    @IBOutlet var answerButtons         : [UIButton]!
+    @IBOutlet weak var questionLabel                : UILabel!
+    @IBOutlet var answerButtons                     : [UIButton]!
 
-    @IBOutlet weak var questionsInfoCount: UIBarButtonItem!
-    @IBOutlet weak var answerButtonsStackView: UIStackView!
-    @IBOutlet weak var answerButtonsStackViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var questionsInfoCount           : UIBarButtonItem!
+    @IBOutlet weak var answerButtonsStackView       : UIStackView!
+    @IBOutlet weak var answerButtonsStackViewHeight : NSLayoutConstraint!
 
-    fileprivate weak var controller     : UIViewController?
+    fileprivate weak var controller                 : UIViewController?
     
     //Hearts
-    @IBOutlet weak var heart1           : UILabel!
-    @IBOutlet weak var heart2           : UILabel!
-    @IBOutlet weak var heart3           : UILabel!
+    @IBOutlet weak var heart1                       : UILabel!
+    @IBOutlet weak var heart2                       : UILabel!
+    @IBOutlet weak var heart3                       : UILabel!
 
     //Variables
     fileprivate var answerButtonsStackViewHeightFixed: CGFloat = 0
-    fileprivate var questionsSelected = [Question]()
-    fileprivate var questionNumber: Int = -1
-    fileprivate var game: Game!
-    fileprivate let maxQuestions: Int = 10
-    fileprivate var startGame = Date()
+    fileprivate var questionsSelected               = [Question]()
+    fileprivate var questionNumber                  : Int = -1
+    fileprivate var game                            = Game()
+    fileprivate let maxQuestions                    : Int = 10
+    fileprivate var startGame                       = Date()
+    fileprivate let dbGame                          = Database.database().reference()
+    fileprivate let dbGameCount                     : Int = 0
 
     //Timer
     var timer = Timer()
@@ -74,8 +76,7 @@ class QuestionsViewController : UIViewController {
         let db = Database.database().reference().child("Games/Competition/0/name")
         db.setValue("Test")
 
-        let db2 = Database.database().reference().child("Games/Competition/1/name")
-        db2.setValue("Test2")
+        dbGame.child("Games//")
 
         print("Elapsed time: \(startGame.timeIntervalSinceNow) seconds")
 
@@ -339,6 +340,7 @@ class QuestionsViewController : UIViewController {
 
         //Initialize game
         //game.status = StatusGame.canceled
+        game.answeredRights?.append(1)
     }
 
     func answeredSelected(question: Question, answer: Question.Answer) {

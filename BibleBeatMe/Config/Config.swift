@@ -7,10 +7,74 @@
 //
 
 import UIKit
+import Firebase
+import CodableFirebase
 
 //Database models Strings
 let questionsModel = "Questions"
 let usersModel = "Users"
+
+//MARK: UserInfo
+struct UserInfo {
+    static let BBUserGuestId = "BBGuestId"
+    static let BBUserName = "BBUserName"
+}
+
+func saveDataUserInfo(info: Any, key: String) {
+    let _default = UserDefaults.standard
+    _default.set(info, forKey: key)
+}
+
+func retrieveDataUserInfo(key: String) -> Any? {
+    let _default = UserDefaults.standard
+    return _default.object(forKey: key)
+}
+
+//Prepare user default login/register
+func prepareUserAutoLogin(completion: @escaping (UserBB) -> Void) {
+
+    var user = UserBB()
+
+    if let userGuestId = retrieveDataUserInfo(key: UserInfo.BBUserGuestId) as? Int {
+
+        user.userGuestId = userGuestId
+        user.isOnline = true
+
+    } else {
+
+        Database.database().reference().child("Users").observeSingleEvent(of: .value, with: { (snapshot) in
+
+            guard let value = snapshot.value else {
+                print("Failed trying to get last User from Database.")
+                return
+            }
+
+            do {
+                let users = try FirebaseDecoder().decode([UserBB].self, from: value)
+
+                if let lastUser = users.last {
+
+                    let nextGuestId = lastUser.userGuestId + 1
+
+                    saveDataUserInfo(info: nextGuestId, key: UserInfo.BBUserGuestId)
+
+                    user.userGuestId = nextGuestId
+
+                    let userToSave = try FirebaseEncoder().encode(user)
+
+                    Database.database().reference().child("Users/\(users.count)").setValue(userToSave)
+
+                    print("Users : \(userToSave)")
+                }
+
+                completion(user)
+
+            } catch let error {
+                print(error)
+            }
+        })
+    }
+}
 
 //MARK: Convert hex color to UIColor
 
@@ -61,7 +125,7 @@ func randomArrayOrder(min: Int, max: Int, limit: Int) -> [Int] {
     return reOrderRandom
 }
 
-//Convert
+//Convert to get hours, minutes and seconds
 func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
     return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
 }
