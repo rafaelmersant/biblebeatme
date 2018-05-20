@@ -70,6 +70,9 @@
 		948A25972068A84000151D1B /* OpponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A25962068A84000151D1B /* OpponentViewController.swift */; };
 		948A25982068A84000151D1B /* OpponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A25962068A84000151D1B /* OpponentViewController.swift */; };
 		948A25992068A84000151D1B /* OpponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A25962068A84000151D1B /* OpponentViewController.swift */; };
+		94BE391420AD231A0073720C /* UserPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE391320AD231A0073720C /* UserPropertiesViewController.swift */; };
+		94BE391520AD231A0073720C /* UserPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE391320AD231A0073720C /* UserPropertiesViewController.swift */; };
+		94BE391620AD231A0073720C /* UserPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE391320AD231A0073720C /* UserPropertiesViewController.swift */; };
 		94D113D62059FF0B005E08A9 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D113D52059FF0B005E08A9 /* QuestionsViewController.swift */; };
 		94D113D72059FF0B005E08A9 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D113D52059FF0B005E08A9 /* QuestionsViewController.swift */; };
 		94D113D82059FF0B005E08A9 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D113D52059FF0B005E08A9 /* QuestionsViewController.swift */; };
@@ -133,6 +136,7 @@
 		947A27962065EB66008D1EF9 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		948A25922067F91100151D1B /* OpponentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpponentsViewController.swift; sourceTree = "<group>"; };
 		948A25962068A84000151D1B /* OpponentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpponentViewController.swift; sourceTree = "<group>"; };
+		94BE391320AD231A0073720C /* UserPropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPropertiesViewController.swift; sourceTree = "<group>"; };
 		94D113D52059FF0B005E08A9 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		94D113D9205DB169005E08A9 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		E6CBD1387361208C4418D416 /* Pods-BibleBeatMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibleBeatMeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibleBeatMeTests/Pods-BibleBeatMeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -279,6 +283,7 @@
 				94238B2E20706F19008CC289 /* ScoresViewController.swift */,
 				9425CEE62075C70D00FD4ADD /* ChallengesReceivedViewController.swift */,
 				9425CEEA2078364C00FD4ADD /* ChallengesSentViewController.swift */,
+				94BE391320AD231A0073720C /* UserPropertiesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -611,6 +616,7 @@
 				9425CEEB2078364C00FD4ADD /* ChallengesSentViewController.swift in Sources */,
 				946176FE209294A600DFC672 /* Reachability.swift in Sources */,
 				9425CEE72075C70D00FD4ADD /* ChallengesReceivedViewController.swift in Sources */,
+				94BE391420AD231A0073720C /* UserPropertiesViewController.swift in Sources */,
 				948A25932067F91100151D1B /* OpponentsViewController.swift in Sources */,
 				94238B2F20706F19008CC289 /* ScoresViewController.swift in Sources */,
 				948A25972068A84000151D1B /* OpponentViewController.swift in Sources */,
@@ -638,6 +644,7 @@
 				9453FE4B2082EC5400910FFB /* Game.swift in Sources */,
 				948A25982068A84000151D1B /* OpponentViewController.swift in Sources */,
 				943EC09E1FFB11C8009B3632 /* BibleTryToBeatMeTests.swift in Sources */,
+				94BE391520AD231A0073720C /* UserPropertiesViewController.swift in Sources */,
 				9453FE3F2082E9FE00910FFB /* User.swift in Sources */,
 				9425CEF4207C537A00FD4ADD /* Challenge.swift in Sources */,
 				9425CEEC2078364C00FD4ADD /* ChallengesSentViewController.swift in Sources */,
@@ -665,6 +672,7 @@
 				9453FE4C2082EC5400910FFB /* Game.swift in Sources */,
 				948A25992068A84000151D1B /* OpponentViewController.swift in Sources */,
 				943EC0A91FFB11C8009B3632 /* BibleTryToBeatMeUITests.swift in Sources */,
+				94BE391620AD231A0073720C /* UserPropertiesViewController.swift in Sources */,
 				9453FE402082E9FE00910FFB /* User.swift in Sources */,
 				9425CEF5207C537A00FD4ADD /* Challenge.swift in Sources */,
 				9425CEED2078364C00FD4ADD /* ChallengesSentViewController.swift in Sources */,

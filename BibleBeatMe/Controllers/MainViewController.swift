@@ -9,7 +9,7 @@
 import UIKit
 import SwiftIcons
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet var specialButtons            : [UIButton]!
     @IBOutlet weak var mainView             : UIView!
@@ -52,6 +52,24 @@ class MainViewController: UIViewController {
         opponentsInvitations.addGestureRecognizer(NotiChallengesGesture)
     }
 
+    @IBAction func showUserProperties(_ sender: AnyObject) {
+
+        let vc = storyboard?.instantiateViewController(withIdentifier: "storyboardUser") as! UserPropertiesViewController
+        vc.preferredContentSize = CGSize(width: 300, height: 200)
+
+        let navController = UINavigationController(rootViewController: vc)
+        navController.modalPresentationStyle = .popover
+        navController.navigationBar.barTintColor = darkGrayColor
+        navController.navigationBar.tintColor = UIColor.white
+
+        let popOver = navController.popoverPresentationController
+        popOver?.delegate = self
+        popOver?.backgroundColor = darkGrayColor //navController.view.backgroundColor
+        popOver?.barButtonItem = sender as? UIBarButtonItem
+
+        self.present(navController, animated: true, completion: nil)
+    }
+
     //Action for notification about challenges received
     @objc func recentsChallengesReceived() {
         print("Go to Challenges Received......")
@@ -65,6 +83,10 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+    }
+
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
     }
 }
 

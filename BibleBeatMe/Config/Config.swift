@@ -106,6 +106,7 @@ func hexToUIColor (hexString: String) -> UIColor {
 let mainColor = hexToUIColor(hexString: "FF0033")
 let backColor = UIColor.black
 let foreColor = UIColor.black
+let darkGrayColor = hexToUIColor(hexString: "292929")
 
 //MARK: random
 func randomNumber(min: Int, max: Int)-> Int {
