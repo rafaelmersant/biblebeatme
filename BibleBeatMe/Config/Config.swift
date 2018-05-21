@@ -40,6 +40,8 @@ func prepareUserAutoLogin(completion: @escaping (UserBB) -> Void) {
         user.userGuestId = userGuestId
         user.isOnline = true
 
+        completion(user)
+
     } else {
 
         Database.database().reference().child("Users").observeSingleEvent(of: .value, with: { (snapshot) in
@@ -74,8 +76,6 @@ func prepareUserAutoLogin(completion: @escaping (UserBB) -> Void) {
             }
         })
     }
-
-    completion(user)
 }
 
 //MARK: Convert hex color to UIColor

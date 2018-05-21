@@ -22,16 +22,13 @@ struct UserBB: Decodable, Encodable {
     init() {
         self.isActive = 1
     }
-}
 
-//class User: NSObject {
-//
-//    func lastUserFromDB() {
-//
-//        Database.database().reference().child("Users").observeSingleEvent(of: .value) { (snapshot) in
-//
-//            guard let users = snapshot.value else { return }
-//
-//        }
-//    }
-//}
+    func usernameToDisplay() -> String? {
+        
+        if self.userName == "" {
+            return "Guest\(self.userGuestId)"
+        } else {
+            return self.userName
+        }
+    }
+}

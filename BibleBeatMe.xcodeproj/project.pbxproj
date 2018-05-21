@@ -64,6 +64,9 @@
 		947A27972065EB66008D1EF9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A27962065EB66008D1EF9 /* ResultsViewController.swift */; };
 		947A27982065EB66008D1EF9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A27962065EB66008D1EF9 /* ResultsViewController.swift */; };
 		947A27992065EB66008D1EF9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A27962065EB66008D1EF9 /* ResultsViewController.swift */; };
+		948840C520B25A8E00B6BC0E /* BibleBeatMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948840C420B25A8E00B6BC0E /* BibleBeatMe.swift */; };
+		948840C620B25A8E00B6BC0E /* BibleBeatMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948840C420B25A8E00B6BC0E /* BibleBeatMe.swift */; };
+		948840C720B25A8E00B6BC0E /* BibleBeatMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948840C420B25A8E00B6BC0E /* BibleBeatMe.swift */; };
 		948A25932067F91100151D1B /* OpponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A25922067F91100151D1B /* OpponentsViewController.swift */; };
 		948A25942067F91100151D1B /* OpponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A25922067F91100151D1B /* OpponentsViewController.swift */; };
 		948A25952067F91100151D1B /* OpponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948A25922067F91100151D1B /* OpponentsViewController.swift */; };
@@ -134,6 +137,7 @@
 		946176FD209294A600DFC672 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		947A278E205F5B23008D1EF9 /* ModalNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNavigationController.swift; sourceTree = "<group>"; };
 		947A27962065EB66008D1EF9 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		948840C420B25A8E00B6BC0E /* BibleBeatMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleBeatMe.swift; sourceTree = "<group>"; };
 		948A25922067F91100151D1B /* OpponentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpponentsViewController.swift; sourceTree = "<group>"; };
 		948A25962068A84000151D1B /* OpponentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpponentViewController.swift; sourceTree = "<group>"; };
 		94BE391320AD231A0073720C /* UserPropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPropertiesViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 				9453FE412082EA3800910FFB /* Friend.swift */,
 				9453FE452082EA5500910FFB /* Score.swift */,
 				9453FE492082EC5400910FFB /* Game.swift */,
+				948840C420B25A8E00B6BC0E /* BibleBeatMe.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -628,6 +633,7 @@
 				9425CEEF207C534B00FD4ADD /* Question.swift in Sources */,
 				94D113D62059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
 				94238B2B20705BD0008CC289 /* DareViewController.swift in Sources */,
+				948840C520B25A8E00B6BC0E /* BibleBeatMe.swift in Sources */,
 				943EC0891FFB11C8009B3632 /* AppDelegate.swift in Sources */,
 				947A27972065EB66008D1EF9 /* ResultsViewController.swift in Sources */,
 				9453FE4A2082EC5400910FFB /* Game.swift in Sources */,
@@ -648,6 +654,7 @@
 				9453FE3F2082E9FE00910FFB /* User.swift in Sources */,
 				9425CEF4207C537A00FD4ADD /* Challenge.swift in Sources */,
 				9425CEEC2078364C00FD4ADD /* ChallengesSentViewController.swift in Sources */,
+				948840C620B25A8E00B6BC0E /* BibleBeatMe.swift in Sources */,
 				9425CEF0207C534B00FD4ADD /* Question.swift in Sources */,
 				94D113D72059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
 				947A27982065EB66008D1EF9 /* ResultsViewController.swift in Sources */,
@@ -676,6 +683,7 @@
 				9453FE402082E9FE00910FFB /* User.swift in Sources */,
 				9425CEF5207C537A00FD4ADD /* Challenge.swift in Sources */,
 				9425CEED2078364C00FD4ADD /* ChallengesSentViewController.swift in Sources */,
+				948840C720B25A8E00B6BC0E /* BibleBeatMe.swift in Sources */,
 				9425CEF1207C534B00FD4ADD /* Question.swift in Sources */,
 				94D113D82059FF0B005E08A9 /* QuestionsViewController.swift in Sources */,
 				947A27992065EB66008D1EF9 /* ResultsViewController.swift in Sources */,

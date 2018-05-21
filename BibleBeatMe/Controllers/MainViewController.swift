@@ -20,9 +20,18 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //saveDataUserInfo(info: "", key: UserInfo.BBUserGuestId)
-        prepareUserAutoLogin { (user) in
-            self.userLogged.title = "Guest\(user.userGuestId)"
+        //Set user info in the app
+        if BibleBeatMe.user == nil {
+
+            prepareUserAutoLogin { (user) in
+
+                BibleBeatMe.userFromDB(guestId: user.userGuestId, completion: { () in
+
+                    if let user = BibleBeatMe.user {
+                        self.userLogged.title = user.usernameToDisplay()
+                    }
+                })
+            }
         }
 
         //Set background Color
