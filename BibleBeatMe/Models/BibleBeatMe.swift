@@ -18,11 +18,11 @@ class BibleBeatMe {
     static func userFromDB(guestId: Int, completion: @escaping () -> Void) {
 
         let users = Database.database().reference().child("Users")
-        let data = users.child("16") //queryOrdered(byChild: "userGuestId").queryEqual(toValue: guestId).queryLimited(toFirst: 1)
+        let data = users.queryOrdered(byChild: "userGuestId").queryEqual(toValue: guestId).queryLimited(toFirst: 1)
 
         data.observeSingleEvent(of: .value, with: { (snapshot) in
 
-            guard let value = snapshot.value else {
+            guard let value = (snapshot.value as? NSDictionary)?.allValues.first else {
                 print("Failed trying to get user from Database. (BibleBeatMe.userFromDB)")
                 return
             }
