@@ -58,6 +58,21 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         opponentsInvitations.addGestureRecognizer(NotiChallengesGesture)
     }
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
+        let notificationCenter = NotificationCenter.default
+
+        // observe the filter attribute add/change notifications.
+        notificationCenter.addObserver(self, selector: #selector(MainViewController.refreshUserName(_:)), name: NSNotification.Name(rawValue: "refreshUserName"), object: nil)
+    }
+
+    //MARK: deinit
+    deinit {
+
+        NotificationCenter.default.removeObserver(self)
+    }
+
     @IBAction func showUserProperties(_ sender: AnyObject) {
 
         let vc = storyboard?.instantiateViewController(withIdentifier: "storyboardUser") as! UserPropertiesViewController
@@ -70,7 +85,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
 
         let popOver = navController.popoverPresentationController
         popOver?.delegate = self
-        popOver?.backgroundColor = darkGrayColor //navController.view.backgroundColor
+        popOver?.backgroundColor = darkGrayColor
         popOver?.barButtonItem = sender as? UIBarButtonItem
 
         self.present(navController, animated: true, completion: nil)
@@ -93,6 +108,15 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
 
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
+    }
+
+    // MARK: Notifications
+
+    @objc func refreshUserName(_ notification: Notification) {
+
+        if let user = BibleBeatMe.user {
+            userLogged.title = user.usernameToDisplay()
+        }
     }
 }
 

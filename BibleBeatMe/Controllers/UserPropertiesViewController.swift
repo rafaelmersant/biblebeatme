@@ -16,12 +16,11 @@ class UserPropertiesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+        message.isHidden = true
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        if let user = BibleBeatMe.user {
+            userNameTextField.text = user.usernameToDisplay()
+        }
     }
 
     @IBAction func save(_ sender: UIBarButtonItem) {
@@ -32,8 +31,11 @@ class UserPropertiesViewController: UIViewController {
 
             print("the user was updated: \(user.userGuestId) with name: \(user.userName)")
 
-            dismiss(animated: true, completion: nil)
+            // post notification for refreshing userName.
+            let notificationCenter = NotificationCenter.default
+            notificationCenter.post(name: Notification.Name(rawValue: "refreshUserName"), object: self)
 
+            dismiss(animated: true, completion: nil)
         }
     }
 
