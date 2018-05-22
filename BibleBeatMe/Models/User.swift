@@ -16,7 +16,7 @@ struct UserBB: Decodable, Encodable {
     var isOnline    : Bool = true
     var userName    = ""
     var email       = ""
-    var userCountry = ""
+    var userCountry = Locale.current.regionCode
     var lastSeen    = Date().timeIntervalSince1970
 
     init() {

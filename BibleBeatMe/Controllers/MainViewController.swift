@@ -21,7 +21,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         super.viewDidLoad()
 
         //Set user info in the app
-        prepareUserAutoLogin { (user) in
+        BibleBeatMe.User.prepareUserAutoLogin { (user) in
 
             BibleBeatMe.User.userFromDB(guestId: user.userGuestId, completion: { () in
 

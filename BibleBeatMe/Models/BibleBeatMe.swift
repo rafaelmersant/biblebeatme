@@ -14,6 +14,7 @@ import CodableFirebase
 class BibleBeatMe {
 
     static var user: UserBB?
+    static var language: String?
 
     struct User {
 
@@ -61,5 +62,59 @@ class BibleBeatMe {
                 }
             }
         }
+
+        //Function to login into
+        //Prepare user default login/register
+        static func prepareUserAutoLogin(completion: @escaping (UserBB) -> Void) {
+
+            var user = UserBB()
+
+            if let BBUser = retrieveDataUserInfo(key: UserInfo.BBuser) as? NSDictionary {
+
+                do {
+
+                    user = try FirebaseDecoder().decode(UserBB.self, from: BBUser)
+
+                } catch let error {
+                    print(error)
+                }
+
+                completion(user)
+
+            } else {
+
+                Database.database().reference().child("Users").observeSingleEvent(of: .value, with: { (snapshot) in
+
+                    guard let value = snapshot.value else {
+                        print("Failed trying to get last User from Database.")
+                        return
+                    }
+
+                    do {
+                        let users = try FirebaseDecoder().decode([UserBB].self, from: value)
+
+                        if let lastUser = users.last {
+
+                            let nextGuestId = lastUser.userGuestId + 1
+                            user.userGuestId = nextGuestId
+
+                            let userToSave = try FirebaseEncoder().encode(user)
+
+                            Database.database().reference().child("Users/\(user.userGuestId)").setValue(userToSave)
+
+                            saveDataUserInfo(info: userToSave, key: UserInfo.BBuser)
+
+                            print("Users : \(userToSave)")
+                        }
+
+                        completion(user)
+
+                    } catch let error {
+                        print(error)
+                    }
+                })
+            }
+        }
+
     }
 }

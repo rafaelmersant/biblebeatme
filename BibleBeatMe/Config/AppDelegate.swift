@@ -23,6 +23,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Firebase configure
         FirebaseApp.configure()
 
+        //Set default language
+        BibleBeatMe.language = Locale.preferredLanguages[0]
+
+        if let language = retrieveDataUserInfo(key: "language") {
+            BibleBeatMe.language = language as? String
+        } else {
+            if let lang = BibleBeatMe.language {
+                saveDataUserInfo(info: lang, key: "language")
+            }
+        }
+
         return true
     }
 
