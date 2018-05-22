@@ -26,7 +26,7 @@ struct UserBB: Decodable, Encodable {
     func usernameToDisplay() -> String? {
         
         if self.userName == "" {
-            return "Guest\(self.userGuestId)"
+            return "G\(self.userGuestId)"
         } else {
             return self.userName
         }

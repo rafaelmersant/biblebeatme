@@ -15,30 +15,51 @@ class BibleBeatMe {
 
     static var user: UserBB?
 
-    static func userFromDB(guestId: Int, completion: @escaping () -> Void) {
+    struct User {
 
-        let users = Database.database().reference().child("Users")
-        let data = users.queryOrdered(byChild: "userGuestId").queryEqual(toValue: guestId).queryLimited(toFirst: 1)
+        //Function to get user from Firebase (Database)
+        //Param In: userGuestId
+        static func userFromDB(guestId: Int, completion: @escaping () -> Void) {
 
-        data.observeSingleEvent(of: .value, with: { (snapshot) in
+            let user = Database.database().reference().child("Users/\(guestId)")
 
-            guard let value = (snapshot.value as? NSDictionary)?.allValues.first else {
-                print("Failed trying to get user from Database. (BibleBeatMe.userFromDB)")
-                return
-            }
+            user.observeSingleEvent(of: .value, with: { (snapshot) in
 
-            do {
+                guard let value = snapshot.value as? NSDictionary else {
+                    print("Failed trying to get user from Database. (BibleBeatMe.userFromDB)")
+                    return
+                }
 
-                self.user = try FirebaseDecoder().decode(UserBB.self, from: value)
+                do {
 
-                completion()
+                    BibleBeatMe.user = try FirebaseDecoder().decode(UserBB.self, from: value)
 
-            } catch let error {
+                    completion()
+
+                } catch let error {
+                    print(error)
+                }
+
+            }) { (error) in
                 print(error)
             }
+        }
 
-        }) { (error) in
-            print(error)
+        //Function to update username for specify user in Firebase
+        //Params In: userGuestId and userName
+        static func updateUserName() {
+
+            if let user = BibleBeatMe.user {
+
+                do {
+
+                    let userToSave = try FirebaseEncoder().encode(user)
+                    Database.database().reference().child("Users/\(user.userGuestId)").updateChildValues(userToSave as! [AnyHashable : Any])
+
+                } catch let error {
+                    print(error)
+                }
+            }
         }
     }
 }

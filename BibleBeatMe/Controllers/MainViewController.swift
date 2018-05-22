@@ -21,17 +21,14 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         super.viewDidLoad()
 
         //Set user info in the app
-        if BibleBeatMe.user == nil {
+        prepareUserAutoLogin { (user) in
 
-            prepareUserAutoLogin { (user) in
+            BibleBeatMe.User.userFromDB(guestId: user.userGuestId, completion: { () in
 
-                BibleBeatMe.userFromDB(guestId: user.userGuestId, completion: { () in
-
-                    if let user = BibleBeatMe.user {
-                        self.userLogged.title = user.usernameToDisplay()
-                    }
-                })
-            }
+                if let user = BibleBeatMe.user {
+                    self.userLogged.title = user.usernameToDisplay()
+                }
+            })
         }
 
         //Set background Color

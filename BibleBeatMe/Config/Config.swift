@@ -18,6 +18,7 @@ let usersModel = "Users"
 struct UserInfo {
     static let BBUserGuestId = "BBGuestId"
     static let BBUserName = "BBUserName"
+    static let BBuser = "BBUser"
 }
 
 func saveDataUserInfo(info: Any, key: String) {
@@ -35,10 +36,15 @@ func prepareUserAutoLogin(completion: @escaping (UserBB) -> Void) {
 
     var user = UserBB()
 
-    if let userGuestId = retrieveDataUserInfo(key: UserInfo.BBUserGuestId) as? Int {
+    if let BBUser = retrieveDataUserInfo(key: UserInfo.BBuser) as? NSDictionary {
 
-        user.userGuestId = userGuestId
-        user.isOnline = true
+        do {
+
+            user = try FirebaseDecoder().decode(UserBB.self, from: BBUser)
+
+        } catch let error {
+            print(error)
+        }
 
         completion(user)
 
@@ -57,14 +63,13 @@ func prepareUserAutoLogin(completion: @escaping (UserBB) -> Void) {
                 if let lastUser = users.last {
 
                     let nextGuestId = lastUser.userGuestId + 1
-
-                    saveDataUserInfo(info: nextGuestId, key: UserInfo.BBUserGuestId)
-
                     user.userGuestId = nextGuestId
 
                     let userToSave = try FirebaseEncoder().encode(user)
 
-                    Database.database().reference().child("Users/\(users.count)").setValue(userToSave)
+                    Database.database().reference().child("Users/\(user.userGuestId)").setValue(userToSave)
+
+                    saveDataUserInfo(info: userToSave, key: UserInfo.BBuser)
 
                     print("Users : \(userToSave)")
                 }
