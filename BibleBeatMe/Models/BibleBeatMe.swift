@@ -60,6 +60,22 @@ class BibleBeatMe {
                 } catch let error {
                     print(error)
                 }
+
+            }
+        }
+
+        //Function to get if user exists
+        static func userExist(userName: String, completion: @escaping (Bool) -> Void) {
+
+            if userName != "" {
+
+                Database.database().reference().child("Users").queryOrdered(byChild: "userName").queryEqual(toValue: userName).observeSingleEvent(of: .value) { (snapshot) in
+
+                    completion(snapshot.exists())
+                }
+            } else {
+
+                completion(false)
             }
         }
 
