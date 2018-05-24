@@ -7,10 +7,7 @@
 //
 
 import UIKit
-import Firebase
-import CodableFirebase
 import MBProgressHUD
-import SCLAlertView
 import SwiftDate
 
 class QuestionsViewController : UIViewController {
@@ -42,18 +39,17 @@ class QuestionsViewController : UIViewController {
 
     //Variables
     fileprivate var answerButtonsStackViewHeightFixed: CGFloat = 0
-    fileprivate var questionsSelected               = [Question]()
+    fileprivate var questionsSelected               = [Question.QuestionModel]()
     fileprivate var questionNumber                  : Int = -1
     fileprivate var game                            = Game()
-    fileprivate let maxQuestions                    : Int = 10
     fileprivate var startGame                       = Date()
-    fileprivate let dbGame                          = Database.database().reference()
     fileprivate let dbGameCount                     : Int = 0
 
     //Timer
     var timer = Timer()
     var seconds = 0
 
+    //Subtract heart (if > 3 game over)
     fileprivate var hearts: Int = 3 {
         didSet {
             if oldValue > hearts {
@@ -72,11 +68,6 @@ class QuestionsViewController : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let db = Database.database().reference().child("Games/Competition/0/name")
-        db.setValue("Test")
-
-        dbGame.child("Games//")
 
         print("Elapsed time: \(startGame.timeIntervalSinceNow) seconds")
 
@@ -116,7 +107,7 @@ class QuestionsViewController : UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        questions()
+        questionsToShow()
     }
 
     override func didReceiveMemoryWarning() {
@@ -280,13 +271,13 @@ class QuestionsViewController : UIViewController {
     }
 
     //get questions from DB
-    func questions() {
+    func questionsToShow() {
 
         var hud: MBProgressHUD!
 
         if Reachability.isConnectedToNetwork() != true {
 
-            SCLAlertView().showInfo("There's no internet conection", subTitle: "please check out and try again.")
+            print("There's no internet conection")
             backToHome(nil)
 
         } else {
@@ -305,30 +296,21 @@ class QuestionsViewController : UIViewController {
             hud.detailsLabel.text = "Loading your game..."
         }
 
-        Database.database().reference().child(questionsModel).observeSingleEvent(of: .value, with: { (snapshot) in
+        Question.questionsToShow(completion: { (questions) in
 
             defer {
                 hud.hide(animated: true)
             }
 
-            guard let value = snapshot.value else { return }
-
-            do {
-                let questions = try FirebaseDecoder().decode([Question].self, from: value).filter {$0.isActive == true}
-
-                let reOrderQuestions = randomArrayOrder(min: 0, max: questions.count, limit: self.maxQuestions)
-
-                reOrderQuestions.forEach({ (newIndex) in
-                    self.questionsSelected.append(questions[newIndex])
-                })
-
-                self.showQuestionOnScreen()
-
-                self.prepareGame()
-
-            } catch let error {
-                print(error)
+            guard let questions = questions else {
+                print("There was a problem trying to get questions from Database.")
+                return
             }
+
+            self.questionsSelected = questions
+            self.showQuestionOnScreen()
+
+            self.prepareGame()
         })
     }
 
@@ -343,7 +325,7 @@ class QuestionsViewController : UIViewController {
         game.answeredRights?.append(1)
     }
 
-    func answeredSelected(question: Question, answer: Question.Answer) {
+    func answeredSelected(question: Question.QuestionModel, answer: Question.QuestionModel.Answer) {
 
         print("question : \(question)")
         print("answer : \(answer)")
