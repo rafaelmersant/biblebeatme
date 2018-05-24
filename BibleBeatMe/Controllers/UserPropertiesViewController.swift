@@ -31,7 +31,7 @@ class UserPropertiesViewController: UIViewController {
 
         if let user = BibleBeatMe.user, let userName = userNameTextField.text {
 
-            BibleBeatMe.User.userExist(userName: userName) { (found) in
+            User.userExist(userName: userName) { (found) in
 
                 if found == true && userName != "" {
 
@@ -40,7 +40,7 @@ class UserPropertiesViewController: UIViewController {
                 } else {
 
                     BibleBeatMe.user?.userName = userName
-                    BibleBeatMe.User.updateUserName()
+                    User.updateUserName()
 
                     print("the user was updated: \(user.userGuestId) with name: \(user.userName)")
 

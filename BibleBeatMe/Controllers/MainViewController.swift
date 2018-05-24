@@ -21,13 +21,13 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         super.viewDidLoad()
 
         //Set user info in the app
-        BibleBeatMe.User.prepareUserAutoLogin { (user) in
+        User.prepareUserAutoLogin { (user) in
 
-            BibleBeatMe.User.userFromDB(guestId: user.userGuestId, completion: { () in
+            User.userFromDB(guestId: user.userGuestId, completion: { () in
 
                 if let user = BibleBeatMe.user {
                     self.userLogged.title = user.usernameToDisplay()
-                    BibleBeatMe.User.userOnline(status: true)
+                    User.userOnline(status: true)
                 }
             })
         }

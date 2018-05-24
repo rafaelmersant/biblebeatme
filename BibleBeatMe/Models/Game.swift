@@ -27,6 +27,6 @@ struct Game: Decodable {
     var answeredRights      : [Int]?
     var answeredWrongs      : [Int]?
     var questionsAnswered   : [Int]?
-    var userWhoComplete     : UserBB?
+    var userWhoComplete     : User.UserBB?
 }
 
