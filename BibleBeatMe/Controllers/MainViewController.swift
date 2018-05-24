@@ -27,6 +27,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
 
                 if let user = BibleBeatMe.user {
                     self.userLogged.title = user.usernameToDisplay()
+                    BibleBeatMe.User.userOnline(status: true)
                 }
             })
         }

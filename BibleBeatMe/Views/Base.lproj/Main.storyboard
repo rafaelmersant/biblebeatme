@@ -761,8 +761,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="300" height="210"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nick Name (Unique)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nw7-Hi-TxL">
-                                <rect key="frame" x="16" y="59" width="137.33333333333334" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name (Unique)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nw7-Hi-TxL">
+                                <rect key="frame" x="15.999999999999993" y="59" width="102.33333333333331" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="dn9-SF-rJ4"/>
                                 </constraints>

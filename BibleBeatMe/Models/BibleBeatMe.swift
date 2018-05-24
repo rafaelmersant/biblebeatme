@@ -51,16 +51,7 @@ class BibleBeatMe {
         static func updateUserName() {
 
             if let user = BibleBeatMe.user {
-
-                do {
-
-                    let userToSave = try FirebaseEncoder().encode(user)
-                    Database.database().reference().child("Users/\(user.userGuestId)").updateChildValues(userToSave as! [AnyHashable : Any])
-
-                } catch let error {
-                    print(error)
-                }
-
+                Database.database().reference().child("Users/\(user.userGuestId)").updateChildValues(["userName" : user.userName])
             }
         }
 
@@ -76,6 +67,14 @@ class BibleBeatMe {
             } else {
 
                 completion(false)
+            }
+        }
+
+        //Function to set Online or Offline user
+        static func userOnline(status: Bool) {
+
+            if let user = BibleBeatMe.user {
+                Database.database().reference().child("Users/\(user.userGuestId)").updateChildValues(["isOnline" : status, "lastSeen" : Date().timeIntervalSince1970])
             }
         }
 
