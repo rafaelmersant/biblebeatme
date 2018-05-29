@@ -13,10 +13,10 @@ class Challenge {
     //Properties
     let challengeId: Int
     var dateSentReceived: Date?
-    var userWhoSend: User.UserBB?
-    var userWhoReceive: User.UserBB?
-    var userWhoWon: User.UserBB?
-    var userWhoLosses: User.UserBB?
+    var userWhoSend: User.UserModel?
+    var userWhoReceive: User.UserModel?
+    var userWhoWon: User.UserModel?
+    var userWhoLosses: User.UserModel?
     var type: String? //Sent or Received
 
     init(id: Int) {

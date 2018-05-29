@@ -13,7 +13,8 @@ import CodableFirebase
 
 class BibleBeatMe {
 
-    static var user: User.UserBB?
+    static var user: User.UserModel?
+    static var game: Game.GameModel?
     static var language: String?
 
 }

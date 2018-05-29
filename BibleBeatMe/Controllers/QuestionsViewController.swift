@@ -42,7 +42,7 @@ class QuestionsViewController : UIViewController {
     fileprivate var questionsSelected               = [Question.QuestionModel]()
     fileprivate var questionNumber                  : Int = -1
     fileprivate var game                            = Game()
-    fileprivate var startGame                       = Date()
+    fileprivate var startGameDate                   = Date()
     fileprivate let dbGameCount                     : Int = 0
 
     //Timer
@@ -69,7 +69,7 @@ class QuestionsViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("Elapsed time: \(startGame.timeIntervalSinceNow) seconds")
+        print("Elapsed time: \(startGameDate.timeIntervalSinceNow) seconds")
 
         self.answerButtonsStackViewHeightFixed = answerButtonsStackViewHeight.multiplier
 
@@ -176,7 +176,6 @@ class QuestionsViewController : UIViewController {
                 }
 
                 answeredSelected(question: questionsSelected[questionNumber], answer: answerSelected)
-
             }
         }
     }
@@ -184,7 +183,7 @@ class QuestionsViewController : UIViewController {
 
     //MARK: Functions
     @objc func clock() {
-        let elapsed = (Date() - startGame)
+        let elapsed = (Date() - startGameDate)
         let (_, minutes, seconds) = secondsToHoursMinutesSeconds(seconds: Int(elapsed))
 
         timeElapse.text = "\(minutes):\(seconds) time elapsed"
@@ -202,6 +201,8 @@ class QuestionsViewController : UIViewController {
 
     //Terminate game
     func terminateGame() {
+
+        Game.end(status: Game.StatusGame.completed)
         self.performSegue(withIdentifier: "showResultsSegue", sender: self)
     }
 
@@ -310,29 +311,38 @@ class QuestionsViewController : UIViewController {
             self.questionsSelected = questions
             self.showQuestionOnScreen()
 
-            self.prepareGame()
+            self.prepareGame(questions: questions)
         })
     }
 
     //Success getting questions started
-    func prepareGame() {
+    func prepareGame(questions: [Question.QuestionModel]) {
 
         //Start time
         self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(QuestionsViewController.clock), userInfo: nil, repeats: true)
 
         //Initialize game
-        //game.status = StatusGame.canceled
-        game.answeredRights?.append(1)
+        Game.start(competitionId: BibleBeatMe.game?.competitionId)
+
+        var questionsId = [Int]()
+
+        questions.forEach { (q) in
+            if let id = q.questionId {
+                questionsId.append(id)
+            }
+        }
+
+        Game.questionsForGame(questions: questionsId)
     }
 
+    //When user select an answer
     func answeredSelected(question: Question.QuestionModel, answer: Question.QuestionModel.Answer) {
+
+        if let id = question.questionId {
+            Game.answerQuestion(questionId: id, right: answer.isRight)
+        }
 
         print("question : \(question)")
         print("answer : \(answer)")
     }
-
-    func gameStatusChange(status: String) {
-
-    }
-
 }

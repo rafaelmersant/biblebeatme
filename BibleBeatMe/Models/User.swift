@@ -14,7 +14,7 @@ class User {
 
     init() {}
 
-    struct UserBB: Decodable, Encodable {
+    struct UserModel: Decodable, Encodable {
 
         var userGuestId : Int = 0
         var isActive    : Int
@@ -53,7 +53,7 @@ class User {
 
             do {
 
-                BibleBeatMe.user = try FirebaseDecoder().decode(User.UserBB.self, from: value)
+                BibleBeatMe.user = try FirebaseDecoder().decode(User.UserModel.self, from: value)
 
                 completion()
 
@@ -100,15 +100,15 @@ class User {
 
     //Function to login into
     //Prepare user default login/register
-    static func prepareUserAutoLogin(completion: @escaping (UserBB) -> Void) {
+    static func prepareUserAutoLogin(completion: @escaping (UserModel) -> Void) {
 
-        var user = UserBB()
+        var user = UserModel()
 
         if let BBUser = retrieveDataUserInfo(key: UserInfo.BBuser) as? NSDictionary {
 
             do {
 
-                user = try FirebaseDecoder().decode(UserBB.self, from: BBUser)
+                user = try FirebaseDecoder().decode(UserModel.self, from: BBUser)
 
             } catch let error {
                 print(error)
@@ -126,7 +126,7 @@ class User {
                 }
 
                 do {
-                    let users = try FirebaseDecoder().decode([UserBB].self, from: value)
+                    let users = try FirebaseDecoder().decode([UserModel].self, from: value)
 
                     if let lastUser = users.last {
 

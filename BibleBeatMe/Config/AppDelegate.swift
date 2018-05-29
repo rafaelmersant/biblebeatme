@@ -63,6 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 
         User.userOnline(status: false)
+        Game.end(status: Game.StatusGame.aborted)
     }
 
 
