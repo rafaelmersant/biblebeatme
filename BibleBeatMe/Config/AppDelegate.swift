@@ -27,11 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         BibleBeatMe.language = Locale.preferredLanguages[0]
 
         if let language = retrieveDataUserInfo(key: "language") {
-            BibleBeatMe.language = language as? String
+            BibleBeatMe.language = language as! String
         } else {
-            if let lang = BibleBeatMe.language {
-                saveDataUserInfo(info: lang, key: "language")
-            }
+            saveDataUserInfo(info: BibleBeatMe.language, key: "language")
         }
 
         return true

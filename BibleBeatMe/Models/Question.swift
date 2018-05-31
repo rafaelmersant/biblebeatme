@@ -21,17 +21,19 @@ final class Question {
         //Answers struct
         struct Answer: Decodable {
             let id          : Int
-            let text        : String
+            let text_es     : String
+            let text_en     : String
             let isRight     : Bool
         }
 
         //Properties
         let questionId      : Int?
-        let questionText    : String?
+        let questionText_es : String?
+        let questionText_en : String?
         let isActive        : Bool?
         let lastUsed        : Date?
-        let languaje        : String?
         let level           : String
+        let category        : String
         let answers         : [Answer]?
     }
 

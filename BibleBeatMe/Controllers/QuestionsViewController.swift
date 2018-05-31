@@ -252,11 +252,20 @@ class QuestionsViewController : UIViewController {
             let orderAnswersRandom = randomArrayOrder(min: 0, max: answersCount, limit: answersCount)
 
             //Show question text and answers
-            self.questionLabel.text = questionsSelected[self.questionNumber].questionText
+            if BibleBeatMe.language == "en" {
+                self.questionLabel.text = questionsSelected[self.questionNumber].questionText_en
+            } else {
+                self.questionLabel.text = questionsSelected[self.questionNumber].questionText_es
+            }
 
             questionsSelected[self.questionNumber].answers?.forEach({ (answer) in
 
-                self.answerButtons[orderAnswersRandom[answer.id]].setTitle(answer.text, for: .normal)
+                if BibleBeatMe.language == "en" {
+                    self.answerButtons[orderAnswersRandom[answer.id]].setTitle(answer.text_en, for: .normal)
+                } else {
+                    self.answerButtons[orderAnswersRandom[answer.id]].setTitle(answer.text_es, for: .normal)
+                }
+
                 self.answerButtons[orderAnswersRandom[answer.id]].tag = answer.id
                 self.answerButtons[orderAnswersRandom[answer.id]].isHidden = false
             })

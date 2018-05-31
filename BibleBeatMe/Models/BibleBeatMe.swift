@@ -15,6 +15,6 @@ class BibleBeatMe {
 
     static var user: User.UserModel?
     static var game: Game.GameModel?
-    static var language: String?
+    static var language = "en"
 
 }

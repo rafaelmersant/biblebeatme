@@ -36,6 +36,9 @@ class ResultsViewController: UIViewController {
 
         //Home button
         homeButton.setIcon(icon: .ionicons(.iosHome), iconSize: 30.0, color: mainColor)
+
+        //Show results game
+        showResults()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,5 +52,21 @@ class ResultsViewController: UIViewController {
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
 
     }
-    
+
+    private func showResults() {
+
+        if let game = BibleBeatMe.game {
+            resultsButtons[0].setTitle("Rights: \(game.answeredRights.count)", for: .normal)
+            resultsButtons[1].setTitle("Wrongs: \(game.answeredWrongs.count)", for: .normal)
+
+            if let questions = game.questions {
+
+                let averageRight = Double((game.answeredRights.count / questions.count) * 100)
+                let averageWrong = Double((game.answeredWrongs.count / questions.count) * 100)
+
+                messageResult.text = "Average right: \(averageRight) -- Average Wrong: \(averageWrong)"
+                print("Average to give message result: \(averageRight) -- \(averageWrong)")
+            }
+        }
+    }
 }
