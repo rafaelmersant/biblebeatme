@@ -55,17 +55,31 @@ class ResultsViewController: UIViewController {
 
     private func showResults() {
 
+        var message = ""
+
         if let game = BibleBeatMe.game {
             resultsButtons[0].setTitle("Rights: \(game.answeredRights.count)", for: .normal)
             resultsButtons[1].setTitle("Wrongs: \(game.answeredWrongs.count)", for: .normal)
 
             if let questions = game.questions {
 
-                let averageRight = Double((game.answeredRights.count / questions.count) * 100)
-                let averageWrong = Double((game.answeredWrongs.count / questions.count) * 100)
+                let averageRight = (Double(game.answeredRights.count) / Double(questions.count)) * 100
 
-                messageResult.text = "Average right: \(averageRight) -- Average Wrong: \(averageWrong)"
-                print("Average to give message result: \(averageRight) -- \(averageWrong)")
+                if averageRight < 20.0 {
+                    message = "Try again, you can do it."
+                }
+                if averageRight > 20.0 {
+                    message = "Great! go for more."
+                }
+                if averageRight > 50.0 {
+                    message = "Good Job, you are very good."
+                }
+                if averageRight > 90.0 {
+                    message = "You are excellent."
+                }
+
+                messageResult.text = message
+                print("Average to give message result: \(averageRight)")
             }
         }
     }

@@ -60,10 +60,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 
+        //Save the game if it's aborted (terminate app)
+        if let game = BibleBeatMe.game, game.status == Game.StatusGame.inProgress && game.competitionId != nil {
+            Game.end(status: Game.StatusGame.aborted)
+        }
+
         User.userOnline(status: false)
-        Game.end(status: Game.StatusGame.aborted)
     }
-
-
 }
 
