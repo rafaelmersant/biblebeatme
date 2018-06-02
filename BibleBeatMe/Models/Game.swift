@@ -116,7 +116,9 @@ class Game {
 
                 let nextGameId = games.count
 
-                if let game = BibleBeatMe.game {
+                if var game = BibleBeatMe.game {
+                    if game.answeredRights.count == 0 { game.answeredRights.append(0) }
+                    if game.answeredWrongs.count == 0 { game.answeredWrongs.append(0) }
 
                     let gameToSave = try FirebaseEncoder().encode(game)
                     Database.database().reference().child("Games/\(nextGameId)").setValue(gameToSave)
