@@ -13,6 +13,8 @@ class OpponentsViewController: UIViewController {
     let opponents = ["Pedro124", "Rafael443", "Jose884", "Rafaelmersant", "Juan654", "John233", "Guest432","Pedro124", "Rafael443", "Jose884", "Rafaelmersant", "Juan654", "John233", "Guest432"]
     let opponentsStatus = ["Active", "Inactive", "Active", "Active", "Active", "Active", "Inactive", "Active", "Inactive", "Active", "Active", "Active", "Active", "Inactive"]
 
+    var usersList: [User.UserModel]?
+
     public var opponentSelected: String?
 
     @IBOutlet weak var headerView               : UIView!
@@ -27,6 +29,11 @@ class OpponentsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        //get users
+        users {
+            self.tableView.reloadData()
+        }
 
         //Set backColor
         headerView.backgroundColor = backColor
@@ -82,6 +89,17 @@ class OpponentsViewController: UIViewController {
         }
     }
 
+    //MARK: Functions
+
+    func users(completion: @escaping () -> Void) {
+        User.users(country: nil) { (usrs) in
+
+            if let users = usrs {
+                self.usersList = users
+                completion()
+            }
+        }
+    }
 }
 
 //MARK: Delegate and DataSource
@@ -97,15 +115,15 @@ extension OpponentsViewController: UITableViewDelegate, UITableViewDataSource {
         cell?.opponentStatus.textColor = backColor == UIColor.white ? UIColor.black : UIColor.lightGray
         cell?.backgroundColor = backColor
 
-        cell?.opponentName.text = opponents[indexPath.row]
-        cell?.opponentStatus.text = opponentsStatus[indexPath.row]
+        cell?.opponentName.text = usersList?[indexPath.row].usernameToDisplay()
+        cell?.opponentStatus.text = usersList?[indexPath.row].isOnline == true ? "Active" : "Last seen: \(usersList?[indexPath.row].lastSeen.description)"
 
         return cell!
     }
 
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return opponents.count
+        return usersList?.count ?? 0
     }
 
     //MARK: Delegate Methods

@@ -52,17 +52,44 @@ class User {
             }
 
             do {
-
                 BibleBeatMe.user = try FirebaseDecoder().decode(User.UserModel.self, from: value)
-
                 completion()
-
             } catch let error {
                 print(error)
             }
-
         }) { (error) in
             print(error)
+        }
+    }
+
+    //Function to get users from Firebase (Database)
+    //Param In: Country
+    static func users(country: String?, completion: @escaping ([UserModel]?) -> Void) {
+
+        var users: DatabaseQuery
+
+        if country != nil {
+            users = Database.database().reference().child("Users").queryOrdered(byChild: "userCountry").queryEqual(toValue: country)
+        } else {
+            users = Database.database().reference().child("Users").queryLimited(toFirst: 20)
+        }
+
+        users.observe(.value, with: { (snapshot) in
+
+            guard let value = snapshot.value as? [NSDictionary] else {
+                print("Failed trying to get users from Database. (All user for opponents)")
+                return
+            }
+
+            do {
+                let users = try FirebaseDecoder().decode([User.UserModel].self, from: value)
+                completion(users)
+            } catch let error {
+                print(error)
+            }
+        }) { (error) in
+            print(error)
+            completion(nil)
         }
     }
 
