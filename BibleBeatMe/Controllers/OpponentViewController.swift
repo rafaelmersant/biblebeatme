@@ -10,7 +10,7 @@ import UIKit
 
 class OpponentViewController: UIViewController {
 
-    var opponent: String?
+    var opponent: User.UserModel?
 
     //MARK: IBOutlets
     @IBOutlet weak var opponentName     : UILabel!
@@ -41,11 +41,11 @@ class OpponentViewController: UIViewController {
         infoButton.setIcon(icon: .googleMaterialDesign(.infoOutline), iconSize: 30.0, color: mainColor)
 
         if let opponent = opponent {
-            opponentName.text = opponent
+            opponentName.text = opponent.usernameToDisplay()
         }
 
         do {
-            backButton.setIcon(icon: .ionicons(.iosArrowBack), iconSize: 30, color: mainColor)
+            backButton.setIcon(icon: .ionicons(.iosArrowBack), iconSize: 30.0, color: mainColor)
         }
     }
 

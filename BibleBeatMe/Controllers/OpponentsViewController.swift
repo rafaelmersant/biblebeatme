@@ -10,12 +10,9 @@ import UIKit
 
 class OpponentsViewController: UIViewController {
 
-    let opponents = ["Pedro124", "Rafael443", "Jose884", "Rafaelmersant", "Juan654", "John233", "Guest432","Pedro124", "Rafael443", "Jose884", "Rafaelmersant", "Juan654", "John233", "Guest432"]
-    let opponentsStatus = ["Active", "Inactive", "Active", "Active", "Active", "Active", "Inactive", "Active", "Inactive", "Active", "Active", "Active", "Active", "Inactive"]
-
     var usersList: [User.UserModel]?
 
-    public var opponentSelected: String?
+    public var opponentSelected: User.UserModel?
 
     @IBOutlet weak var headerView               : UIView!
     @IBOutlet weak var backButton               : UIBarButtonItem!
@@ -27,11 +24,13 @@ class OpponentsViewController: UIViewController {
 
     fileprivate weak var controller             : UIViewController?
 
+    //MARK: Override methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //get users
-        users {
+        users(country: nil) {
             self.tableView.reloadData()
         }
 
@@ -67,13 +66,6 @@ class OpponentsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func backToHome(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
-    }
-
-
-    //MARK: Override methods
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
@@ -89,10 +81,21 @@ class OpponentsViewController: UIViewController {
         }
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+
+
+    //MARK: IBActions
+
+    @IBAction func backToHome(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
     //MARK: Functions
 
-    func users(completion: @escaping () -> Void) {
-        User.users(country: nil) { (usrs) in
+    fileprivate func users(country: String?, completion: @escaping () -> Void) {
+        User.users(country: country) { (usrs) in
 
             if let users = usrs {
                 self.usersList = users
@@ -131,9 +134,10 @@ extension OpponentsViewController: UITableViewDelegate, UITableViewDataSource {
 
         tableView.deselectRow(at: indexPath, animated: true)
 
-        self.opponentSelected = opponents[indexPath.row]
-        self.performSegue(withIdentifier: "showOpponent", sender: self)
-
+        if let opponent = usersList?[indexPath.row] {
+            self.opponentSelected = opponent
+            self.performSegue(withIdentifier: "showOpponent", sender: self)
+        }
     }
 }
 

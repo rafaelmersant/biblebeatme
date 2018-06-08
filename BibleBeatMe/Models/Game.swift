@@ -65,9 +65,9 @@ class Game {
 
         if let _ = BibleBeatMe.game {
             BibleBeatMe.game?.ended = Date().timeIntervalSince1970
-            game(status: status)
+            gameStatus(status: status)
 
-            saveGame()
+            save()
         }
     }
 
@@ -95,14 +95,14 @@ class Game {
     }
 
     //Set status for game
-    static func game(status: String) {
+    static func gameStatus(status: String) {
         if let _ = BibleBeatMe.game {
             BibleBeatMe.game?.status = status
         }
     }
 
     //Save the game in firebase
-    static func saveGame() {
+    static func save() {
 
         Database.database().reference().child("Games").observeSingleEvent(of: .value, with: { (snapshot) in
 
