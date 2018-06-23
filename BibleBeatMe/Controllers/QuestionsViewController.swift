@@ -49,6 +49,13 @@ class QuestionsViewController : UIViewController {
     var timer = Timer()
     var seconds = 0
 
+    //Animate QuestionText
+    fileprivate var startValue                      : Int = 0
+    fileprivate var endValue                        : Int = 0
+    fileprivate let animationDuration               : Double = 2.0
+    fileprivate var startTimeAnimation              : Date!
+    fileprivate var questionTextAnimation           : NSString?
+
     //Subtract heart (if > 3 game over)
     fileprivate var hearts: Int = 3 {
         didSet {
@@ -189,6 +196,32 @@ class QuestionsViewController : UIViewController {
         timeElapse.text = "\(minutes):\(seconds) time elapsed"
     }
 
+    //Animate QuestionText at the show moment.
+    @objc func animateQuestionText() {
+
+        let now = Date()
+        let elapsedTime = now.timeIntervalSince(startTimeAnimation)
+
+        if elapsedTime > animationDuration {
+            questionLabel.text = questionTextAnimation?.substring(from: 0)
+        } else {
+            let percentage = elapsedTime / animationDuration
+            let value = percentage * Double(endValue - startValue)
+            questionLabel.text = questionTextAnimation!.substring(with: NSRange(location: 0, length: Int(value)))
+        }
+    }
+
+    func throwQuestionAnimation() {
+
+        let displayLink = CADisplayLink(target: self, selector: #selector(animateQuestionText))
+        displayLink.add(to: .main, forMode: .defaultRunLoopMode)
+
+        if let length = questionTextAnimation?.length {
+            endValue = length
+            startTimeAnimation = Date()
+        }
+    }
+
     //Lock screen
     func lock() {
         self.view.isUserInteractionEnabled = false
@@ -253,10 +286,12 @@ class QuestionsViewController : UIViewController {
 
             //Show question text and answers
             if BibleBeatMe.language == "en" {
-                self.questionLabel.text = questionsSelected[self.questionNumber].questionText_en
+                questionTextAnimation = questionsSelected[self.questionNumber].questionText_en! as NSString //self.questionLabel.text = questionsSelected[self.questionNumber].questionText_en
             } else {
-                self.questionLabel.text = questionsSelected[self.questionNumber].questionText_es
+                questionTextAnimation = questionsSelected[self.questionNumber].questionText_es! as NSString //self.questionLabel.text = questionsSelected[self.questionNumber].questionText_es
             }
+
+            throwQuestionAnimation()
 
             questionsSelected[self.questionNumber].answers?.forEach({ (answer) in
 

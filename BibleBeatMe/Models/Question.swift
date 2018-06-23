@@ -38,17 +38,14 @@ final class Question {
     }
 
     //Function to get questions for game
-    static func questionsToShow(completion: @escaping ([QuestionModel]?) -> Void)
-    {
+    static func questionsToShow(completion: @escaping ([QuestionModel]?) -> Void) {
         var questionsSelected = [Question.QuestionModel]()
 
         Database.database().reference().child(questionsModel).observeSingleEvent(of: .value, with: { (snapshot) in
-
             guard let value = snapshot.value else { return }
 
             do {
                 let questions = try FirebaseDecoder().decode([Question.QuestionModel].self, from: value).filter {$0.isActive == true}
-
                 let reOrderQuestions = randomArrayOrder(min: 0, max: questions.count, limit: maxQuestions)
 
                 reOrderQuestions.forEach({ (newIndex) in

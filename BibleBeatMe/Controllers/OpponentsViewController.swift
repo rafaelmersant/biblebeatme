@@ -25,7 +25,7 @@ class OpponentsViewController: UIViewController {
     fileprivate weak var controller             : UIViewController?
 
     //MARK: Override methods
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -113,13 +113,31 @@ extension OpponentsViewController: UITableViewDelegate, UITableViewDataSource {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "opponentCell", for: indexPath) as? OpponentCell
 
+        guard let user = usersList?[indexPath.row] else {
+            print("The user for position: \(indexPath.row) does not exist.")
+            return cell!
+        }
+
         //Set backColor
         cell?.opponentName.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
         cell?.opponentStatus.textColor = backColor == UIColor.white ? UIColor.black : UIColor.lightGray
         cell?.backgroundColor = backColor
 
-        cell?.opponentName.text = usersList?[indexPath.row].usernameToDisplay()
-        cell?.opponentStatus.text = usersList?[indexPath.row].isOnline == true ? "Active" : "Last seen: \(usersList?[indexPath.row].lastSeen.description)"
+        cell?.opponentName.text = user.usernameToDisplay()
+
+        if user.isOnline == true {
+            cell?.opponentStatus.text = "Online"
+        } else {
+            let lastSeen = NSDate(timeIntervalSince1970: user.lastSeen)
+            let dateFormatter = DateFormatter()
+            //dateFormatter.timeZone = TimeZone.TimeZone()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            dateFormatter.dateStyle = .full
+            dateFormatter.timeStyle = .short
+
+            cell?.opponentStatus.text = dateFormatter.string(for: lastSeen as Date)
+
+        }
 
         return cell!
     }

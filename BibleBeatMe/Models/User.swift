@@ -29,7 +29,6 @@ class User {
         }
 
         func usernameToDisplay() -> String? {
-
             if self.userName == "" {
                 return "G\(self.userGuestId)"
             } else {
@@ -41,11 +40,9 @@ class User {
     //Function to get user from Firebase (Database)
     //Param In: userGuestId
     static func userFromDB(guestId: Int, completion: @escaping () -> Void) {
-
         let user = Database.database().reference().child("Users/\(guestId)")
 
         user.observeSingleEvent(of: .value, with: { (snapshot) in
-
             guard let value = snapshot.value as? NSDictionary else {
                 print("Failed trying to get user from Database. (BibleBeatMe.userFromDB)")
                 return
@@ -54,6 +51,7 @@ class User {
             do {
                 BibleBeatMe.user = try FirebaseDecoder().decode(User.UserModel.self, from: value)
                 completion()
+
             } catch let error {
                 print(error)
             }
@@ -96,7 +94,6 @@ class User {
     //Function to update username for specify user in Firebase
     //Params In: userGuestId and userName
     static func updateUserName() {
-
         if let user = BibleBeatMe.user {
             Database.database().reference().child("Users/\(user.userGuestId)").updateChildValues(["userName" : user.userName])
         }
@@ -106,20 +103,21 @@ class User {
     static func userExist(userName: String, completion: @escaping (Bool) -> Void) {
 
         if userName != "" {
+            Database.database().reference().child("Users")
+                .queryOrdered(byChild: "userName")
+                .queryEqual(toValue: userName)
+                .observeSingleEvent(of: .value) { (snapshot) in
 
-            Database.database().reference().child("Users").queryOrdered(byChild: "userName").queryEqual(toValue: userName).observeSingleEvent(of: .value) { (snapshot) in
+                completion(snapshot.exists()) }
 
-                completion(snapshot.exists())
-            }
         } else {
 
             completion(false)
         }
     }
 
-    //Function to set Online or Offline user
+    //Function to set Online or LastSeen user
     static func userOnline(status: Bool) {
-
         if let user = BibleBeatMe.user {
             Database.database().reference().child("Users/\(user.userGuestId)").updateChildValues(["isOnline" : status, "lastSeen" : Date().timeIntervalSince1970])
         }
@@ -128,13 +126,11 @@ class User {
     //Function to login into
     //Prepare user default login/register
     static func prepareUserAutoLogin(completion: @escaping (UserModel) -> Void) {
-
         var user = UserModel()
 
         if let BBUser = retrieveDataUserInfo(key: UserInfo.BBuser) as? NSDictionary {
 
             do {
-
                 user = try FirebaseDecoder().decode(UserModel.self, from: BBUser)
 
             } catch let error {
