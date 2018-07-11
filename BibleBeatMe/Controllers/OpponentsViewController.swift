@@ -128,15 +128,14 @@ extension OpponentsViewController: UITableViewDelegate, UITableViewDataSource {
         if user.isOnline == true {
             cell?.opponentStatus.text = "Online"
         } else {
-            let lastSeen = NSDate(timeIntervalSince1970: user.lastSeen)
+            let lastSeen = Date(timeIntervalSince1970: user.lastSeen)
+
             let dateFormatter = DateFormatter()
-            //dateFormatter.timeZone = TimeZone.TimeZone()
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            dateFormatter.dateStyle = .full
+            dateFormatter.dateStyle = NSCalendar.current.compare(lastSeen, to: Date(), toGranularity: .day) == .orderedSame ? .none : .short
             dateFormatter.timeStyle = .short
+            dateFormatter.locale = Locale(identifier: BibleBeatMe.language)
 
             cell?.opponentStatus.text = dateFormatter.string(for: lastSeen as Date)
-
         }
 
         return cell!
