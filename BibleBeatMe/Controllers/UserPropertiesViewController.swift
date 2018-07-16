@@ -14,13 +14,21 @@ class UserPropertiesViewController: UIViewController {
 
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var message: UILabel!
-    
+
+    @IBOutlet weak var segmentedLanguage: UISegmentedControl!
+
+    let languages = ["en", "es"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         userNameTextField.delegate = self
 
         message.isHidden = true
+
+        segmentedLanguage.selectedSegmentIndex = languages.index(where: { (language) -> Bool in
+            return language == BibleBeatMe.language
+        })!
 
         if let user = BibleBeatMe.user, user.userName != "" {
             userNameTextField.text = user.usernameToDisplay()
@@ -56,6 +64,10 @@ class UserPropertiesViewController: UIViewController {
 
     @IBAction func cancel(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func languageSelected(_ sender: UISegmentedControl) {
+        setDefaultLanguage(new: languages[sender.selectedSegmentIndex])
     }
 }
 

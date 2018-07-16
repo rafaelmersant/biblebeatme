@@ -61,6 +61,30 @@ let backColor = UIColor.black
 let foreColor = UIColor.black
 let darkGrayColor = hexToUIColor(hexString: "292929")
 
+//MARK: Update language
+func setDefaultLanguage(new: String? = "en") {
+
+    //Save or retrieve language from userInfo
+    if let language = retrieveDataUserInfo(key: "language"), new == nil {
+        BibleBeatMe.language = (language as! NSString).substring(to: 2)
+    } else {
+
+        if new == nil {
+            //Set default English if language is not Spanish
+            if Locale.preferredLanguages.count > 0 {
+                switch((Locale.preferredLanguages[0] as NSString).substring(to: 2)) {
+                case "es"   : BibleBeatMe.language = "es"
+                default     : BibleBeatMe.language = "en"
+                }
+            }
+        } else {
+            BibleBeatMe.language = new!
+        }
+
+        saveDataUserInfo(info: BibleBeatMe.language, key: "language")
+    }
+}
+
 //MARK: random
 func randomNumber(min: Int, max: Int)-> Int {
     return Int(arc4random_uniform(UInt32(max - min)) + UInt32(min));
