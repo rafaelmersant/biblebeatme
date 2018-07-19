@@ -15,6 +15,10 @@ class BibleBeatMe {
 
     static var user: User.UserModel?
     static var game: Game.GameModel?
-    static var language = "en"
+    static var language = "en" {
+        didSet {
+            Locale.preferredLanguage = self.language
+        }
+    }
 
 }

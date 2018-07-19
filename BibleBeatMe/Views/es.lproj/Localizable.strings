@@ -1,0 +1,52 @@
+/*
+ Spanish.strings
+ BibleBeatMe
+
+ Created by Rafael Mercedes on 7/18/18.
+ Copyright © 2018 rafaelmersant. All rights reserved.
+ */
+
+
+/*******************************************************************************/
+//MARK: Customized variables -- SPANISH
+/*******************************************************************************/
+
+// MainViewController
+"home"          = "Inicio";
+"practice"      = "Practicar";
+"competition"   = "Competir";
+"scores"        = "Puntuaciones";
+
+// QuestionsViewController
+"cancel"        = "Cancelar";
+"of"            = "de";
+"timeElapsed"   = "tiempo transcurrido";
+
+// ResultsViewController
+"results"       = "Resultados";
+"rights"        = "Correctas";
+"wrongs"        = "Incorrectas";
+"resultMsg1"    = "Trata de nuevo, tu puedes hacerlo.";
+"resultMsg2"    = "Grandioso! ve por más.";
+"resultMsg3"    = "Buen trabajo, eres muy buen@.";
+"resultMsg4"    = "Eres excelente.";
+
+// OpponentsViewController
+"selectOpponent"= "Seleccionar opponente";
+"someoneWait"   = "Alguien esta esperando por ti";
+
+// OpponentViewController
+
+// DareViewController
+
+// ScoresViewController
+
+// CallengesReceivedViewController
+
+// ChallengesSentViewController
+
+// UserPropertiesViewController
+
+
+
+

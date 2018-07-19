@@ -17,6 +17,8 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     @IBOutlet weak var opponentsInvitations : UILabel!
     @IBOutlet weak var userLogged           : UIBarButtonItem!
 
+    let titleButtons = ["practice", "competition", "scores"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,6 +52,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
             button.layer.borderColor = UIColor.gray.cgColor
             button.setTitleColor(mainColor, for: .normal)
             button.backgroundColor = backColor
+            button.setTitle(titleButtons[button.tag].localized(), for: .normal)
         }
 
         //Notification number (invitation --> Challenges Received)

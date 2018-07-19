@@ -39,7 +39,7 @@
             </objects>
             <point key="canvasLocation" x="-754" y="124"/>
         </scene>
-        <!--Home-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="homeStoryboard" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="BYZ-38-t0r" customClass="MainViewController" customModule="BibleBeatMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,7 +87,7 @@
                                             <segue destination="xBF-wU-VUo" kind="presentation" id="h9Y-sb-VG6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbB-ci-sIY">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbB-ci-sIY">
                                         <rect key="frame" x="62.333333333333343" y="240.33333333333331" width="288.33333333333326" height="57"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -109,7 +109,7 @@
                                             <segue destination="t8Y-ri-QS7" kind="presentation" id="VAW-xY-K1G"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzE-tw-X01">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzE-tw-X01">
                                         <rect key="frame" x="62.333333333333343" y="337.33333333333331" width="288.33333333333326" height="57"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -183,7 +183,7 @@
                         <viewLayoutGuide key="safeArea" id="D9h-tw-ume"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Home" id="AoX-iY-1Cu">
+                    <navigationItem key="navigationItem" id="AoX-iY-1Cu">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Ee2-2Z-tIR"/>
                         <barButtonItem key="leftBarButtonItem" title="user" id="0GG-DI-wpQ">
                             <connections>

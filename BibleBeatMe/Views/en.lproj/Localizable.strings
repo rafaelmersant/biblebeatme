@@ -1,0 +1,50 @@
+/*
+ English.strings
+ BibleBeatMe
+
+ Created by Rafael Mercedes on 7/18/18.
+ Copyright © 2018 rafaelmersant. All rights reserved.
+ */
+
+
+/*******************************************************************************/
+//MARK: Customized variables -- ENGLISH
+/*******************************************************************************/
+
+// MainViewController
+"home"          = "Home";
+"practice"      = "Practice";
+"competition"   = "Competition";
+"scores"        = "Scores";
+
+// QuestionsViewController
+"cancel"        = "Cancel";
+"of"            = "of";
+"timeElapsed"   = "time elapsed";
+
+// ResultsViewController
+"results"       = "Results";
+"rights"        = "Rights";
+"wrongs"        = "Wrongs";
+"resultMsg1"    = "Try again, you can do it.";
+"resultMsg2"    = "Great! go for more.";
+"resultMsg3"    = "Good job, you are very good.";
+"resultMsg4"    = "You are excellent.";
+
+// OpponentsViewController
+"selectOpponent"= "Select opponent";
+"someoneWait"   = "Someone is waiting for you";
+
+// OpponentViewController
+
+// DareViewController
+
+// ScoresViewController
+
+// CallengesReceivedViewController
+
+// ChallengesSentViewController
+
+// UserPropertiesViewController
+
+

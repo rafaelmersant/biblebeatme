@@ -1,0 +1,360 @@
+
+/* Class = "UIBarButtonItem"; title = "user"; ObjectID = "0GG-DI-wpQ"; */
+"0GG-DI-wpQ.title" = "user";
+
+/* Class = "UILabel"; text = "Rights"; ObjectID = "0IL-jf-ohu"; */
+"0IL-jf-ohu.text" = "Rights";
+
+/* Class = "UILabel"; text = "H2"; ObjectID = "16d-P8-LaD"; */
+"16d-P8-LaD.text" = "H2";
+
+/* Class = "UIViewController"; title = "Practice"; ObjectID = "16m-Ly-mPt"; */
+"16m-Ly-mPt.title" = "Practicar";
+
+/* Class = "UILabel"; text = "Time"; ObjectID = "1Jy-dB-wcF"; */
+"1Jy-dB-wcF.text" = "Time";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "22F-KS-cYg"; */
+"22F-KS-cYg.title" = "Back";
+
+/* Class = "UINavigationItem"; title = "Results"; ObjectID = "2Mj-No-Q01"; */
+"2Mj-No-Q01.title" = "Results";
+
+/* Class = "UISegmentedControl"; 2Ur-Ns-P0K.segmentTitles[0] = "Personal"; ObjectID = "2Ur-Ns-P0K"; */
+"2Ur-Ns-P0K.segmentTitles[0]" = "Personal";
+
+/* Class = "UISegmentedControl"; 2Ur-Ns-P0K.segmentTitles[1] = "World"; ObjectID = "2Ur-Ns-P0K"; */
+"2Ur-Ns-P0K.segmentTitles[1]" = "World";
+
+/* Class = "UILabel"; text = "Bible Beat Me"; ObjectID = "2bP-1Y-fVh"; */
+"2bP-1Y-fVh.text" = "Bible Beat Me";
+
+/* Class = "UILabel"; text = "10 minutes ago"; ObjectID = "3ka-rL-jth"; */
+"3ka-rL-jth.text" = "10 minutes ago";
+
+/* Class = "UIButton"; normalTitle = "Reject"; ObjectID = "498-9x-bfI"; */
+"498-9x-bfI.normalTitle" = "Reject";
+
+/* Class = "UILabel"; text = "Bible Beat Me"; ObjectID = "5em-nw-j9D"; */
+"5em-nw-j9D.text" = "Bible Beat Me";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "6SW-bJ-PgZ"; */
+"6SW-bJ-PgZ.title" = "Back";
+
+/* Class = "UILabel"; text = "Active"; ObjectID = "6fz-0n-8CT"; */
+"6fz-0n-8CT.text" = "Active";
+
+/* Class = "UISegmentedControl"; 7WM-MO-UZu.segmentTitles[0] = "English"; ObjectID = "7WM-MO-UZu"; */
+"7WM-MO-UZu.segmentTitles[0]" = "English";
+
+/* Class = "UISegmentedControl"; 7WM-MO-UZu.segmentTitles[1] = "Spanish"; ObjectID = "7WM-MO-UZu"; */
+"7WM-MO-UZu.segmentTitles[1]" = "Spanish";
+
+/* Class = "UILabel"; text = "time elapsed"; ObjectID = "88L-qC-fCq"; */
+"88L-qC-fCq.text" = "time elapsed";
+
+/* Class = "UILabel"; text = "Bible Beat Me"; ObjectID = "8at-vw-I7G"; */
+"8at-vw-I7G.text" = "Bible Beat Me";
+
+/* Class = "UILabel"; text = "John7788"; ObjectID = "8k2-Gd-1ef"; */
+"8k2-Gd-1ef.text" = "John7788";
+
+/* Class = "UIButton"; normalTitle = "Wrongs: 3"; ObjectID = "9WK-Z6-b5d"; */
+"9WK-Z6-b5d.normalTitle" = "Wrongs: 3";
+
+/* Class = "UIButton"; normalTitle = "Accept"; ObjectID = "9yW-dJ-TMj"; */
+"9yW-dJ-TMj.normalTitle" = "Accept";
+
+/* Class = "UIButton"; normalTitle = "Someone is waiting for you"; ObjectID = "A2e-Yk-ERp"; */
+"A2e-Yk-ERp.normalTitle" = "Someone is waiting for you";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "A9a-5s-4EE"; */
+"A9a-5s-4EE.title" = "Save";
+
+/* Class = "UINavigationItem"; title = "Competition"; ObjectID = "A9g-6V-f46"; */
+"A9g-6V-f46.title" = "Competition";
+
+/* Class = "UIViewController"; title = "Dare View"; ObjectID = "AJZ-ic-gcw"; */
+"AJZ-ic-gcw.title" = "Dare View";
+
+/* Class = "UILabel"; text = "This name already exists"; ObjectID = "ATq-Tm-9Mk"; */
+"ATq-Tm-9Mk.text" = "This name already exists";
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "AoX-iY-1Cu"; */
+"AoX-iY-1Cu.title" = "Home";
+
+/* Class = "UIViewController"; title = "Challenges Received"; ObjectID = "B9w-Bm-ZnG"; */
+"B9w-Bm-ZnG.title" = "Challenges Received";
+
+/* Class = "UISegmentedControl"; BLk-LM-33u.segmentTitles[0] = "All"; ObjectID = "BLk-LM-33u"; */
+"BLk-LM-33u.segmentTitles[0]" = "All";
+
+/* Class = "UISegmentedControl"; BLk-LM-33u.segmentTitles[1] = "Waiting"; ObjectID = "BLk-LM-33u"; */
+"BLk-LM-33u.segmentTitles[1]" = "Waiting";
+
+/* Class = "UISegmentedControl"; BLk-LM-33u.segmentTitles[2] = "Accepted"; ObjectID = "BLk-LM-33u"; */
+"BLk-LM-33u.segmentTitles[2]" = "Accepted";
+
+/* Class = "UINavigationController"; title = "Challenges"; ObjectID = "BYO-gn-vzS"; */
+"BYO-gn-vzS.title" = "Challenges";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "ECb-zy-zxv"; */
+"ECb-zy-zxv.text" = "Date";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "Ee2-2Z-tIR"; */
+"Ee2-2Z-tIR.title" = "Back";
+
+/* Class = "UILabel"; text = "Won: 4"; ObjectID = "Esx-IL-Bv5"; */
+"Esx-IL-Bv5.text" = "Won: 4";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "FN5-X6-mlN"; */
+"FN5-X6-mlN.title" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Competition"; ObjectID = "FbB-ci-sIY"; */
+"FbB-ci-sIY.normalTitle" = "Competition";
+
+/* Class = "UILabel"; text = "Results"; ObjectID = "H6o-Xi-1SI"; */
+"H6o-Xi-1SI.text" = "Results";
+
+/* Class = "UINavigationItem"; title = "Scores"; ObjectID = "Hfm-Xu-yeh"; */
+"Hfm-Xu-yeh.title" = "Scores";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "Hpd-Jz-mtP"; */
+"Hpd-Jz-mtP.title" = "Cancel";
+
+/* Class = "UISegmentedControl"; Hpx-VO-Bto.segmentTitles[0] = "All"; ObjectID = "Hpx-VO-Bto"; */
+"Hpx-VO-Bto.segmentTitles[0]" = "All";
+
+/* Class = "UISegmentedControl"; Hpx-VO-Bto.segmentTitles[1] = "Waiting"; ObjectID = "Hpx-VO-Bto"; */
+"Hpx-VO-Bto.segmentTitles[1]" = "Waiting";
+
+/* Class = "UIButton"; normalTitle = "Dare"; ObjectID = "Hw6-uP-FTF"; */
+"Hw6-uP-FTF.normalTitle" = "Dare";
+
+/* Class = "UILabel"; text = "Waiting for response..."; ObjectID = "IB4-aR-wWW"; */
+"IB4-aR-wWW.text" = "Waiting for response...";
+
+/* Class = "UINavigationItem"; title = "Competition"; ObjectID = "IQO-Ek-zeD"; */
+"IQO-Ek-zeD.title" = "Competition";
+
+/* Class = "UIBarButtonItem"; title = "Home"; ObjectID = "Ipk-aS-DJB"; */
+"Ipk-aS-DJB.title" = "Home";
+
+/* Class = "UILabel"; text = "List of Callenges Received"; ObjectID = "M6f-6m-nCq"; */
+"M6f-6m-nCq.text" = "List of Callenges Received";
+
+/* Class = "UILabel"; text = "Wrongs"; ObjectID = "MRR-TO-kAq"; */
+"MRR-TO-kAq.text" = "Wrongs";
+
+/* Class = "UIViewController"; title = "Challenges Sent"; ObjectID = "Mj9-x4-OBl"; */
+"Mj9-x4-OBl.title" = "Challenges Sent";
+
+/* Class = "UILabel"; text = "Name (Unique)"; ObjectID = "Nw7-Hi-TxL"; */
+"Nw7-Hi-TxL.text" = "Name (Unique)";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "O2N-g6-s8u"; */
+"O2N-g6-s8u.title" = "Back";
+
+/* Class = "UIViewController"; title = "User Properties"; ObjectID = "P6e-IO-BJD"; */
+"P6e-IO-BJD.title" = "User Properties";
+
+/* Class = "UILabel"; text = "Rafaelmersant"; ObjectID = "QR1-fL-Irv"; */
+"QR1-fL-Irv.text" = "Rafaelmersant";
+
+/* Class = "UILabel"; text = "10 minutes ago"; ObjectID = "R5Q-74-S4t"; */
+"R5Q-74-S4t.text" = "10 minutes ago";
+
+/* Class = "UIBarButtonItem"; title = "See more"; ObjectID = "Spc-r0-p3R"; */
+"Spc-r0-p3R.title" = "See more";
+
+/* Class = "UILabel"; text = "Time"; ObjectID = "T7j-9F-wHj"; */
+"T7j-9F-wHj.text" = "Time";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "T7s-gI-Czb"; */
+"T7s-gI-Czb.title" = "Back";
+
+/* Class = "UINavigationController"; title = "Result Practice Navigation"; ObjectID = "TkZ-IZ-R11"; */
+"TkZ-IZ-R11.title" = "Result Practice Navigation";
+
+/* Class = "UINavigationItem"; title = "Competition"; ObjectID = "USE-fn-6s2"; */
+"USE-fn-6s2.title" = "Competition";
+
+/* Class = "UILabel"; text = "2 minutes ago"; ObjectID = "WN6-6J-paj"; */
+"WN6-6J-paj.text" = "2 minutes ago";
+
+/* Class = "UINavigationController"; title = "Home"; ObjectID = "WvX-Rb-nJZ"; */
+"WvX-Rb-nJZ.title" = "Home";
+
+/* Class = "UILabel"; text = "Fought with you: 3 times and won: 2"; ObjectID = "X54-jp-a8m"; */
+"X54-jp-a8m.text" = "Fought with you: 3 times and won: 2";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "XOh-dT-7sb"; */
+"XOh-dT-7sb.title" = "Back";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "YVW-rY-aYi"; */
+"YVW-rY-aYi.title" = "Back";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "YlW-hz-Rjc"; */
+"YlW-hz-Rjc.title" = "Back";
+
+/* Class = "UILabel"; text = "Accepted"; ObjectID = "YoQ-Za-cRf"; */
+"YoQ-Za-cRf.text" = "Accepted";
+
+/* Class = "UILabel"; text = "Pedro1456"; ObjectID = "ZZD-PP-lg9"; */
+"ZZD-PP-lg9.text" = "Pedro1456";
+
+/* Class = "UIButton"; normalTitle = "Rights: 5"; ObjectID = "aot-nG-ROs"; */
+"aot-nG-ROs.normalTitle" = "Rights: 5";
+
+/* Class = "UILabel"; text = "Select opponent"; ObjectID = "bAy-Rs-gkm"; */
+"bAy-Rs-gkm.text" = "Select opponent";
+
+/* Class = "UILabel"; text = "Wrongs"; ObjectID = "c6E-zj-yit"; */
+"c6E-zj-yit.text" = "Wrongs";
+
+/* Class = "UILabel"; text = "H1"; ObjectID = "c85-92-HGf"; */
+"c85-92-HGf.text" = "H1";
+
+/* Class = "UIBarButtonItem"; title = "Battles"; ObjectID = "cGj-XT-68N"; */
+"cGj-XT-68N.title" = "Battles";
+
+/* Class = "UILabel"; text = "H3"; ObjectID = "dBJ-JM-jwl"; */
+"dBJ-JM-jwl.text" = "H3";
+
+/* Class = "UILabel"; text = "Info"; ObjectID = "e2m-DH-ric"; */
+"e2m-DH-ric.text" = "Info";
+
+/* Class = "UILabel"; text = "Who"; ObjectID = "eSr-3B-GPb"; */
+"eSr-3B-GPb.text" = "Who";
+
+/* Class = "UILabel"; text = "List of Callenges Sent"; ObjectID = "gIv-GX-nmA"; */
+"gIv-GX-nmA.text" = "List of Callenges Sent";
+
+/* Class = "UILabel"; text = "OpponentName"; ObjectID = "glp-Vy-WWz"; */
+"glp-Vy-WWz.text" = "OpponentName";
+
+/* Class = "UINavigationItem"; title = "Competition"; ObjectID = "hRO-On-41z"; */
+"hRO-On-41z.title" = "Competition";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "hmv-Hh-i2i"; */
+"hmv-Hh-i2i.title" = "Back";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "htE-KN-MsF"; */
+"htE-KN-MsF.text" = "Date";
+
+/* Class = "UILabel"; text = "Rafael4456"; ObjectID = "ixp-RK-olk"; */
+"ixp-RK-olk.text" = "Rafael4456";
+
+/* Class = "UIViewController"; title = "Opponent"; ObjectID = "j0p-aQ-kfc"; */
+"j0p-aQ-kfc.title" = "Opponent";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "jFh-9C-NU5"; */
+"jFh-9C-NU5.title" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Scores"; ObjectID = "kzE-tw-X01"; */
+"kzE-tw-X01.normalTitle" = "Scores";
+
+/* Class = "UILabel"; text = "Congrats! You can do it, go for more"; ObjectID = "lpz-4Y-5Gm"; */
+"lpz-4Y-5Gm.text" = "Congrats! You can do it, go for more";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "mJF-U1-IEf"; */
+"mJF-U1-IEf.title" = "Back";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "mLQ-pE-S73"; */
+"mLQ-pE-S73.title" = "Back";
+
+/* Class = "UINavigationItem"; title = "Competition"; ObjectID = "mUm-0K-ZAy"; */
+"mUm-0K-ZAy.title" = "Competition";
+
+/* Class = "UILabel"; text = "Who"; ObjectID = "mfI-nl-zF7"; */
+"mfI-nl-zF7.text" = "Who";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "njE-Cy-GjM"; */
+"njE-Cy-GjM.text" = "9";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "ohp-16-fdx"; */
+"ohp-16-fdx.title" = "Back";
+
+/* Class = "UIViewController"; title = "Results"; ObjectID = "qkM-Yd-9rc"; */
+"qkM-Yd-9rc.title" = "Results";
+
+/* Class = "UILabel"; text = "wants a competition with you"; ObjectID = "qwX-Xg-dZh"; */
+"qwX-Xg-dZh.text" = "wants a competition with you";
+
+/* Class = "UIViewController"; title = "Scores View"; ObjectID = "rTN-E3-xvV"; */
+"rTN-E3-xvV.title" = "Scores View";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "rxu-JB-4hO"; */
+"rxu-JB-4hO.title" = "Back";
+
+/* Class = "UILabel"; text = "Waiting"; ObjectID = "s1y-Om-5M0"; */
+"s1y-Om-5M0.text" = "Waiting";
+
+/* Class = "UILabel"; text = "Rights"; ObjectID = "sY2-Rz-Trf"; */
+"sY2-Rz-Trf.text" = "Rights";
+
+/* Class = "UILabel"; text = "Language"; ObjectID = "tmS-qB-PuT"; */
+"tmS-qB-PuT.text" = "Language";
+
+/* Class = "UIButton"; normalTitle = "Practice"; ObjectID = "x7o-un-21D"; */
+"x7o-un-21D.normalTitle" = "Practicar";
+
+/* Class = "UINavigationController"; title = "Practice Navigation"; ObjectID = "xBF-wU-VUo"; */
+"xBF-wU-VUo.title" = "Practice Navigation";
+
+/* Class = "UILabel"; text = "Losses: 3"; ObjectID = "xU6-3K-w3Q"; */
+"xU6-3K-w3Q.text" = "Losses: 3";
+
+/* Class = "UIViewController"; title = "Opponents"; ObjectID = "xoW-Rd-RY2"; */
+"xoW-Rd-RY2.title" = "Opponents";
+
+/* Class = "UINavigationItem"; title = "Practice"; ObjectID = "xr4-NY-MCb"; */
+"xr4-NY-MCb.title" = "Practicar";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "zrC-86-rwN"; */
+"zrC-86-rwN.title" = "Back";
+
+
+/*******************************************************************************/
+//MARK: Customized variables -- SPANISH
+/*******************************************************************************/
+
+// MainViewController
+"home"          = "Inicio"
+"practice"      = "Practicar"
+"competition"   = "Competir"
+"scores"        = "Puntuaciones"
+
+// QuestionsViewController
+"cancel"        = "Cancelar"
+"of"            = "de"
+"timeElapsed"   = "tiempo transcurrido"
+
+// ResultsViewController
+"results"       = "Resultados"
+"rights"        = "Correctas"
+"wrongs"        = "Incorrectas"
+"resultMsg1"    = "Trata de nuevo, tu puedes hacerlo."
+"resultMsg2"    = "Grandioso! ve por más."
+"resultMsg3"    = "Buen trabajo, eres muy buen@."
+"resultMsg4"    = "Eres excelente."
+
+// OpponentsViewController
+"selectOpponent"= "Seleccionar opponente"
+"someoneWait"   = "Alguien esta esperando por ti"
+
+// OpponentViewController
+
+// DareViewController
+
+// ScoresViewController
+
+// CallengesReceivedViewController
+
+// ChallengesSentViewController
+
+// UserPropertiesViewController
+
+
+
+

@@ -139,3 +139,25 @@ extension NSLayoutConstraint {
         return newConstraint
     }
 }
+
+//MARK: extension for Locale handle several languages manually
+extension Locale {
+    static var preferredLanguage: String {
+        get {
+            return self.preferredLanguages.first ?? "en"
+        }
+        set {
+            UserDefaults.standard.set([newValue], forKey: "AppleLanguages")
+            UserDefaults.standard.synchronize()
+        }
+    }
+}
+
+//MARK: extension String to get localized
+extension String {
+
+    func localized() -> String {
+
+        return Bundle.main.localizedString(forKey: self, value: nil, table: nil)
+    }
+}
