@@ -41,7 +41,7 @@ class UserPropertiesViewController: UIViewController {
 
             User.userExist(userName: userName) { (found) in
 
-                if found == true && userName != "" {
+                if found == true && userName != "" && userName != BibleBeatMe.user?.userName {
 
                     self.message.isHidden = false
 
