@@ -14,6 +14,8 @@ import CodableFirebase
 let questionsModel = "Questions"
 let usersModel = "Users"
 
+var languageBundle: AnyObject?
+
 //MARK: UserInfo
 struct UserInfo {
     static let BBUserLanguage = "language"
@@ -148,7 +150,7 @@ extension Locale {
         }
         set {
             UserDefaults.standard.set([newValue], forKey: "AppleLanguages")
-            UserDefaults.standard.synchronize()
+            //UserDefaults.standard.synchronize()
         }
     }
 }
@@ -158,6 +160,32 @@ extension String {
 
     func localized() -> String {
 
-        return Bundle.main.localizedString(forKey: self, value: nil, table: nil)
+        return Bundle.main.localizedString(forKey: self, value: nil, table: nil) //languageBundle as! String //
+    }
+}
+
+func language() {
+
+    let languageCode = UserDefaults.standard
+
+    if languageCode.object(forKey: "language") != nil {
+        let language = languageCode.object(forKey: "language")
+        var path :String = Bundle.main.path(forResource: language as! String?, ofType: "lproj")!
+        if path .isEmpty {
+            path = Bundle.main.path(forResource: "en", ofType: "lproj")!
+        }
+
+        languageBundle = Bundle(path: path)
+    }
+    else {
+        languageCode.set("en", forKey: "language")
+        languageCode.synchronize()
+        let language = languageCode.string(forKey: "language")!
+        var path = Bundle.main.path(forResource: language, ofType: "lproj")!
+        if path .isEmpty {
+            path = Bundle.main.path(forResource: "en", ofType: "lproj")!
+        }
+
+        languageBundle = Bundle(path: path)
     }
 }

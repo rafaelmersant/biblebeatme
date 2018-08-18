@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         //Set default language
         setDefaultLanguage(new: nil)
+        language()
 
         return true
     }

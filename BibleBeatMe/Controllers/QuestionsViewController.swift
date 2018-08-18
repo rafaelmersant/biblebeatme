@@ -45,6 +45,8 @@ class QuestionsViewController : UIViewController {
     fileprivate var startGameDate                   = Date()
     fileprivate let dbGameCount                     : Int = 0
 
+    fileprivate let of                              = "of".localized()
+
     //Timer
     var timer = Timer()
     var seconds = 0
@@ -75,7 +77,7 @@ class QuestionsViewController : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         print("Elapsed time: \(startGameDate.timeIntervalSinceNow) seconds")
 
         self.answerButtonsStackViewHeightFixed = answerButtonsStackViewHeight.multiplier
@@ -271,7 +273,7 @@ class QuestionsViewController : UIViewController {
 
         } else {
             //refresh current question number and how many are left.
-            questionsInfoCount.title = "\(questionNumber + 1) of \(questionsSelected.count)"
+            questionsInfoCount.title = "\(questionNumber + 1) \(of) \(questionsSelected.count)"
         }
 
         if questionNumber < questionsSelected.count {
