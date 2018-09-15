@@ -98,7 +98,9 @@ class OpponentsViewController: UIViewController {
         User.users(country: country) { (usrs) in
 
             if let users = usrs {
-                self.usersList = users
+                self.usersList = users.filter({ (user) -> Bool in
+                    return user.userName != BibleBeatMe.user?.userName
+                })
                 completion()
             }
         }

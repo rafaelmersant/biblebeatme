@@ -12,18 +12,18 @@ let maxUserNameLength = 15
 
 class UserPropertiesViewController: UIViewController {
 
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var message: UILabel!
+    @IBOutlet weak var userNameTextField    : UITextField!
+    @IBOutlet weak var message              : UILabel!
 
-    @IBOutlet weak var segmentedLanguage: UISegmentedControl!
+    @IBOutlet weak var segmentedLanguage    : UISegmentedControl!
 
-    let languages = ["en", "es"]
-
+    var newLanguage                         : String?
+    let languages                           = ["en", "es"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         userNameTextField.delegate = self
-
         message.isHidden = true
 
         segmentedLanguage.selectedSegmentIndex = languages.index(where: { (language) -> Bool in
@@ -52,9 +52,14 @@ class UserPropertiesViewController: UIViewController {
 
                     print("the user was updated: \(user.userGuestId) with name: \(user.userName)")
 
-                    // post notification for refreshing userName.
+                    if let newLanguage = self.newLanguage {
+                        setDefaultLanguage(new: newLanguage)
+                        //languageDelegate?.languageDidChange(languages[sender.selectedSegmentIndex])
+                    }
+
+                    // post notification for refreshing userName and Language.
                     let notificationCenter = NotificationCenter.default
-                    notificationCenter.post(name: Notification.Name(rawValue: "refreshUserName"), object: self)
+                    notificationCenter.post(name: Notification.Name(rawValue: "refreshUserNameAndLanguage"), object: self)
 
                     self.dismiss(animated: true, completion: nil)
                 }
@@ -67,11 +72,15 @@ class UserPropertiesViewController: UIViewController {
     }
 
     @IBAction func languageSelected(_ sender: UISegmentedControl) {
-        setDefaultLanguage(new: languages[sender.selectedSegmentIndex])
+
+        if languages[sender.selectedSegmentIndex] != BibleBeatMe.language {
+            newLanguage = languages[sender.selectedSegmentIndex]
+        }
     }
 }
 
 //MARK: UITextFieldDelegate
+
 extension UserPropertiesViewController: UITextFieldDelegate {
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

@@ -68,7 +68,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         let notificationCenter = NotificationCenter.default
 
         // observe the filter attribute add/change notifications.
-        notificationCenter.addObserver(self, selector: #selector(MainViewController.refreshUserName(_:)), name: NSNotification.Name(rawValue: "refreshUserName"), object: nil)
+        notificationCenter.addObserver(self, selector: #selector(MainViewController.refreshUserNameAndLanguage(_:)), name: NSNotification.Name(rawValue: "refreshUserNameAndLanguage"), object: nil)
     }
 
     //MARK: deinit
@@ -116,10 +116,15 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
 
     // MARK: Notifications
 
-    @objc func refreshUserName(_ notification: Notification) {
+    @objc func refreshUserNameAndLanguage(_ notification: Notification) {
 
         if let user = BibleBeatMe.user {
             userLogged.title = user.usernameToDisplay()
+        }
+
+        language()
+        specialButtons.forEach { (button) in
+            button.setTitle(titleButtons[button.tag].localized(), for: .normal)
         }
     }
 }
