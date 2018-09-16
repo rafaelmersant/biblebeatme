@@ -57,6 +57,9 @@
 		946176FE209294A600DFC672 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946176FD209294A600DFC672 /* Reachability.swift */; };
 		946176FF209294A600DFC672 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946176FD209294A600DFC672 /* Reachability.swift */; };
 		94617700209294A600DFC672 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946176FD209294A600DFC672 /* Reachability.swift */; };
+		947A0402214EF30D0080A0D2 /* genstrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A0401214EF30D0080A0D2 /* genstrings.swift */; };
+		947A0403214EF30D0080A0D2 /* genstrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A0401214EF30D0080A0D2 /* genstrings.swift */; };
+		947A0404214EF30D0080A0D2 /* genstrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A0401214EF30D0080A0D2 /* genstrings.swift */; };
 		947A278F205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A278E205F5B23008D1EF9 /* ModalNavigationController.swift */; };
 		947A2790205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A278E205F5B23008D1EF9 /* ModalNavigationController.swift */; };
 		947A2791205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A278E205F5B23008D1EF9 /* ModalNavigationController.swift */; };
@@ -141,6 +144,8 @@
 		9453FE452082EA5500910FFB /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		9453FE492082EC5400910FFB /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		946176FD209294A600DFC672 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		947A0400214E84190080A0D2 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		947A0401214EF30D0080A0D2 /* genstrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = genstrings.swift; sourceTree = "<group>"; };
 		947A278E205F5B23008D1EF9 /* ModalNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNavigationController.swift; sourceTree = "<group>"; };
 		947A27962065EB66008D1EF9 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		948840C420B25A8E00B6BC0E /* BibleBeatMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleBeatMe.swift; sourceTree = "<group>"; };
@@ -243,8 +248,10 @@
 		943EC0871FFB11C8009B3632 /* BibleBeatMe */ = {
 			isa = PBXGroup;
 			children = (
+				943F1C1720FFBCA8002F099C /* Localizable.strings */,
 				943EC0941FFB11C8009B3632 /* Info.plist */,
 				9425CEF6207E482700FD4ADD /* GoogleService-Info.plist */,
+				947A0401214EF30D0080A0D2 /* genstrings.swift */,
 				947A278D205DB740008D1EF9 /* Config */,
 				94D113DE205DB385005E08A9 /* Views */,
 				94D113DD205DB378005E08A9 /* Controllers */,
@@ -304,7 +311,6 @@
 			children = (
 				943EC0911FFB11C8009B3632 /* LaunchScreen.storyboard */,
 				943EC08C1FFB11C8009B3632 /* Main.storyboard */,
-				943F1C1720FFBCA8002F099C /* Localizable.strings */,
 				943EC08F1FFB11C8009B3632 /* Assets.xcassets */,
 			);
 			path = Views;
@@ -486,6 +492,7 @@
 				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftIcons/SwiftIcons.framework",
@@ -497,6 +504,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftIcons.framework",
@@ -627,6 +635,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9453FE462082EA5500910FFB /* Score.swift in Sources */,
+				947A0402214EF30D0080A0D2 /* genstrings.swift in Sources */,
 				9425CEEB2078364C00FD4ADD /* ChallengesSentViewController.swift in Sources */,
 				946176FE209294A600DFC672 /* Reachability.swift in Sources */,
 				9425CEE72075C70D00FD4ADD /* ChallengesReceivedViewController.swift in Sources */,
@@ -674,6 +683,7 @@
 				9453FE432082EA3800910FFB /* Friend.swift in Sources */,
 				9425CEE82075C70D00FD4ADD /* ChallengesReceivedViewController.swift in Sources */,
 				9453FE472082EA5500910FFB /* Score.swift in Sources */,
+				947A0403214EF30D0080A0D2 /* genstrings.swift in Sources */,
 				946176FF209294A600DFC672 /* Reachability.swift in Sources */,
 				947A2790205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */,
 			);
@@ -703,6 +713,7 @@
 				9453FE442082EA3800910FFB /* Friend.swift in Sources */,
 				9425CEE92075C70D00FD4ADD /* ChallengesReceivedViewController.swift in Sources */,
 				9453FE482082EA5500910FFB /* Score.swift in Sources */,
+				947A0404214EF30D0080A0D2 /* genstrings.swift in Sources */,
 				94617700209294A600DFC672 /* Reachability.swift in Sources */,
 				947A2791205F5B24008D1EF9 /* ModalNavigationController.swift in Sources */,
 			);
@@ -729,6 +740,7 @@
 			children = (
 				943EC08D1FFB11C8009B3632 /* Base */,
 				943F1BF120FD1AB4002F099C /* en */,
+				947A0400214E84190080A0D2 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

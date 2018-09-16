@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Localize_Swift
 
 let maxUserNameLength = 15
 
@@ -52,14 +53,14 @@ class UserPropertiesViewController: UIViewController {
 
                     print("the user was updated: \(user.userGuestId) with name: \(user.userName)")
 
-                    if let newLanguage = self.newLanguage {
+                    if let newLanguage = self.newLanguage, newLanguage != BibleBeatMe.language {
+
                         setDefaultLanguage(new: newLanguage)
-                        //languageDelegate?.languageDidChange(languages[sender.selectedSegmentIndex])
+                        Localize.setCurrentLanguage(newLanguage)
                     }
 
-                    // post notification for refreshing userName and Language.
-                    let notificationCenter = NotificationCenter.default
-                    notificationCenter.post(name: Notification.Name(rawValue: "refreshUserNameAndLanguage"), object: self)
+                    // post notification for refreshing userName and Language.                    
+                    NotificationCenter.default.post(name: Notification.Name(rawValue: "refreshUserNameAndLanguage"), object: self)
 
                     self.dismiss(animated: true, completion: nil)
                 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftIcons
+import Localize_Swift
 
 class MainViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
@@ -68,7 +69,8 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         let notificationCenter = NotificationCenter.default
 
         // observe the filter attribute add/change notifications.
-        notificationCenter.addObserver(self, selector: #selector(MainViewController.refreshUserNameAndLanguage(_:)), name: NSNotification.Name(rawValue: "refreshUserNameAndLanguage"), object: nil)
+        notificationCenter.addObserver(self, selector: #selector(MainViewController.refreshUserNameAndLanguage(_:)),
+                                       name: NSNotification.Name(rawValue: "refreshUserNameAndLanguage"), object: nil)
     }
 
     //MARK: deinit
@@ -76,6 +78,8 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
 
         NotificationCenter.default.removeObserver(self)
     }
+
+    //MARK: IBActions
 
     @IBAction func showUserProperties(_ sender: AnyObject) {
 
@@ -100,6 +104,8 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         print("Go to Challenges Received......")
     }
 
+    // MARK: Overrides
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -107,7 +113,6 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
     }
 
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
@@ -122,7 +127,6 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
             userLogged.title = user.usernameToDisplay()
         }
 
-        language()
         specialButtons.forEach { (button) in
             button.setTitle(titleButtons[button.tag].localized(), for: .normal)
         }

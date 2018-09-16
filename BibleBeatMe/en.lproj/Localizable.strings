@@ -6,7 +6,6 @@
  Copyright © 2018 rafaelmersant. All rights reserved.
  */
 
-
 /*******************************************************************************/
 //MARK: Customized variables -- ENGLISH
 /*******************************************************************************/
@@ -21,7 +20,7 @@
 "cancel"        = "Cancel";
 "of"            = "of";
 "timeElapsed"   = "time elapsed";
-
+"practice1"="Practicar";
 // ResultsViewController
 "results"       = "Results";
 "rights"        = "Rights";

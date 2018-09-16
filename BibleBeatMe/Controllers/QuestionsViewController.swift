@@ -106,7 +106,7 @@ class QuestionsViewController : UIViewController {
 
         // add right navigation bar button items.
         do {
-            backButton.title = "Cancel"
+            backButton.title = "cancel".localized()
             backButton.setTitleTextAttributes([
                 NSAttributedStringKey.font: UIFont(name: "HelveticaNeue", size: 17.0)!,
                 NSAttributedStringKey.foregroundColor: mainColor], for: .normal)

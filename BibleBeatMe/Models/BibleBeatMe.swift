@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 import CodableFirebase
-
+import Localize_Swift
 
 class BibleBeatMe {
 
@@ -17,8 +17,7 @@ class BibleBeatMe {
     static var game: Game.GameModel?
     static var language = "en" {
         didSet {
-            Locale.preferredLanguage = self.language
+            Localize.setCurrentLanguage(language)
         }
     }
-
 }

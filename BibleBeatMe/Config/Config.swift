@@ -29,6 +29,10 @@ func saveDataUserInfo(info: Any, key: String) {
 
 func retrieveDataUserInfo(key: String) -> Any? {
     let _default = UserDefaults.standard
+
+    if _default.object(forKey: key) == nil {
+        saveDataUserInfo(info: "en", key: key)
+    }
     return _default.object(forKey: key)
 }
 
@@ -67,8 +71,9 @@ let darkGrayColor = hexToUIColor(hexString: "292929")
 func setDefaultLanguage(new: String? = "en") {
 
     //Save or retrieve language from userInfo
-    if let language = retrieveDataUserInfo(key: "language"), new == nil {
+    if let language = retrieveDataUserInfo(key: "selectedLanguage"), new == nil {
         BibleBeatMe.language = (language as! NSString).substring(to: 2)
+
     } else {
 
         if new == nil {
@@ -83,7 +88,7 @@ func setDefaultLanguage(new: String? = "en") {
             BibleBeatMe.language = new!
         }
 
-        saveDataUserInfo(info: BibleBeatMe.language, key: "language")
+        saveDataUserInfo(info: BibleBeatMe.language, key: "selectedLanguage")
     }
 }
 
@@ -112,7 +117,7 @@ func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
     return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
 }
 
-//MARK: Modify Multiplier for NSLayoutConstraint
+// MARK: Modify Multiplier for NSLayoutConstraint
 extension NSLayoutConstraint {
     /**
      Change multiplier constraint
@@ -139,53 +144,5 @@ extension NSLayoutConstraint {
 
         NSLayoutConstraint.activate([newConstraint])
         return newConstraint
-    }
-}
-
-//MARK: extension for Locale handle several languages manually
-extension Locale {
-    static var preferredLanguage: String {
-        get {
-            return self.preferredLanguages.first ?? "en"
-        }
-        set {
-            UserDefaults.standard.set([newValue], forKey: "AppleLanguages")
-            //UserDefaults.standard.synchronize()
-        }
-    }
-}
-
-//MARK: extension String to get localized
-extension String {
-
-    func localized() -> String {
-
-        return Bundle.main.localizedString(forKey: self, value: nil, table: nil) //languageBundle as! String //
-    }
-}
-
-func language() {
-
-    let languageCode = UserDefaults.standard
-
-    if languageCode.object(forKey: "language") != nil {
-        let language = languageCode.object(forKey: "language")
-        var path :String = Bundle.main.path(forResource: language as! String?, ofType: "lproj")!
-        if path .isEmpty {
-            path = Bundle.main.path(forResource: "en", ofType: "lproj")!
-        }
-
-        languageBundle = Bundle(path: path)
-    }
-    else {
-        languageCode.set("en", forKey: "language")
-        languageCode.synchronize()
-        let language = languageCode.string(forKey: "language")!
-        var path = Bundle.main.path(forResource: language, ofType: "lproj")!
-        if path .isEmpty {
-            path = Bundle.main.path(forResource: "en", ofType: "lproj")!
-        }
-
-        languageBundle = Bundle(path: path)
     }
 }

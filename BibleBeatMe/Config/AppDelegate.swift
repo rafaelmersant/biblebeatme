@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         //Set default language
         setDefaultLanguage(new: nil)
-        language()
 
         return true
     }
@@ -62,5 +61,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         User.userOnline(status: false)
     }
+
+//    //Other Function
+//    @objc func languageWillChange(notification: NSNotification) {
+//
+//        let targetLang = notification.object as! String
+//
+////        saveDataUserInfo(info: targetLang, key: "selectedLanguage")
+////        Bundle.setLanguage(targetLang)
+////
+////        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "language_did_change"), object: targetLang)
+//    }
+
 }
 

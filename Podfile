@@ -13,6 +13,7 @@ target 'BibleBeatMe' do
   pod 'MBProgressHUD', '~> 1.1.0'
   pod 'CodableFirebase'
   pod 'SwiftDate'
+  pod 'Localize-Swift', '~> 2.0'
   # pod 'FlagKit'
 
   # Pods for BibleBeatMe
