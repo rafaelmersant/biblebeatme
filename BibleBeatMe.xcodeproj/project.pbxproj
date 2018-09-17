@@ -136,7 +136,6 @@
 		943EC0A41FFB11C8009B3632 /* BibleBeatMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BibleBeatMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		943EC0A81FFB11C8009B3632 /* BibleTryToBeatMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleTryToBeatMeUITests.swift; sourceTree = "<group>"; };
 		943EC0AA1FFB11C8009B3632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		943F1BF120FD1AB4002F099C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		943F1C1620FFBCA8002F099C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		943F1C1820FFBCE2002F099C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9453FE3D2082E9FE00910FFB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -144,7 +143,6 @@
 		9453FE452082EA5500910FFB /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		9453FE492082EC5400910FFB /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		946176FD209294A600DFC672 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		947A0400214E84190080A0D2 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		947A0401214EF30D0080A0D2 /* genstrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = genstrings.swift; sourceTree = "<group>"; };
 		947A278E205F5B23008D1EF9 /* ModalNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNavigationController.swift; sourceTree = "<group>"; };
 		947A27962065EB66008D1EF9 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -739,8 +737,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				943EC08D1FFB11C8009B3632 /* Base */,
-				943F1BF120FD1AB4002F099C /* en */,
-				947A0400214E84190080A0D2 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

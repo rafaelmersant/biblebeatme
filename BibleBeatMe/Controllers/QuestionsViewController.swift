@@ -47,6 +47,8 @@ class QuestionsViewController : UIViewController {
 
     fileprivate let of                              = "of".localized()
 
+    public var navTitle                             = "practice".localized()
+
     //Timer
     var timer = Timer()
     var seconds = 0
@@ -110,6 +112,8 @@ class QuestionsViewController : UIViewController {
             backButton.setTitleTextAttributes([
                 NSAttributedStringKey.font: UIFont(name: "HelveticaNeue", size: 17.0)!,
                 NSAttributedStringKey.foregroundColor: mainColor], for: .normal)
+
+            navigationItem.title = navTitle
         }
     }
 
@@ -126,7 +130,6 @@ class QuestionsViewController : UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -194,8 +197,9 @@ class QuestionsViewController : UIViewController {
     @objc func clock() {
         let elapsed = (Date() - startGameDate)
         let (_, minutes, seconds) = secondsToHoursMinutesSeconds(seconds: Int(elapsed))
+        let timeElapsed = "timeElapsed".localized()
 
-        timeElapse.text = "\(minutes):\(seconds) time elapsed"
+        timeElapse.text = "\(minutes):\(seconds) \(timeElapsed)"
     }
 
     //Animate QuestionText at the show moment.
@@ -339,8 +343,8 @@ class QuestionsViewController : UIViewController {
             hud.contentColor = backColor
             hud.bezelView.color = mainColor
             hud.bezelView.style = .solidColor
-            hud.label.text = "Wait"
-            hud.detailsLabel.text = "Loading your game..."
+            hud.label.text = "wait".localized()
+            hud.detailsLabel.text = "loadingYourGame...".localized()
         }
 
         Question.questionsToShow(completion: { (questions) in

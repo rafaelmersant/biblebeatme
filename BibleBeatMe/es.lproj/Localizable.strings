@@ -21,15 +21,17 @@
 "cancel"        = "Cancelar";
 "of"            = "de";
 "timeElapsed"   = "tiempo transcurrido";
+"wait"          = "Espera";
+"loadingYourGame..." = "Cargando tu jugada...";
 
 // ResultsViewController
 "results"       = "Resultados";
 "rights"        = "Correctas";
 "wrongs"        = "Incorrectas";
-"resultMsg1"    = "Trata de nuevo, tu puedes hacerlo.";
-"resultMsg2"    = "Grandioso! ve por más.";
-"resultMsg3"    = "Buen trabajo, eres muy buen@.";
-"resultMsg4"    = "Eres excelente.";
+"resultMsg1"    = "Trata de nuevo, tu puedes hacerlo";
+"resultMsg2"    = "Grandioso! ve por más";
+"resultMsg3"    = "Buen trabajo, eres muy buen@";
+"resultMsg4"    = "Eres excelente";
 
 // OpponentsViewController
 "selectOpponent"= "Seleccionar opponente";

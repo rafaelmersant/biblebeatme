@@ -21,6 +21,9 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        resultsLabel.text = resultsLabel.text?.lowercased().localized()
+        navigationItem.title = navigationItem.title?.lowercased().localized()
+
         //Set backColor
         mainView.backgroundColor = backColor
         resultsLabel.textColor = backColor == UIColor.white ? UIColor.black : UIColor.white
@@ -56,29 +59,31 @@ class ResultsViewController: UIViewController {
     private func showResults() {
 
         var message = ""
+        let right = "rights".localized()
+        let wrong = "wrongs".localized()
 
         if let game = BibleBeatMe.game {
-            resultsButtons[0].setTitle("Rights: \(game.answeredRights.count)", for: .normal)
-            resultsButtons[1].setTitle("Wrongs: \(game.answeredWrongs.count)", for: .normal)
+            resultsButtons[0].setTitle("\(right): \(game.answeredRights.count)", for: .normal)
+            resultsButtons[1].setTitle("\(wrong): \(game.answeredWrongs.count)", for: .normal)
 
             if let questions = game.questions {
 
                 let averageRight = (Double(game.answeredRights.count) / Double(questions.count)) * 100
 
                 if averageRight < 20.0 {
-                    message = "Try again, you can do it."
+                    message = "resultMsg1" //"Try again, you can do it."
                 }
                 if averageRight > 20.0 {
-                    message = "Great! go for more."
+                    message = "resultMsg2" //"Great! go for more."
                 }
                 if averageRight > 50.0 {
-                    message = "Good Job, you are very good."
+                    message = "resultMsg3" //"Good Job, you are very good."
                 }
                 if averageRight > 90.0 {
-                    message = "You are excellent."
+                    message = "resultMsg4" //"You are excellent."
                 }
 
-                messageResult.text = message
+                messageResult.text = message.localized()
                 print("Average to give message result: \(averageRight)")
             }
         }

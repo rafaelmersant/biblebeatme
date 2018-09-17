@@ -8,7 +8,6 @@
 
 import UIKit
 import SwiftIcons
-import Localize_Swift
 
 class MainViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 

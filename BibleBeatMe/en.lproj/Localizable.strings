@@ -20,15 +20,17 @@
 "cancel"        = "Cancel";
 "of"            = "of";
 "timeElapsed"   = "time elapsed";
-"practice1"="Practicar";
+"wait"          = "Wait";
+"loadingYourGame..." = "Loading your game...";
+
 // ResultsViewController
 "results"       = "Results";
 "rights"        = "Rights";
 "wrongs"        = "Wrongs";
-"resultMsg1"    = "Try again, you can do it.";
-"resultMsg2"    = "Great! go for more.";
-"resultMsg3"    = "Good job, you are very good.";
-"resultMsg4"    = "You are excellent.";
+"resultMsg1"    = "Try again, you can do it";
+"resultMsg2"    = "Great! go for more";
+"resultMsg3"    = "Good job, you are very good";
+"resultMsg4"    = "You are excellent";
 
 // OpponentsViewController
 "selectOpponent"= "Select opponent";

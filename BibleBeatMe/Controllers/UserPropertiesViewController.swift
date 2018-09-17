@@ -29,7 +29,7 @@ class UserPropertiesViewController: UIViewController {
 
         segmentedLanguage.selectedSegmentIndex = languages.index(where: { (language) -> Bool in
             return language == BibleBeatMe.language
-        })!
+        }) ?? 0
 
         if let user = BibleBeatMe.user, user.userName != "" {
             userNameTextField.text = user.usernameToDisplay()
