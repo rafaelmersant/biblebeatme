@@ -564,6 +564,7 @@
                         <outlet property="battlesButton" destination="cGj-XT-68N" id="bpx-oU-3O3"/>
                         <outlet property="headerView" destination="ZgR-2S-urd" id="RDY-ph-8IX"/>
                         <outlet property="searchOpponentTextField" destination="qx9-GZ-Cab" id="IKB-8R-9cY"/>
+                        <outlet property="someoneWaitingLabel" destination="A2e-Yk-ERp" id="Pve-jg-Zqx"/>
                         <outlet property="tableHeaderView" destination="17W-ch-gMI" id="poS-HQ-MwH"/>
                         <outlet property="tableView" destination="Ro5-sk-NpZ" id="FfA-sf-hEZ"/>
                         <outlet property="titleOpponent" destination="bAy-Rs-gkm" id="O93-BK-zhd"/>

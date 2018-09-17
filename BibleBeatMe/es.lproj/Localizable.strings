@@ -34,8 +34,9 @@
 "resultMsg4"    = "Eres excelente";
 
 // OpponentsViewController
-"selectOpponent"= "Seleccionar opponente";
+"selectOpponent"= "Seleccionar oponente";
 "someoneWait"   = "Alguien esta esperando por ti";
+"online"        = "En linea";
 
 // OpponentViewController
 

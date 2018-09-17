@@ -21,6 +21,7 @@ class OpponentsViewController: UIViewController {
     @IBOutlet weak var tableHeaderView          : UIView!
     @IBOutlet weak var titleOpponent            : UILabel!
     @IBOutlet weak var battlesButton            : UIBarButtonItem!
+    @IBOutlet weak var someoneWaitingLabel      : UIButton!
 
     fileprivate weak var controller             : UIViewController?
 
@@ -39,6 +40,9 @@ class OpponentsViewController: UIViewController {
         
         //title opponent formats
         titleOpponent.textColor = mainColor
+        titleOpponent.text = "selectOpponent".localized()
+
+        someoneWaitingLabel.setTitle("someoneWait".localized(), for: .normal)
 
         //Search Opponent TextField
         searchOpponentTextField.backgroundColor = backColor
@@ -57,6 +61,8 @@ class OpponentsViewController: UIViewController {
         do {
             backButton.setIcon(icon: .ionicons(.iosArrowBack), iconSize: 30.0, color: mainColor)
             battlesButton.setIcon(icon: .icofont(.list), iconSize: 30.0, color: mainColor)
+
+            navigationItem.title = navigationItem.title?.lowercased().localized()
         }
 
         self.tableView.tableHeaderView = self.tableHeaderView
@@ -128,7 +134,7 @@ extension OpponentsViewController: UITableViewDelegate, UITableViewDataSource {
         cell?.opponentName.text = user.usernameToDisplay()
 
         if user.isOnline == true {
-            cell?.opponentStatus.text = "Online"
+            cell?.opponentStatus.text = "online".localized()
         } else {
             let lastSeen = Date(timeIntervalSince1970: user.lastSeen)
 

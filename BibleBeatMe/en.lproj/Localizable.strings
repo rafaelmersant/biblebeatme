@@ -35,6 +35,7 @@
 // OpponentsViewController
 "selectOpponent"= "Select opponent";
 "someoneWait"   = "Someone is waiting for you";
+"online"        = "Online";
 
 // OpponentViewController
 
